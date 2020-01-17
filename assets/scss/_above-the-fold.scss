@@ -1,0 +1,90 @@
+@import "variables";
+
+#above-fold{
+    width:100%;
+    height: 100vh;
+    position:relative;
+    #carousel-stack-container{
+        position:absolute;
+        height:100%;
+        width:100%;
+        z-index: 1;
+        .carousel-image{
+            position:absolute;
+            width: 100%;
+            height: 100%;
+            background-position: bottom !important;
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+            &:nth-of-type(1){
+                background: url('http://nebula.wsimg.com/f999a158852315fd1f45267ec104b4e8?AccessKeyId=0A547B94FD14E2142AB9&disposition=0&alloworigin=1');
+                z-index: 3;
+
+            }
+        }
+    }
+    #path-window{
+        position:absolute;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 75%;
+        height: 100%;
+        background: transparent;
+        right: 0;
+        z-index: 2;
+        #path-curve{
+            height: 100%;
+        }
+        #white-block{
+            width: 200%;
+            height: 100%;
+            background: white;
+            #af-nav{
+              display:flex;
+              flex-flow:row;
+              flex-wrap: nowrap;
+              justify-content: space-around;
+              align-items: center;
+              padding: 30px 50px;
+              font-weight: 600;
+
+              .af-nav-item{
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-family: "Sofia Pro", Arial, sans-serif;
+              }
+            }
+            #top-heading{
+              position: relative;
+              &:after{
+                content: '';
+                display: block;
+                position: absolute;
+              }
+
+              h3{
+                font-family: "Viner Hand ITC", cursive;
+                color: $darkbrown;
+                font-size: 2rem;
+              }
+              h1{
+                font-family: "Sofia Pro", Arial, sans-serif;
+                color: #EC9B07;
+                font-size: 5rem;
+                font-weight:800;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+              }
+              button{
+                background: none;
+              	color: inherit;
+              	border: none;
+              	padding: 0;
+              	cursor: pointer;
+              	outline: inherit;
+              }
+            }
+        }
+    }
+}
