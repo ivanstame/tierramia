@@ -2,8 +2,9 @@
 
 #above-fold{
     width:100%;
-    height: 100vh;
+    height: 150vh;
     position:relative;
+    overflow: hidden;
     #carousel-stack-container{
         position:absolute;
         height:100%;
@@ -11,13 +12,13 @@
         z-index: 1;
         .carousel-image{
             position:absolute;
-            width: 100%;
+            width: 70%;
             height: 100%;
-            background-position: bottom !important;
+            background-position: right !important;
             background-size: cover !important;
             background-repeat: no-repeat !important;
             &:nth-of-type(1){
-                background: url('http://nebula.wsimg.com/f999a158852315fd1f45267ec104b4e8?AccessKeyId=0A547B94FD14E2142AB9&disposition=0&alloworigin=1');
+                background: url('../img/cafe_1.jpg');
                 z-index: 3;
 
             }
@@ -28,61 +29,108 @@
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        width: 75%;
+        width: 100%;
         height: 100%;
         background: transparent;
-        right: 0;
+        left: 0;
         z-index: 2;
         #path-curve{
             height: 100%;
+            width: 40%;
         }
         #white-block{
             width: 200%;
             height: 100%;
-            background: white;
+            background: $background;
             #af-nav{
               display:flex;
               flex-flow:row;
               flex-wrap: nowrap;
               justify-content: space-around;
               align-items: center;
-              padding: 30px 50px;
+              padding: 30px 50px 30px 0;
               font-weight: 600;
+
 
               .af-nav-item{
                 text-transform: uppercase;
                 letter-spacing: 1px;
                 font-family: "Sofia Pro", Arial, sans-serif;
+                color: $darkbrown;
+              }
+            }
+            #logo-container{
+              display: inline-block;
+              img{
+                border-radius: 50%;
+                width: 75px;
+                padding: 0;
               }
             }
             #top-heading{
               position: relative;
+              transform-style: preserve-3d;
+              padding-top: 100px;
+              padding-left: 50px;
               &:after{
                 content: '';
                 display: block;
                 position: absolute;
+                width: 100%;
+                height:150%;
+                background-image:url('../img/talavera.svg');
+                background-repeat: no-repeat;
+                opacity: 0.06;
+                transform: translateZ(-1px);
+                top: 15%;
+                left: 15px;
               }
 
               h3{
                 font-family: "Viner Hand ITC", cursive;
                 color: $darkbrown;
-                font-size: 2rem;
+                font-size: 2.4rem;
+                position: relative;
+                left: -100px;
               }
               h1{
-                font-family: "Sofia Pro", Arial, sans-serif;
+                font-family: "Sofia Pro Bold", Arial, sans-serif;
                 color: #EC9B07;
-                font-size: 5rem;
+                font-size: 6rem;
                 font-weight:800;
                 letter-spacing: 2px;
                 text-transform: uppercase;
+                position: relative;
+                left: -60px;
               }
-              button{
-                background: none;
-              	color: inherit;
-              	border: none;
-              	padding: 0;
-              	cursor: pointer;
-              	outline: inherit;
+
+            }
+            button#cta {
+              transform-style: preserve-3d;
+              border: 3px solid #5B4C41;
+              padding: 25px 25px;
+              background-color: #635142;
+              background-image: url(../img/button2.png);
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-position: 0% 8%;
+              filter: grayscale(0.4);
+              text-transform: capitalize;
+              /* font-family: sans-serif; */
+              letter-spacing: 1px;
+              font-weight: 600;
+              color: #5b4c41;
+              margin: 50px 0 0 150px;
+              font-size: 20px;
+              position: relative;
+              font-family: Sofia Pro;
+              border-radius: 3px;
+              transition: .175s all ease-in-out;
+              cursor: pointer;
+              &:hover{
+                background-position: 0% 308%;
+                color: white;
+                border-color: #EC9B07;
               }
             }
         }

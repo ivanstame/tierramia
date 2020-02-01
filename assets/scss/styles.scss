@@ -1,16 +1,18 @@
 @import "reset";
 @import "above-the-fold";
+@import "variables";
 
 // font-family: "Viner Hand ITC"
 @import url(//db.onlinewebfonts.com/c/83e5ac371473d9693a6ad28c323c3cf8?family=Viner+Hand+ITC);
 @import url(//db.onlinewebfonts.com/c/dc6734899329fcbdd770b32dc47059d8?family=Sofia+Pro+Light);
 @import url(//db.onlinewebfonts.com/c/a1f486ff14cc5c4f87a0e3825d152372?family=Sofia+Pro);
+@import url(//db.onlinewebfonts.com/c/2bddd8cacbb264e5533b00d2513b6ebc?family=Sofia+Pro+Bold);
 
 
 
 body {
   line-height: 1;
-  background: white;
+  background: $background;
 }
 
 ol,
