@@ -1,3 +1,24 @@
 $darkbrown: #2a180ec4;
 $orange:#EC9B07;
 $background: #FAF9F6;
+
+
+@mixin overlay {
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-style {
+  background-color: rgb(245,222,186);
+  background: radial-gradient(circle, rgba(245,222,186,1) 1%, rgba(233,191,117,1) 100%);
+  border-radius: 46px;
+}
