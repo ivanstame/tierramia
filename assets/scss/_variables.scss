@@ -1,6 +1,43 @@
+@import "node_modules/include-media/dist/include-media";
+
 $darkbrown: #2a180ec4;
 $orange:#EC9B07;
 $background: #FAF9F6;
+$cream: rgb(235, 234, 229);
+$lightBrown: #685a54;
+
+@font-face {
+  font-family: 'ArbescoDT-Bold';
+  src: url('../Arbesco/ArbescoDT-Bold.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'ArbescoDT-Regular';
+  src: url('../Arbesco/ArbescoDT-Regular.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'ArbescoDT-SemiBold';
+  src: url('../Arbesco/ArbescoDT-SemiBold.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'ArbescoDT-Book';
+  src: url('../Arbesco/ArbescoDT-Book.ttf')  format('truetype');
+}
+
+
+
+
+// @font-face {
+//   font-family: 'MyWebFont';
+//   src: url('webfont.eot'); /* IE9 Compat Modes */
+//   src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//        url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+//        url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
+//        url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+//        url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+// }
 
 
 @mixin overlay {

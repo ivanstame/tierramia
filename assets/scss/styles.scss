@@ -1,6 +1,7 @@
 @import "reset";
 @import "above-the-fold";
 @import "variables";
+@import "node_modules/include-media/dist/include-media";
 
 // font-family: "Viner Hand ITC"
 @import url(//db.onlinewebfonts.com/c/83e5ac371473d9693a6ad28c323c3cf8?family=Viner+Hand+ITC);
@@ -13,6 +14,7 @@
 body {
   line-height: 1;
   background: $background;
+  overflow-x: hidden;
 }
 
 ol,

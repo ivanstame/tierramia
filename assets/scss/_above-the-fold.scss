@@ -1,15 +1,24 @@
 @import "variables";
+@import "node_modules/include-media/dist/include-media";
 
 #above-fold{
     width:100%;
     height: 150vh;
     position:relative;
     overflow: hidden;
+    @include media(">phone", "<=tablet") {
+      height: 110vh;
+      background: white;
+}
+
     #carousel-stack-container{
         position:absolute;
         height:100%;
         width:100%;
         z-index: 1;
+        @include media(">phone", "<=tablet") {
+        height: 83%;
+        }
         .carousel-image{
             position:absolute;
             width: 70%;
@@ -34,6 +43,9 @@
         background: transparent;
         left: 0;
         z-index: 2;
+        @include media(">phone", "<=tablet") {
+        height: 83%;
+        }
         #path-curve{
             height: 100%;
             width: 40%;
@@ -43,6 +55,9 @@
             width: 200%;
             height: 101%;
             background: #fff;
+            @include media(">phone", "<=tablet") {
+            width: 100%;
+            }
             #af-nav{
               display:flex;
               flex-flow:row;
@@ -51,14 +66,26 @@
               align-items: center;
               padding: 30px 50px 30px 0;
               font-weight: 600;
-
-
+              @include media(">phone", "<=tablet") {
+              padding: 50px 20px 30px 0;
+              width: 100%;
+              li{
+                font-size: 12px;
+              }
+              li:nth-of-type(1){
+                display: none;
+              }
+              li:nth-of-type(6){
+                display: none;
+              }
+              }
               .af-nav-item{
                 text-transform: uppercase;
                 letter-spacing: 1px;
-                font-family: "Sofia Pro", Arial, sans-serif;
+                font-family: "ArbescoDT-Bold", Arial, sans-serif;
                 color: $darkbrown;
                 cursor: pointer;
+
               }
             }
             #logo-container{
@@ -87,6 +114,17 @@
                 top: 15%;
                 left: 15px;
               }
+              @include media(">phone", "<=tablet") {
+                top: 106px;
+                padding: 0;
+                padding-left: 5px;
+                &:after{
+                  height: 473% !important;
+                  top: -46% !important;
+                  left: 15px !important;
+                }
+              }
+
 
               h3{
                 font-family: "Viner Hand ITC", cursive;
@@ -95,16 +133,24 @@
                 position: relative;
                 left: -100px;
                 margin-bottom: 10px;
+              @include media(">phone", "<=tablet"){
+                margin-bottom: 14px;
+                font-size: 1.2rem;
+                left:0;
+              }
               }
               h1{
-                font-family: "Sofia Pro Bold", Arial, sans-serif;
+                font-family: "ArbescoDT-Bold", Arial, sans-serif;
                 color: #EC9B07;
                 font-size: 6rem;
-                font-weight:800;
                 letter-spacing: 2px;
                 text-transform: capitalize;
                 position: relative;
                 left: -60px;
+                @include media(">phone", "<=tablet"){
+                  left:0;
+                  font-size: 3rem;
+                }
               }
 
             }
@@ -112,18 +158,27 @@
               @include button-style;
               transform-style: preserve-3d;
               border: 3px solid #5B4C41;
-              padding: 25px 45px;
+              padding: 0px 45px;
+              height: 83px;
+              outline: none;
+              line-height: 80px;
               text-transform: uppercase;
               letter-spacing: 1px;
               font-weight: 600;
               color: #5b4c41;
-              margin: 50px 0 -20px 175px;
+              margin: 35px 0 -20px 102px;
               font-size: 20px;
               position: relative;
-              font-family: 'Sofia Pro', sans-serif;
+              font-family: 'ArbescoDT-Bold', sans-serif;
               transition: .15s all ease-in-out;
               cursor: pointer;
               box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+              &:focus{
+                outline: none;
+              }
+              &:active{
+                outline: none;
+              }
 
               &:hover{
                 border-color: #A67E5B;
@@ -131,29 +186,57 @@
                 box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
                 transform: translateY(-1px);
               }
+              @include media(">phone", "<=tablet"){
+                padding: 0px 25px;
+                height: 63px;
+                line-height: 60px;
+                letter-spacing: 1px;
+                font-size: 15px;
+                margin: 0;
+                top: 140px;
+                left: 5px;
+              }
             }
             #shape-box{
               margin-top: 210px;
               position: relative;
               left: -250px;
+              @include media(">phone", "<=tablet"){
+                position: absolute;
+                bottom: -163px;
+                width: 116%;
+                left: 33%;
+                transform: translateX(-50%) !important;
+                transform-style: preserve-3d;
+                margin: 0;
+              }
               #shaper{
                 float: left;
                 shape-outside: polygon(0px 0px, 291px 0px, -44px 300px);
                 width: 350px;
                 height: 270px;
+                @include media(">phone", "<=tablet"){
+                  shape-outside: polygon(0px 0px, 293px 20px, 54px 290px);
+                  width: 300px;
+                }
               }
               p{
-                font-family: 'Sofia Pro Light', sans-serif;
-                font-weight: 600;
+                font-family: 'ArbescoDT-Book', sans-serif;
                 width: 120%;
                 font-size: 22px;
                 line-height: 2;
                 color: #685a54;
+                @include media(">phone", "<=tablet"){
+                  width: 100%;
+                  font-size: 16px !important;
+                }
                 span{
                   color: $orange;
                   cursor: pointer;
                   &:hover{
+                    text-decoration-style: double !important;
                     text-decoration: underline;
+
                   }
                 }
               }
@@ -168,6 +251,9 @@
   background-size: 30%;
   position: relative;
   padding: 65px 0;
+  @include media(">phone", "<=tablet"){
+    height: 175vh;
+  }
   &::before{
     position: absolute;
     display: block;
@@ -178,6 +264,9 @@
     top: -2px;
     left: 2px;
     z-index: 9;
+    @include media(">phone", "<=tablet"){
+
+    }
   }
 
   #promo-container{
@@ -185,8 +274,10 @@
     height: 100%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-
-
+    @include media(">phone", "<=tablet"){
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
     .promo-text{
       background: white;
       display: flex;
@@ -194,28 +285,46 @@
       justify-content: space-between;
       align-items: center;
       padding: 9% 15%;
-      font-family: 'Sofia Pro Light', sans-serif;
+      font-family: 'ArbescoDT-Book', sans-serif;
+      @include media(">phone", "<=tablet"){
+        grid-row: 2/3;
+        padding: 13% 15%;
+      }
       h3{
         text-transform: uppercase;
-        font-family: 'Sofia Pro', sans-serif;
+        font-family: 'ArbescoDT-Bold', sans-serif;
         color: #ec9b07;
         font-size: 1.25rem;
+        @include media(">phone", "<=tablet"){
+
+        }
       }
       h2{
         text-transform: capitalize;
-        font-family: 'Sofia Pro Bold';
+        font-family: 'Viner Hand ITC';
         color: #685a54;
-        font-size: 2.25rem;
+        font-size: 2.2rem;
+        @include media(">phone", "<=tablet"){
+          font-size: 1.7rem;
+        }
       }
       p{
-        font-family: 'Sofia Pro Light', sans-serif;
+        font-family: 'ArbescoDT-Book', sans-serif;
         color: #685a54;
         font-size: 1.1rem;
         line-height: 1.5;
+        @include media(">phone", "<=tablet"){
+          font-size: 1rem;
+          line-height: 2;
+        }
       }
       a{
         text-decoration: none;
         color: #ec9b07;
+        font-family: 'ArbescoDT-Bold';
+        @include media(">phone", "<=tablet"){
+
+        }
       }
 
     }
@@ -224,18 +333,25 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
+      @include media(">phone", "<=tablet"){
+        grid-row: 1/2;
+      }
     }
   }
 }
 
 
 #location-section{
-  background: white;
+  background: #fff;
   display: flex;
   flex-flow: column;
   justify-content: center;
   position: relative;
   height: 100vh;
+  @include media(">phone", "<=tablet"){
+    height: auto;
+    padding: 50px 0px 75px 0;
+  }
     &::before{
       position: absolute;
       display: block;
@@ -248,16 +364,27 @@
       z-index: 9;
     }
     h1{
-      text-align: center;
-      margin: 0 auto;
-      font-family: "Sofia Pro", Arial, sans-serif;
-      color: #EC9B07;
-      font-size: 3rem;
-      font-weight: 800;
+      text-align: left;
+      font-family: "ArbescoDT-SemiBold", Arial, sans-serif;
+      color: #51453f;
+      font-size: 2.75rem;
       letter-spacing: 2px;
+      display: inline-block;
       text-transform: capitalize;
-      margin-bottom: 80px;
+      margin-bottom: 50px;
+      position: relative;
+      padding-left: 6rem;
       transform-style: preserve-3d;
+      text-decoration: underline;
+      text-underline-position: under;
+      text-decoration-color: #ec9b07;
+      text-decoration-style: double;
+      @include media(">phone", "<=tablet"){
+        text-align: center;
+        padding: 0;
+        margin-bottom: 60px;
+        font-size: 2rem;
+      }
   }
 
     #location-container{
@@ -268,15 +395,28 @@
       justify-content: space-around;
       -ms-flex-align: center;
       padding: 0 5%;
+      @include media(">phone", "<=tablet"){
+        flex-flow: column;
+        justify-content: space-around;
+        align-items: center;
+      }
       .location{
         position: relative;
-        width: 375px;
-        height: 375px;
+        width: 350px;
+        height: 425px;
         border: 1px solid #897e79;
         box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
         overflow: hidden;
         border-radius: 3px;
         cursor: pointer;
+        @include media(">phone", "<=tablet"){
+          width: 65vw;
+          height: 52vw;
+          margin-bottom: 50px;
+          &:last-of-type{
+            margin-bottom: 0;
+          }
+        }
         .zoomable-bg{
           width: 100%;
           height: 100%;
@@ -285,6 +425,12 @@
           transition: .2s all ease-in-out;
           &:hover{
             transform: scale(1.2);
+          }
+          @include media(">phone", "<=tablet"){
+            transition: none;
+            &:hover{
+              transform: none !important;
+            }
           }
         }
       }
@@ -296,6 +442,7 @@
       }
       #l3{
         background-image: url("../img/norcal_cafe.jpg");
+        background-position: bottom;
       }
       .overlay{
         position: absolute;
@@ -314,7 +461,7 @@
         align-items: center;
         padding-bottom: 30px;
         h3{
-          font-family: "Sofia Pro Light", sans-serif;
+          font-family: "ArbescoDT-SemiBold", sans-serif;
           color: white;
           font-size: 2rem;
           text-transform: uppercase;
@@ -325,9 +472,16 @@
           background: rgba(87,73,66,0.85);
           border-top: 3px solid $orange;
           border-bottom: 3px solid $orange;
+          @include media(">phone", "<=tablet"){
+            padding: 0;
+            height: 53px;
+            line-height: 50px;
+            font-size: 1.5rem;
+          }
         }
       }
-}
+    }
+
 }
 
 #sourcing{
@@ -336,19 +490,28 @@
   background-size: 30%;
   position: relative;
   padding: 65px 0;
-  .promo-photo{
-    background: url('../img/farmer.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+  @include media(">phone", "<=tablet"){
+    height: 175vh;
   }
+
   .promo-container{
     display: grid;
     height: 100%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-
-
+    @include media(">phone", "<=tablet"){
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+    .promo-photo{
+      background: url('../img/farmer.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      @include media(">phone", "<=tablet"){
+        grid-row: 1/2;
+      }
+    }
     .promo-text{
       background: white;
       display: flex;
@@ -356,29 +519,40 @@
       justify-content: space-between;
       align-items: center;
       padding: 9% 15%;
-      font-family: 'Sofia Pro Light', sans-serif;
+      @include media(">phone", "<=tablet"){
+        grid-row: 2/3;
+        padding: 13% 15%;
+      }
       h3{
         text-transform: uppercase;
-        font-family: 'Sofia Pro', sans-serif;
+        font-family: 'ArbescoDT-Bold', sans-serif;
         color: #ec9b07;
         font-size: 1.25rem;
       }
       h2{
         text-transform: capitalize;
-        font-family: 'Sofia Pro Bold';
+        font-family: 'Viner Hand ITC';
         color: #685a54;
-        font-size: 2.25rem;
+        font-size: 2.2rem;
         line-height: 1.3;
+        @include media(">phone", "<=tablet"){
+          font-size: 1.7rem;
+        }
       }
       p{
-        font-family: 'Sofia Pro Light', sans-serif;
+        font-family: 'ArbescoDT-Book', sans-serif;
         color: #685a54;
         font-size: 1.1rem;
         line-height: 1.5;
+        @include media(">phone", "<=tablet"){
+          font-size: 1rem;
+          line-height: 2;
+        }
       }
       a{
         text-decoration: none;
         color: #ec9b07;
+        font-family: 'ArbescoDT-Bold';
       }
 
     }
@@ -386,33 +560,53 @@
 }
 
 #shop{
-  height: 110vh;
+  height: 100vh;
   padding: 65px 0;
-  background: #fff;
+  background: #fbf9f8;
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  h1{
-    text-align: center;
-    margin: 0 auto;
-    font-family: "Sofia Pro", Arial, sans-serif;
-    color: #EC9B07;
-    font-size: 3rem;
-    font-weight: 800;
-    letter-spacing: 2px;
-    text-transform: capitalize;
-    margin-bottom: 80px;
-    transform-style: preserve-3d;
+  @include media(">phone", "<=tablet"){
+    height: auto;
   }
+  h1{
+    align-self: flex-start;
+    text-align: left;
+    font-family: "ArbescoDT-SemiBold", Arial, sans-serif;
+    color: #51453f;
+    font-size: 2.75rem;
+    letter-spacing: 2px;
+    display: inline-block;
+    text-transform: capitalize;
+    margin-bottom: 50px;
+    position: relative;
+    padding-left: 6rem;
+    transform-style: preserve-3d;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color: #ec9b07;
+    text-decoration-style: double;
+    @include media(">phone", "<=tablet"){
+      display: block;
+      text-align: center;
+      padding: 0;
+      align-self: unset;
+      margin-bottom: 75px;
+      font-size: 2rem;
+    }
+}
   #shop-gallery-container{
     display: flex;
     flex-flow: row;
     width: 100%;
     justify-content: space-around;
     align-items: center;
-    font-family: 'Sofia Pro Light', sans-serif;
+    font-family: 'ArbescoDT-Book', sans-serif;
     padding: 0 5%;
+    @include media(">phone", "<=tablet"){
+      flex-wrap: wrap;
+    }
 
     .product-wrapper{
       display: flex;
@@ -422,9 +616,21 @@
       width: 20%;
       transform-style: preserve-3d;
       position: relative;
+      @include media(">phone", "<=tablet"){
+        width: 60%;
+        &:nth-of-type(1){
+          margin-bottom: 125px;
+        }
+        &:nth-of-type(2){
+          margin-bottom: 125px;
+        }
+      }
       img{
         width: 100%;
         margin-bottom: 20px;
+        @include media(">phone", "<=tablet"){
+          width: 90%;
+        }
       }
       h4{
         font-weight: 600;
@@ -434,6 +640,8 @@
         margin-bottom: 25px;
         position: relative;
         font-size: 1.2rem;
+        color: $darkbrown;
+        font-family: 'ArbescoDT-Bold';
         &::after{
           position: absolute;
           content: '';
@@ -447,15 +655,21 @@
       }
       p{
         line-height: 1.4;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
+        font-family: 'ArbescoDT-Book';
+        color: $lightBrown;
+        @include media(">phone", "<=tablet"){
+          line-height: 2;
+        }
       }
       button{
         @include button-style;
         text-transform: uppercase;
         letter-spacing: 1px;
         cursor: pointer;
+        color: $darkbrown;
         outline: none;
-        font-family: 'Sofia Pro Light', sans-serif;
+        font-family: 'ArbescoDT-SemiBold', sans-serif;
         font-weight: 600;
         border: 3px solid $darkbrown;
         font-size: 1rem;
@@ -484,6 +698,13 @@
       background-size: cover;
       left: 15%;
       border-radius: 50%;
+      @include media(">phone", "<=tablet"){
+        width: 37vw !important;
+        height: 37vw !important;
+        left: 14%;
+        background-position: -73px 0px;
+      }
+
       }
       .product-wrapper:nth-of-type(2)::after{
         position: absolute;
@@ -497,6 +718,12 @@
         background-size: cover;
         left: 15%;
         border-radius: 50%;
+        @include media(">phone", "<=tablet"){
+          width: 37vw !important;
+          height: 37vw !important;
+          left: 14%;
+          background-position: -73px 0px;
+        }
         }
         .product-wrapper:nth-of-type(3)::after{
           position: absolute;
@@ -510,6 +737,45 @@
           background-size: cover;
           left: 15%;
           border-radius: 50%;
+          @include media(">phone", "<=tablet"){
+            width: 37vw !important;
+            height: 37vw !important;
+            left: 14%;
+            background-position: -73px 0px;
           }
+          }
+    }
+  }
+
+  footer {
+    background: $darkbrown;
+    height: 65vh;
+    padding: 25px 150px;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    align-items: center;
+      #footer-links{
+        height: 80%;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+        align-items:center;
+        padding-bottom: 40px;
+        padding-top: 10px;
+        .footer-link{
+          font-family: 'ArbescoDT-SemiBold';
+          font-size: 1.5rem;
+          color: white;
+          &:hover{
+            cursor: pointer;
+          }
+        }
+      }
+    img{
+      width: 50%;
+      @include media(">phone", "<=tablet"){
+        width: 100%;
+      }
     }
   }
