@@ -7,6 +7,11 @@ $cream: rgb(235, 234, 229);
 $lightBrown: #685a54;
 
 @font-face {
+  font-family: 'Viner Hand ITC';
+  src: url('../VinerHand/VinerHand.ttf')  format('truetype');
+}
+
+@font-face {
   font-family: 'ArbescoDT-Bold';
   src: url('../Arbesco/ArbescoDT-Bold.ttf')  format('truetype');
 }
