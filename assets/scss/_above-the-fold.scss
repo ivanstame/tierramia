@@ -7,7 +7,7 @@
     position:relative;
     overflow: hidden;
     @include media(">phone", "<=tablet") {
-      height: 110vh;
+      height: 88vh;
       background: white;
 }
 
@@ -17,7 +17,7 @@
         width:100%;
         z-index: 1;
         @include media(">phone", "<=tablet") {
-        height: 83%;
+        height: 75%;
         }
         .carousel-image{
             position:absolute;
@@ -44,12 +44,16 @@
         left: 0;
         z-index: 2;
         @include media(">phone", "<=tablet") {
-        height: 83%;
+        height: 75%;
         }
         #path-curve{
-            height: 100%;
-            width: 40%;
-            filter: brightness(4.5);
+          height: 100%;
+          width: 40%;
+          filter: brightness(4.5);
+          @include media(">phone", "<=tablet") {
+          height: 101%;
+          margin-left: -1px;
+          }
         }
         #white-block{
             width: 200%;
@@ -57,6 +61,8 @@
             background: #fff;
             @include media(">phone", "<=tablet") {
             width: 100%;
+            height: 101%;
+            margin-left: -2px;
             }
             #af-nav{
               display:flex;
@@ -67,10 +73,10 @@
               padding: 30px 50px 30px 0;
               font-weight: 600;
               @include media(">phone", "<=tablet") {
-              padding: 50px 20px 30px 0;
+              padding: 30px 20px 30px 0;
               width: 100%;
               li{
-                font-size: 12px;
+                font-size: 10px;
               }
               li:nth-of-type(1){
                 display: none;
@@ -115,12 +121,12 @@
                 left: 15px;
               }
               @include media(">phone", "<=tablet") {
-                top: 106px;
+                top: 118px;
                 padding: 0;
                 padding-left: 5px;
                 &:after{
-                  height: 473% !important;
-                  top: -46% !important;
+                  height: 475% !important;
+                  top: -90% !important;
                   left: 15px !important;
                 }
               }
@@ -135,7 +141,7 @@
                 margin-bottom: 10px;
               @include media(">phone", "<=tablet"){
                 margin-bottom: 14px;
-                font-size: 1.2rem;
+                font-size: 1rem;
                 left:0;
               }
               }
@@ -149,7 +155,7 @@
                 left: -60px;
                 @include media(">phone", "<=tablet"){
                   left:0;
-                  font-size: 3rem;
+                  font-size: 2.3rem;
                 }
               }
 
@@ -187,13 +193,13 @@
                 transform: translateY(-1px);
               }
               @include media(">phone", "<=tablet"){
-                padding: 0px 25px;
-                height: 63px;
-                line-height: 60px;
+                padding: 0px 15px;
+                height: 50px;
+                line-height: 47px;
                 letter-spacing: 1px;
-                font-size: 15px;
-                margin: 0;
-                top: 140px;
+                font-size: 12px;
+                margin: 0 0 0 20px;
+                top: 180px;
                 left: 5px;
               }
             }
@@ -203,10 +209,10 @@
               left: -250px;
               @include media(">phone", "<=tablet"){
                 position: absolute;
-                bottom: -163px;
-                width: 116%;
-                left: 33%;
-                transform: translateX(-50%) !important;
+                bottom: 0px;
+                width: 75%;
+                left: 55%;
+                transform: translateX(-50%) translateY(75%)!important;
                 transform-style: preserve-3d;
                 margin: 0;
               }
@@ -216,8 +222,7 @@
                 width: 350px;
                 height: 270px;
                 @include media(">phone", "<=tablet"){
-                  shape-outside: polygon(0px 0px, 293px 20px, 54px 290px);
-                  width: 300px;
+                  display: none;
                 }
               }
               p{
@@ -228,7 +233,7 @@
                 color: #685a54;
                 @include media(">phone", "<=tablet"){
                   width: 100%;
-                  font-size: 16px !important;
+                  font-size: 13px !important;
                 }
                 span{
                   color: $orange;
@@ -252,7 +257,8 @@
   position: relative;
   padding: 65px 0;
   @include media(">phone", "<=tablet"){
-    height: 175vh;
+    height: 100vh;
+    padding: 50px 0;
   }
   &::before{
     position: absolute;
@@ -288,7 +294,7 @@
       font-family: 'ArbescoDT-Book', sans-serif;
       @include media(">phone", "<=tablet"){
         grid-row: 2/3;
-        padding: 13% 15%;
+        padding: 8% 10%;
       }
       h3{
         text-transform: uppercase;
@@ -296,7 +302,7 @@
         color: #ec9b07;
         font-size: 1.25rem;
         @include media(">phone", "<=tablet"){
-
+          font-size: 1.1rem;
         }
       }
       h2{
@@ -305,7 +311,7 @@
         color: #685a54;
         font-size: 2.2rem;
         @include media(">phone", "<=tablet"){
-          font-size: 1.7rem;
+          font-size: 1.5rem;
         }
       }
       p{
@@ -314,7 +320,7 @@
         font-size: 1.1rem;
         line-height: 1.5;
         @include media(">phone", "<=tablet"){
-          font-size: 1rem;
+          font-size: 13px !important;
           line-height: 2;
         }
       }
@@ -491,7 +497,8 @@
   position: relative;
   padding: 65px 0;
   @include media(">phone", "<=tablet"){
-    height: 175vh;
+    height: 100vh;
+    padding: 50px 0;
   }
 
   .promo-container{
@@ -521,13 +528,16 @@
       padding: 9% 15%;
       @include media(">phone", "<=tablet"){
         grid-row: 2/3;
-        padding: 13% 15%;
+        padding: 8% 10%;
       }
       h3{
         text-transform: uppercase;
         font-family: 'ArbescoDT-Bold', sans-serif;
         color: #ec9b07;
         font-size: 1.25rem;
+        @include media(">phone", "<=tablet"){
+          font-size: 1.1rem;
+        }
       }
       h2{
         text-transform: capitalize;
@@ -536,7 +546,7 @@
         font-size: 2.2rem;
         line-height: 1.3;
         @include media(">phone", "<=tablet"){
-          font-size: 1.7rem;
+          font-size: 1.5rem;
         }
       }
       p{
@@ -545,7 +555,7 @@
         font-size: 1.1rem;
         line-height: 1.5;
         @include media(">phone", "<=tablet"){
-          font-size: 1rem;
+          font-size: 13px !important;
           line-height: 2;
         }
       }
@@ -569,6 +579,7 @@
   align-items: center;
   @include media(">phone", "<=tablet"){
     height: auto;
+    padding: 65px 0 95px 0;
   }
   h1{
     align-self: flex-start;
@@ -605,7 +616,9 @@
     font-family: 'ArbescoDT-Book', sans-serif;
     padding: 0 5%;
     @include media(">phone", "<=tablet"){
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
+      overflow: hidden;
+      width: 100%;
     }
 
     .product-wrapper{
@@ -613,23 +626,23 @@
       flex-flow: column;
       justify-content: center;
       align-items: center;
-      width: 20%;
+      width: 30%;
       transform-style: preserve-3d;
       position: relative;
       @include media(">phone", "<=tablet"){
-        width: 60%;
+        width: 30%;
         &:nth-of-type(1){
-          margin-bottom: 125px;
+
         }
         &:nth-of-type(2){
-          margin-bottom: 125px;
+
         }
       }
       img{
         width: 100%;
         margin-bottom: 20px;
         @include media(">phone", "<=tablet"){
-          width: 90%;
+          width: 80%;
         }
       }
       h4{
@@ -660,6 +673,8 @@
         color: $lightBrown;
         @include media(">phone", "<=tablet"){
           line-height: 2;
+          font-size: 13px !important;
+          width: 80%;
         }
       }
       button{
@@ -699,10 +714,11 @@
       left: 15%;
       border-radius: 50%;
       @include media(">phone", "<=tablet"){
-        width: 37vw !important;
-        height: 37vw !important;
-        left: 14%;
-        background-position: -73px 0px;
+        width: 50vw !important;
+        height: 50vw !important;
+        left: 50%;
+        background-position: -76px 0px;
+        transform: translateX(-50%) translateZ(-1px);
       }
 
       }
@@ -719,10 +735,11 @@
         left: 15%;
         border-radius: 50%;
         @include media(">phone", "<=tablet"){
-          width: 37vw !important;
-          height: 37vw !important;
-          left: 14%;
-          background-position: -73px 0px;
+          width: 50vw !important;
+          height: 50vw !important;
+          left: 50%;
+          background-position: -76px 0px;
+          transform: translateX(-50%) translateZ(-1px);
         }
         }
         .product-wrapper:nth-of-type(3)::after{
@@ -738,10 +755,11 @@
           left: 15%;
           border-radius: 50%;
           @include media(">phone", "<=tablet"){
-            width: 37vw !important;
-            height: 37vw !important;
-            left: 14%;
-            background-position: -73px 0px;
+            width: 50vw !important;
+            height: 50vw !important;
+            left: 50%;
+            background-position: -76px 0px;
+            transform: translateX(-50%) translateZ(-1px);
           }
           }
     }
@@ -755,6 +773,10 @@
     flex-flow: column;
     justify-content: flex-end;
     align-items: center;
+    @include media(">phone", "<=tablet"){
+      padding: 20px 120px;
+      justify-content: center;
+    }
       #footer-links{
         height: 80%;
         display: flex;
@@ -763,10 +785,16 @@
         align-items:center;
         padding-bottom: 40px;
         padding-top: 10px;
+        @include media(">phone", "<=tablet"){
+          align-items: flex-start;
+        }
         .footer-link{
           font-family: 'ArbescoDT-SemiBold';
           font-size: 1.5rem;
           color: white;
+          @include media(">phone", "<=tablet"){
+
+          }
           &:hover{
             cursor: pointer;
           }
@@ -775,7 +803,7 @@
     img{
       width: 50%;
       @include media(">phone", "<=tablet"){
-        width: 100%;
+        width: 100% !important;
       }
     }
   }

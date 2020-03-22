@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <title>Tierra Mia Coffee</title>
-    <meta property="og:title" content="CodingPhase - Learn To Code and Get Paid ASAP!">
-    <meta name="description" content="Learn how to code from the best platform by building real projects that will help you land the dream job and get a high paying salary">
-    <meta property="og:description" content="Learn how to code from the best platform by building real projects that will help you land the dream job and get a high paying salary">
+    <meta property="og:title" content="Tierra Mia - Rough Draft">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
     <meta property="og:image" content="https://codingphase.com/img/websitethumb.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="og:site_name" content="CodingPhase LLC">
@@ -19,8 +19,10 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <link rel="manifest" href="/manifest.json">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
   </head>
   <body>
@@ -31,7 +33,7 @@
   			<div class="carousel-image"></div>
   		</div>
   		<div id="path-window">
-  			<img id="path-curve" src="../img/curvywindow2.png">
+  			<img id="path-curve" src="./img/curvywindow2.png">
   			<div id="white-block">
   				<ul id="af-nav">
   					<li>
@@ -58,15 +60,18 @@
     					quality preparation in coffee makes.
             </p>
   				</div>
-  			</div>
-  		</div>
   	</section>
     <section id="horchata">
         <div id="promo-container">
             <div class="promo-text">
               <h3>Our Speciality</h3>
               <h2>Trata un cafe tan sabrosita</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p>
+      					Tierra Mia Coffee is a craft coffee roaster with a strong focus on quality and a unique Latin American <span>MENU</span>.
+      					Founded in 2008, we have now grown to over 15 locations in Northern and Southern California. Every day we work
+      					tirelessly to provide you the best tasting product possible and invite you to come and taste the difference that
+      					quality preparation in coffee makes.
+              </p>
               <a href="#">Learn More</a>
             </div>
             <div class="promo-photo">
@@ -112,21 +117,21 @@
   	</section>
     <section id="shop">
       <h1>Shop Coffee</h1>
-      <div id="shop-gallery-container">
+      <div class="shop-gallery-container" id="shop-gallery-container">
           <div class="product-wrapper">
-            <img src="../img/bag.png">
+            <img src="./img/bag.png">
             <h4>Dark Roasts</h4>
             <p>Here is a brief description of the coffee using colorful language and all types of hyperbole Here is a brief description of the coffee using colorful language and all types of hyperbole</p>
             <button class="buy-btn">Purchase</button>
           </div>
           <div class="product-wrapper">
-            <img src="../img/bag.png">
+            <img src="./img/bag.png">
             <h4>Medium Roasts</h4>
             <p>Here is a brief description of the coffee using colorful language and all types of hyperbole Here is a brief description of the coffee using colorful language and all types of hyperbole</p>
             <button class="buy-btn">Purchase</button>
           </div>
           <div class="product-wrapper">
-            <img src="../img/bag.png">
+            <img src="./img/bag.png">
             <h4>Light Roasts</h4>
             <p>Here is a brief description of the coffee using colorful language and all types of hyperbole.  Here is a brief description of the coffee using colorful language and all types of hyperbole</p>
             <button class="buy-btn">Purchase</button>
@@ -143,10 +148,18 @@
           <li class="footer-link">Menu</li>
           <li class="footer-link">Reach Us</li>
         </ul>
-      <img src="../img/transparentwordlogo.png" />
+      <img src="./img/transparentwordlogo.png" />
     </footer>
-    <script src="/js/dist/vendors~FirstComp.js"></script>
-    <script src="/js/dist/FirstComp.js"></script>
-    <script src="/js/dist/main.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('.shop-gallery-container').slick({
+        // desktop bullshit
+
+      });
+    });
+</script>
   </body>
 </html>
