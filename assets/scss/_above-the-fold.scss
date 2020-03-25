@@ -571,7 +571,7 @@
 }
 
 #shop{
-  padding: 65px 0;
+  padding: 65px 0 95px 0;
   background: #fbf9f8;
   overflow-x: hidden;
 
@@ -668,7 +668,7 @@
         .slide{
 
           @include media(">phone", "<=tablet"){
-              width: 90vw;
+              width: 80vw;
               background: #fbf9f8;
               position: absolute;
           }
