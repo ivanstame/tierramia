@@ -2,6 +2,8 @@ const track = document.querySelector('.slider-track');
 const slides = Array.from(track.children);
 const nextButton = document.querySelector('.slider_btn--right');
 const prevButton = document.querySelector('.slider_btn--left');
+var targetIndex = 0;
+prevButton.style.visibility = 'hidden';
 
 const slideWidth = slides[0].getBoundingClientRect().width;
 
@@ -29,14 +31,28 @@ prevButton.addEventListener('click', e => {
 	const currentSlide = track.querySelector('.current_slide');
 	const previousSlide = currentSlide.previousElementSibling;
 
-	console.log(previousSlide);
 	moveToSlide(track, currentSlide, previousSlide);
+
+	targetIndex--;
+	nextButton.style.visibility = 'visible';
+	if (targetIndex == 0) {
+		prevButton.style.visibility = 'hidden';
+	} else {
+		prevButton.style.visibility = 'visible';
+	}
 });
 
 nextButton.addEventListener('click', e => {
 	const currentSlide = track.querySelector('.current_slide');
 	const nextSlide = currentSlide.nextElementSibling;
 
-	console.log(nextSlide);
 	moveToSlide(track, currentSlide, nextSlide);
+	targetIndex++;
+	prevButton.style.visibility = 'visible';
+
+	if (targetIndex == slides.length - 1) {
+		nextButton.style.visibility = 'hidden';
+	} else {
+		nextButton.style.visibility = 'visible';
+	}
 });
