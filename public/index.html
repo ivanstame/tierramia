@@ -21,8 +21,6 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
   </head>
   <body>
@@ -42,7 +40,7 @@
   					</li>
   					<li class="af-nav-item">About</li>
   					<li class="af-nav-item">Menu</li>
-  					<li class="af-nav-item">Locations</li>
+  					<li class="af-nav-item">Cafes</li>
   					<li class="af-nav-item">Shop</li>
   					<li class="af-nav-item">Join Us</li>
   				</ul>
@@ -116,26 +114,47 @@
     <section id="shop">
       <h1>Shop Coffee</h1>
       <div class="shop-gallery-container" id="shop-gallery-container">
-          <div class="product-wrapper">
-            <img src="./img/bag.png">
-            <h4>Dark Roasts</h4>
-            <p>Here is a brief description of the coffee using colorful language and all types of hyperbole Here is a brief description of the coffee using colorful language and all types of hyperbole</p>
-            <button class="buy-btn">Purchase</button>
-          </div>
-          <div class="product-wrapper">
-            <img src="./img/bag.png">
-            <h4>Medium Roasts</h4>
-            <p>Here is a brief description of the coffee using colorful language and all types of hyperbole Here is a brief description of the coffee using colorful language and all types of hyperbole</p>
-            <button class="buy-btn">Purchase</button>
-          </div>
-          <div class="product-wrapper">
-            <img src="./img/bag.png">
-            <h4>Light Roasts</h4>
-            <p>Here is a brief description of the coffee using colorful language and all types of hyperbole.  Here is a brief description of the coffee using colorful language and all types of hyperbole</p>
-            <button class="buy-btn">Purchase</button>
-          </div>
+        <button class="slider_btn slider_btn--left">
+          <img src="./img/leftarrow.png" />
+        </button>
+        <div class="slider-track-container">
+          <ul class="slider-track">
+            <li class="slide current_slide">
+              <div class="product-wrapper">
+                <div class="product-image">
+                  <img src="./img/talacircledark.png">
+                </div>
+                <h4>Dark Roasts</h4>
+                <p>Here is a brief description of the coffee using colorful language and all types of hyperbole Here is a brief description of the coffee using colorful language and all types of hyperbole</p>
+                <button class="buy-btn">Purchase</button>
+              </div>
+            </li>
+            <li class="slide">
+              <div class="product-wrapper">
+                <div class="product-image">
+                  <img src="./img/talacircleorange.png">
+                </div>
+                <h4>Medium Roasts</h4>
+                <p>Here is a brief description of the coffee using colorful language and all types of hyperbole Here is a brief description of the coffee using colorful language and all types of hyperbole</p>
+                <button class="buy-btn">Purchase</button>
+              </div>
+            </li>
+            <li class="slide">
+              <div class="product-wrapper">
+                <div class="product-image">
+                  <img src="./img/talacirclelight.png">
+                </div>
+                <h4>Light Roasts</h4>
+                <p>Here is a brief description of the coffee using colorful language and all types of hyperbole.  Here is a brief description of the coffee using colorful language and all types of hyperbole</p>
+                <button class="buy-btn">Purchase</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <button class="slider_btn slider_btn--right">
+          <img src="./img/rightarrow.png" />
+        </button>
       </div>
-
     </section>
     <footer>
         <ul id="footer-links">
@@ -148,16 +167,8 @@
         </ul>
       <img src="./img/transparentwordlogo.png" />
     </footer>
+    <script type="text/javascript" src="./js/dist/main.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function(){
-      $('.shop-gallery-container').slick({
-        // desktop bullshit
-
-      });
-    });
-</script>
   </body>
 </html>

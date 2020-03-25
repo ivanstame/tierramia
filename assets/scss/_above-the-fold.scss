@@ -571,19 +571,13 @@
 }
 
 #shop{
-  height: 100vh;
   padding: 65px 0;
   background: #fbf9f8;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
+
   @include media(">phone", "<=tablet"){
-    height: auto;
-    padding: 65px 0 95px 0;
+
   }
   h1{
-    align-self: flex-start;
     text-align: left;
     font-family: "ArbescoDT-SemiBold", Arial, sans-serif;
     color: #51453f;
@@ -591,7 +585,7 @@
     letter-spacing: 2px;
     display: inline-block;
     text-transform: capitalize;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     position: relative;
     padding-left: 6rem;
     transform-style: preserve-3d;
@@ -604,167 +598,161 @@
       text-align: center;
       padding: 0;
       align-self: unset;
-      margin-bottom: 75px;
       font-size: 2rem;
+      margin-bottom: 65px;
     }
 }
+// Explicit height?
   #shop-gallery-container{
-    display: flex;
-    flex-flow: row;
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
-    font-family: 'ArbescoDT-Book', sans-serif;
-    padding: 0 5%;
+    position: relative; //potentially unnecessary
+    width: 80%;
+    margin: 0 auto;
+
     @include media(">phone", "<=tablet"){
-      flex-wrap: nowrap;
-      overflow: hidden;
-      width: 100%;
-    }
 
-    .product-wrapper{
-      display: flex;
-      flex-flow: column;
-      justify-content: center;
-      align-items: center;
-      width: 30%;
-      transform-style: preserve-3d;
-      position: relative;
-      @include media(">phone", "<=tablet"){
-        width: 30%;
-        &:nth-of-type(1){
-
-        }
-        &:nth-of-type(2){
-
-        }
-      }
-      img{
-        width: 100%;
-        margin-bottom: 20px;
-        @include media(">phone", "<=tablet"){
-          width: 80%;
-        }
-      }
-      h4{
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        word-spacing: 1px;
-        margin-bottom: 25px;
-        position: relative;
-        font-size: 1.2rem;
-        color: $darkbrown;
-        font-family: 'ArbescoDT-Bold';
-        &::after{
-          position: absolute;
-          content: '';
-          display: block;
-          height: 2px;
-          width: 80%;
-          background: $orange;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-      }
-      p{
-        line-height: 1.4;
-        margin-bottom: 20px;
-        font-family: 'ArbescoDT-Book';
-        color: $lightBrown;
-        @include media(">phone", "<=tablet"){
-          line-height: 2;
-          font-size: 13px !important;
-          width: 80%;
-        }
-      }
-      button{
-        @include button-style;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        cursor: pointer;
-        color: $darkbrown;
-        outline: none;
-        font-family: 'ArbescoDT-SemiBold', sans-serif;
-        font-weight: 600;
-        border: 3px solid $darkbrown;
-        font-size: 1rem;
-        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
-        padding: 14px 40px 10px;
-        transition: .1s all ease-in-out;
-        &:hover{
-          border-color: #A67E5B;
-          color: #87643d;
-          transform: translateY(-1px);
-        }
-      }
     }
-    .product-wrapper::after{
-      box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
-    }
-    .product-wrapper:nth-of-type(1)::after{
+    .slider_btn{
       position: absolute;
-      display: block;
-      content: '';
-      background: url(../img/talaveradark.svg);
-      width: 12vw !important;
-      height: 12vw;
-      transform: translateZ(-1px);
-      top: 9%;
-      background-size: cover;
-      left: 15%;
-      border-radius: 50%;
-      @include media(">phone", "<=tablet"){
-        width: 50vw !important;
-        height: 50vw !important;
-        left: 50%;
-        background-position: -76px 0px;
-        transform: translateX(-50%) translateZ(-1px);
+      background: none;
+      color: inherit;
+      border: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
+      top: 50%;
+      transform: translateY(-50%);
+      img{
+        width: 25px;
       }
+      @include media(">phone", "<=tablet"){
 
       }
-      .product-wrapper:nth-of-type(2)::after{
-        position: absolute;
-        display: block;
-        content: '';
-        background: url(../img/talaveraorange.svg);
-        width: 12vw !important;
-        height: 12vw;
-        transform: translateZ(-1px);
-        top: 9%;
-        background-size: cover;
-        left: 15%;
-        border-radius: 50%;
-        @include media(">phone", "<=tablet"){
-          width: 50vw !important;
-          height: 50vw !important;
-          left: 50%;
-          background-position: -76px 0px;
-          transform: translateX(-50%) translateZ(-1px);
-        }
-        }
-        .product-wrapper:nth-of-type(3)::after{
-          position: absolute;
-          display: block;
-          content: '';
-          background: url(../img/talaverabeige.svg);
-          width: 12vw !important;
-          height: 12vw;
-          transform: translateZ(-1px);
-          top: 9%;
-          background-size: cover;
-          left: 15%;
-          border-radius: 50%;
-          @include media(">phone", "<=tablet"){
-            width: 50vw !important;
-            height: 50vw !important;
-            left: 50%;
-            background-position: -76px 0px;
-            transform: translateX(-50%) translateZ(-1px);
-          }
-          }
     }
-  }
+    .slider_btn--left{
+      left: -20px;
+      z-index: 2;
+      @include media(">phone", "<=tablet"){
+
+      }
+    }
+    .slider_btn--right{
+      right: -20px;
+      z-index: 2;
+      @include media(">phone", "<=tablet"){
+
+      }
+    }
+    .slider-track-container{
+      position:relative;
+      z-index: 1;
+      height: 100%; //only necessary if parent shop-gallery-container has explicit height.
+      @include media(">phone", "<=tablet"){
+
+      }
+      .slider-track{
+        //remove all list stylings from <ul class= ".slider-track">
+        position: relative;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        left: 0;
+        transition: 1s all ease-in-out;
+
+        @include media(">phone", "<=tablet"){
+          height: 475px;
+        }
+        .slide{
+
+          @include media(">phone", "<=tablet"){
+              width: 300px;
+              background: #fbf9f8;
+              position: absolute;
+          }
+          .product-wrapper{
+
+            @include media(">phone", "<=tablet"){
+
+            }
+            .product-image{
+              position:relative;
+              margin: 0 auto;
+              @include media(">phone", "<=tablet"){
+                width: 80%;
+
+              }
+              img {
+
+                @include media(">phone", "<=tablet"){
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+              }
+            }
+
+            h4{
+              font-weight: 600;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              word-spacing: 1px;
+              margin-bottom: 20px;
+              position: relative;
+              font-size: 1.2rem;
+              color: rgba(42,24,14,0.768627);
+              font-family: 'ArbescoDT-Bold';
+              text-align: center;
+              &:after{
+                position: absolute;
+                content: '';
+                display: block;
+                height: 2px;
+                width: 40%;
+                background: #EC9B07;
+                left: 50%;
+                transform: translateX(-50%);
+              }
+              @include media(">phone", "<=tablet"){
+
+              }
+            }
+            p{
+              line-height: 2;
+              margin-bottom: 20px;
+              @include media(">phone", "<=tablet"){
+                font-size: 13px !important;
+                padding: 0 14%;
+              }
+            }
+            .buy-btn{
+              @include button-style;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              cursor: pointer;
+              color: rgba(42,24,14,0.768627);
+              outline: none;
+              line-height: 30px;
+              height: 30px;
+              font-family: 'ArbescoDT-SemiBold', sans-serif;
+              font-weight: 600;
+              border: 2px solid rgba(42,24,14,0.768627);
+              font-size: 0.8rem;
+              box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+              padding: 0 10px;
+              display: block;
+              margin: 0 auto;
+              @include media(">phone", "<=tablet"){
+
+              }
+            }
+          } //close .product-wrapper
+        } //close .slide
+      } //close .slider-track
+    } // close .slider-track-container
+  } //close .shop-gallery-container
+} //close #shop
 
   footer {
     background: $darkbrown;
