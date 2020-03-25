@@ -667,7 +667,7 @@
         .slide{
 
           @include media(">phone", "<=tablet"){
-              width: 300px;
+              width: 75vw;
               background: #fbf9f8;
               position: absolute;
           }
