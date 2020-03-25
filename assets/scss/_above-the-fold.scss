@@ -660,7 +660,7 @@
         display: flex;
         justify-content: center;
         left: 0;
-        transition: 1s all ease-in-out;
+        transition: .65s all ease-in-out;
 
         @include media(">phone", "<=tablet"){
           height: 475px;
