@@ -27,8 +27,8 @@
           top: 10px;
           left: 5%;
           @include media(">phone", "<=tablet") {
-            width: 95px;
-            height: 95px;
+            width: 87px;
+            height: 87px;
           }
           .circle-logo{
             width: 100%;
