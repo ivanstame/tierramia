@@ -1,12 +1,48 @@
 @import "variables";
 @import "node_modules/include-media/dist/include-media";
 
+.showSlide {
+  z-index: 3 !important;
+}
 
 #above-fold{
     width:100%;
     height: 150vh;
     position:relative;
     overflow: hidden;
+    .circlelogo-wrapper{
+      position: absolute;
+      z-index: 4;
+      top: 10px;
+      left: 5%;
+      @include media(">phone", "<=tablet") {
+        width: 87px;
+        height: 87px;
+      }
+      .circle-logo{
+
+        @include media(">phone", "<=tablet") {
+          width: 100%;
+          height: 100%;
+        }
+
+      }
+    }
+    .reveal-btn-wrapper{
+      position: absolute;
+      z-index: 4;
+      @include media(">phone", "<=tablet") {
+        top: 75%;
+        width: 30px;
+        height: 30px;
+      }
+      #reveal-btn{
+        width: 100%;
+        @include media(">phone", "<=tablet") {
+
+        }
+      }
+    }
     @include media(">phone", "<=tablet") {
       height: 88vh;
       background: white;
@@ -20,31 +56,28 @@
         @include media(">phone", "<=tablet") {
         height: 75%;
         }
-        .circlelogo-wrapper{
-          position: absolute;
-          z-index: 4;
-          top: 10px;
-          left: 5%;
-          @include media(">phone", "<=tablet") {
-            width: 87px;
-            height: 87px;
-          }
-          .circle-logo{
-            width: 100%;
-            height: 100%;
-          }
-        }
+
         .carousel-image{
             position:absolute;
             width: 70%;
             height: 100%;
-            background-position: right !important;
-            background-size: cover !important;
-            background-repeat: no-repeat !important;
             &:nth-of-type(1){
                 background: url('../img/cafe_1.jpg');
-                z-index: 3;
-
+                background-position: right !important;
+                background-size: cover !important;
+                background-repeat: no-repeat !important;
+            }
+            &:nth-of-type(2){
+                background: url('../img/mugandcup.jpg');
+                background-position: right !important;
+                background-size: cover !important;
+                background-repeat: no-repeat !important;
+            }
+            &:nth-of-type(3){
+                background: url('../img/tmcoffeefarmer.jpeg');
+                background-position: 15% !important;
+                background-size: cover !important;
+                background-repeat: no-repeat !important;
             }
         }
     }
@@ -58,7 +91,7 @@
         background: transparent;
         left: 0;
         z-index: 2;
-        transition: .4s all linear;
+        transition: .3s all linear;
         @include media(">phone", "<=tablet") {
         height: 75%;
         }

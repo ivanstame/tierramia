@@ -101,3 +101,30 @@ windowPane.addEventListener('swiped-right', e => {
 windowPane.addEventListener('swiped-left', e => {
 	windowPane.style.transform = 'translateX(0)';
 });
+
+//image slideshow
+let t = 0;
+
+setInterval(function() {
+	t = t + 1;
+
+	if (t >= 16) {
+		t = 0;
+		$('#img1').show();
+		$('#img2').show();
+		$('#img3').show();
+	}
+
+	switch (t) {
+		case 5:
+			$('#img3').fadeOut('slow');
+			break;
+		case 10:
+			$('#img2').fadeOut('slow');
+			break;
+		case 15:
+			$('#img1').fadeOut('slow');
+			$('#img3').fadeIn('slow');
+			break;
+	}
+}, 1000);
