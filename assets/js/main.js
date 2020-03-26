@@ -95,7 +95,7 @@ nextButton.addEventListener('click', e => {
 const windowPane = document.querySelector('#path-window');
 
 windowPane.addEventListener('swiped-right', e => {
-	windowPane.style.transform = 'translateX(40%)';
+	windowPane.style.transform = 'translateX(35%)';
 });
 
 windowPane.addEventListener('swiped-left', e => {
