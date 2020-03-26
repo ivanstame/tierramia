@@ -22,12 +22,15 @@
         height: 75%;
         }
         .circlelogo-wrapper{
-          width: 80px;
-          height: 80px;
+
           position: absolute;
           z-index: 4;
           top: 10px;
           left: 5%;
+          @include media(">phone", "<=tablet") {
+            width: 85px;
+            height: 85px;
+          }
           .circle-logo{
             width: 100%;
             height: 100%;
