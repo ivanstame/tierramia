@@ -89,3 +89,15 @@ nextButton.addEventListener('click', e => {
 		nextButton.style.visibility = 'visible';
 	}
 });
+
+//windowPane stuff
+
+const windowPane = document.querySelector('#path-window');
+
+windowPane.addEventListener('swiped-right', e => {
+	windowPane.style.transform = 'translateX(40%)';
+});
+
+windowPane.addEventListener('swiped-left', e => {
+	windowPane.style.transform = 'translateX(0)';
+});
