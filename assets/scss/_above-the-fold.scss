@@ -93,7 +93,7 @@
             display: flex;
             flex-flow: column;
             justify-content: space-between;
-            padding-bottom: 30%;
+            padding-bottom: 20%;
             @include media(">phone", "<=tablet") {
             width: 60%;
             height: 101%;
@@ -233,6 +233,7 @@
                 line-height: 47px;
                 letter-spacing: 1px;
                 font-size: 12px;
+                margin-bottom: -30px;
               }
             }
             #shape-box{
