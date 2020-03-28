@@ -93,7 +93,7 @@
             display: flex;
             flex-flow: column;
             justify-content: space-between;
-            padding-bottom: 50px;
+            padding-bottom: 20%;
             @include media(">phone", "<=tablet") {
             width: 60%;
             height: 101%;
@@ -140,6 +140,7 @@
             #top-heading{
               transform-style: preserve-3d;
               width: 100%;
+              margin-top: -20px;
               // padding-top: 100px;
               // padding-left: 100px;
               &:after{
@@ -160,7 +161,7 @@
                 // padding: 0;
                 // padding-left: 5px;
                 &:after{
-                  height: 475% !important;
+                  height: 400% !important;
                   // top: -90% !important;
                   // left: 15px !important;
                 }
