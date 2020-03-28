@@ -1,9 +1,6 @@
 @import "variables";
 @import "node_modules/include-media/dist/include-media";
 
-.showSlide {
-  z-index: 3 !important;
-}
 
 #above-fold{
     width:100%;
@@ -26,21 +23,6 @@
           height: 100%;
         }
 
-      }
-    }
-    .reveal-btn-wrapper{
-      position: absolute;
-      z-index: 4;
-      @include media(">phone", "<=tablet") {
-        top: 75%;
-        width: 30px;
-        height: 30px;
-      }
-      #reveal-btn{
-        width: 100%;
-        @include media(">phone", "<=tablet") {
-
-        }
       }
     }
     @include media(">phone", "<=tablet") {
@@ -108,8 +90,12 @@
             width: 200%;
             height: 101%;
             background: #fff;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            padding-bottom: 30px;
             @include media(">phone", "<=tablet") {
-            width: 100%;
+            width: 60%;
             height: 101%;
             margin-left: -2px;
             }
@@ -152,10 +138,10 @@
               }
             }
             #top-heading{
-              position: relative;
               transform-style: preserve-3d;
-              padding-top: 100px;
-              padding-left: 100px;
+              width: 100%;
+              // padding-top: 100px;
+              // padding-left: 100px;
               &:after{
                 content: '';
                 display: block;
@@ -170,13 +156,13 @@
                 left: 15px;
               }
               @include media(">phone", "<=tablet") {
-                top: 100px;
-                padding: 0;
-                padding-left: 5px;
+                // top: 100px;
+                // padding: 0;
+                // padding-left: 5px;
                 &:after{
                   height: 475% !important;
-                  top: -90% !important;
-                  left: 15px !important;
+                  // top: -90% !important;
+                  // left: 15px !important;
                 }
               }
 
@@ -184,27 +170,28 @@
               h3{
                 font-family: "Viner Hand ITC", cursive;
                 color: $darkbrown;
-                font-size: 2.4rem;
-                position: relative;
-                left: -100px;
-                margin-bottom: 10px;
+                margin-bottom: 20px;
+                // font-size: 2.4rem;
+                // position: relative;
+                // left: -100px;
+                // margin-bottom: 10px;
               @include media(">phone", "<=tablet"){
-                margin-bottom: 14px;
-                font-size: 1rem;
-                left:0;
+                // margin-bottom: 14px;
+                // font-size: 1rem;
+                // left:0;
               }
               }
               h1{
                 font-family: "ArbescoDT-Bold", Arial, sans-serif;
                 color: #EC9B07;
-                font-size: 6rem;
+                // font-size: 6rem;
                 letter-spacing: 2px;
                 text-transform: capitalize;
-                position: relative;
-                left: -60px;
+                // position: relative;
+                // left: -60px;
                 @include media(">phone", "<=tablet"){
-                  left:0;
-                  font-size: 2.3rem;
+                  // left:0;
+                  // font-size: 2.3rem;
                 }
               }
 
@@ -221,9 +208,7 @@
               letter-spacing: 1px;
               font-weight: 600;
               color: #5b4c41;
-              margin: 35px 0 -20px 102px;
               font-size: 20px;
-              position: relative;
               font-family: 'ArbescoDT-Bold', sans-serif;
               transition: .15s all ease-in-out;
               cursor: pointer;
@@ -247,9 +232,6 @@
                 line-height: 47px;
                 letter-spacing: 1px;
                 font-size: 12px;
-                margin: 0 0 0 20px;
-                top: 160px;
-                left: 5px;
               }
             }
             #shape-box{

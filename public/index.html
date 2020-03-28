@@ -28,9 +28,6 @@
       <div class="circlelogo-wrapper">
         <img class = "circle-logo" src="./img/circlelogo.png" />
       </div>
-      <div class="reveal-btn-wrapper">
-        <img id="reveal-btn" src="./img/rightarrow.png" />
-      </div>
   		<div id="carousel-stack-container">
 
   			<div class="carousel-image" id="img1"></div>
@@ -53,8 +50,8 @@
   					<li class="af-nav-item">Join Us</li>
   				</ul>
   				<div id="top-heading">
-  					<h3>El mejor cafe viene de tierra mia</h3>
-  					<h1>Bienvenidos</h1>
+  					<h3 id="mejor-headline">El mejor cafe viene de tierra mia</h3>
+  					<h1 id="bien-headline">Bienvenidos</h1>
   				</div>
           <button id="cta">Find A Cafe Near You</button>
   				<div id="shape-box">
@@ -177,7 +174,13 @@
     </footer>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script type="text/javascript" src="./js/dist/swiped-events.min.js"></script>
+    <script type="text/javascript" src="./js/dist/jquery.fittext.js"></script>
     <script type="text/javascript" src="./js/dist/main.js"></script>
+    <script>
+      jQuery("#bien-headline").fitText(.65);
+      jQuery("#mejor-headline").fitText(1.5);
+    </script>
   </body>
 </html>
