@@ -93,7 +93,7 @@
             display: flex;
             flex-flow: column;
             justify-content: space-between;
-            padding-bottom: 20%;
+            padding-bottom: 30%;
             @include media(">phone", "<=tablet") {
             width: 60%;
             height: 101%;
