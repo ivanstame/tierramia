@@ -99,7 +99,7 @@
             }
             &:nth-of-type(2){
                 background: url('../img/o.jpg');
-                background-position: 260%;
+                background-position: 100%;
                 background-size: cover;
                 background-repeat: no-repeat;
                 @include media(">=desktop"){
