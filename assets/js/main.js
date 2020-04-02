@@ -9,7 +9,12 @@ const slideWidth = slides[0].getBoundingClientRect().width;
 
 // apparently you can set the parameters and anonymous function contents to an operation as a variable
 const setSlidePosition = (slide, index) => {
+	slide.style.position = 'absolute';
 	slide.style.left = slideWidth * index + 'px';
+};
+const resetSlidePosition = (slide, index) => {
+	slide.style.position = 'unset';
+	slide.style.width = '33%';
 };
 
 const addSwipeToSlides = (slide, index) => {
@@ -128,3 +133,14 @@ setInterval(function() {
 			break;
 	}
 }, 1000);
+
+//when the window resizes we have to have the slides reposition themselves
+$(window).on('resize', function() {
+	if ($(window).width() < 1024) {
+		slides.forEach(setSlidePosition);
+		slides.forEach(addSwipeToSlides);
+		console.log('resized');
+	} else {
+		console.log('no-need');
+	}
+});

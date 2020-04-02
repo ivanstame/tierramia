@@ -3,46 +3,93 @@
 
 
 #above-fold{
+    background: white;
     width:100%;
-    height: 150vh;
+    height: 88vh;
     position:relative;
     overflow: hidden;
+    @include media(">=tablet"){
+
+      @include media("landscape") {
+
+      }
+
+    } //end tablet mq for #above-fold
+    @include media(">=desktop") {
+    height: 135vh;
+    }
     .circlelogo-wrapper{
       position: absolute;
       z-index: 4;
       top: 10px;
       left: 5%;
-      @include media(">phone", "<=tablet") {
-        width: 87px;
-        height: 87px;
-      }
-      .circle-logo{
+      width: 12vw;
+      height: 12vw;
+      @include media(">=tablet"){
 
-        @include media(">phone", "<=tablet") {
-          width: 100%;
-          height: 100%;
+        @include media("landscape") {
+
+        }
+
+      } //end tablet mq
+      @include media(">=desktop") {
+
+      } //end desktop mq
+      .circle-logo{
+        width: 100%;
+        height: 100%;
+        @include media(">=tablet") {
+
+        }
+        @include media(">=desktop"){
+
         }
 
       }
     }
-    @include media(">phone", "<=tablet") {
-      height: 88vh;
-      background: white;
-}
+
+
 
     #carousel-stack-container{
         position:absolute;
-        height:100%;
+        height:75%;
         width:100%;
         z-index: 1;
-        @include media(">phone", "<=tablet") {
-        height: 75%;
-        }
+        @include media(">=phone"){  //phone defaults above
+      	    @include media("landscape"){ //phone landscape
 
+      	    }
+      	}
+      	@include media(">=tablet"){    //tablet portrait
+              height: 90%;
+              @include media("landscape") {  //tablet landscape
+
+              }
+
+            }
+        @include media(">=desktop") {  //desktop
+            height: 100%;
+        }
         .carousel-image{
             position:absolute;
             width: 70%;
             height: 100%;
+            @include media(">=phone"){  //phone defaults above
+          	    @include media("landscape"){ //phone landscape
+
+          	    }
+          	}
+            //
+          	@include media(">=tablet"){    //tablet portrait
+
+                  @include media("landscape") {  //tablet landscape
+
+                  }
+
+                }
+            @include media(">=desktop") {  //desktop
+
+            }
             &:nth-of-type(1){
                 background: url('../img/tmcoffeefarmer.jpeg');
                 background-position: 15%  !important;
@@ -50,9 +97,9 @@
                 background-repeat: no-repeat !important;
             }
             &:nth-of-type(2){
-                background: url('../img/cafe_2.jpg');
-                background-position: right !important;
-                background-size: cover !important;
+                background: url('../img/o.jpg');
+                background-position: left !important;
+                background-size: contain !important;
                 background-repeat: no-repeat !important;
             }
             &:nth-of-type(3){
@@ -69,35 +116,76 @@
         flex-direction: row;
         flex-wrap: nowrap;
         width: 100%;
-        height: 100%;
         background: transparent;
         left: 0;
         z-index: 2;
         transition: .3s all linear;
-        @include media(">phone", "<=tablet") {
         height: 75%;
+        @include media(">=phone"){  //phone defaults above
+            @include media("landscape"){ //phone landscape
+
+            }
+        }
+        //
+        @include media(">=tablet"){    //tablet portrait
+          height: 90%;
+              @include media("landscape") {  //tablet landscape
+
+              }
+
+            }
+        @include media(">=desktop") {  //desktop
+          height: 100%;
         }
         #path-curve{
           height: 100%;
           width: 40%;
           filter: brightness(4.5);
-          @include media(">phone", "<=tablet") {
           height: 101%;
           margin-left: -1px;
+          @include media(">=phone"){  //phone defaults above
+              @include media("landscape"){ //phone landscape
+
+              }
           }
+          //
+          @include media(">=tablet"){    //tablet portrait
+
+                @include media("landscape") {  //tablet landscape
+
+                }
+
+              }
+          @include media(">=desktop") {  //desktop
+
+          }
+
         }
         #white-block{
-            width: 200%;
+            width: 60%;
             height: 101%;
             background: #fff;
             display: flex;
             flex-flow: column;
             justify-content: space-between;
+            align-items: center;
             padding-bottom: 20%;
-            @include media(">phone", "<=tablet") {
-            width: 60%;
-            height: 101%;
             margin-left: -2px;
+            @include media(">=phone"){  //phone defaults above
+                @include media("landscape"){ //phone landscape
+
+                }
+            }
+            //
+            @include media(">=tablet"){    //tablet portrait
+
+                  @include media("landscape") {  //tablet landscape
+
+                  }
+
+                }
+            @include media(">=desktop") {  //desktop
+              padding-bottom: 30%;
             }
             #af-nav{
               display:flex;
@@ -105,111 +193,175 @@
               flex-wrap: nowrap;
               justify-content: space-around;
               align-items: center;
-              padding: 30px 50px 30px 0;
-              font-weight: 600;
-              @include media(">phone", "<=tablet") {
               padding: 45px 20px 30px 0;
+              font-weight: 600;
               width: 100%;
+              @include media(">=phone"){  //phone defaults above
+                  @include media("landscape"){ //phone landscape
+
+                  }
+              }
+              //
+              @include media(">=tablet"){    //tablet portrait
+
+                    @include media("landscape") {  //tablet landscape
+
+                    }
+
+                  }
+              @include media(">=desktop") {  //desktop
+                padding-top: 70px;
+              }
               li{
-                font-size: 10px;
-              }
-              li:nth-of-type(1){
-                display: none;
-              }
-              li:nth-of-type(6){
-                display: none;
-              }
-              }
-              .af-nav-item{
+                font-size: 2.3vw;
                 text-transform: uppercase;
                 letter-spacing: 1px;
                 font-family: "ArbescoDT-Bold", Arial, sans-serif;
                 color: $darkbrown;
                 cursor: pointer;
+                @include media(">=phone"){  //phone defaults above
+                    @include media("landscape"){ //phone landscape
 
+                    }
+                }
+                //
+                @include media(">=tablet"){    //tablet portrait
+
+                      @include media("landscape") {  //tablet landscape
+
+                      }
+
+                    }
+                @include media(">=desktop") {  //desktop
+                  font-size: 1.25vw;
+                }
               }
-            }
-            #logo-container{
-              display: inline-block;
-              img{
-                border-radius: 50%;
-                width: 75px;
-                padding: 0;
+              li:nth-of-type(5){
+                display: none;
+                @include media(">=phone"){  //phone defaults above
+                    @include media("landscape"){ //phone landscape
+                    }
+                }
+                //
+                @include media(">=tablet"){    //tablet portrait
+                  display: inline-block;
+                      @include media("landscape") {  //tablet landscape
+                        display: inline-block;
+                      }
+                    }
+                @include media(">=desktop") {  //desktop
+                  display: inline-block;
+                }
               }
             }
             #top-heading{
               transform-style: preserve-3d;
               width: 100%;
-              margin-top: -20px;
-              // padding-top: 100px;
-              // padding-left: 100px;
+              margin-top: 25px;
+              @include media(">=phone"){  //phone defaults above
+                  @include media("landscape"){ //phone landscape
+
+                  }
+              }
+              @include media(">=tablet"){    //tablet portrait
+
+                    @include media("landscape") {  //tablet landscape
+
+                    }
+                  }
+              @include media(">=desktop") {  //desktop
+                margin-top: 50px;
+                text-align: center;
+              }
               &:after{
                 content: '';
                 display: block;
                 position: absolute;
                 width: 100%;
-                height:175%;
+                height:400%;
                 background-image:url('../img/talavera.svg');
                 background-repeat: no-repeat;
                 opacity: 0.06;
                 transform: translateZ(-1px);
-                top: -100%;
+                top: -50%;
                 left: 15px;
-              }
-              @include media(">phone", "<=tablet") {
-                // top: 100px;
-                // padding: 0;
-                // padding-left: 5px;
-                &:after{
-                  height: 400% !important;
-                  // top: -90% !important;
-                  // left: 15px !important;
+                @include media(">=phone"){  //phone defaults above
+                    @include media("landscape"){ //phone landscape
+
+                    }
+                }
+                @include media(">=tablet"){    //tablet portrait
+
+                      @include media("landscape") {  //tablet landscape
+
+                      }
+                    }
+                @include media(">=desktop") {  //desktop
+                  height: 223%;
+                  margin-top: 30px;
                 }
               }
-
-
               h3{
                 font-family: "Viner Hand ITC", cursive;
                 color: $darkbrown;
                 margin-bottom: 20px;
-                // font-size: 2.4rem;
-                // position: relative;
-                // left: -100px;
-                // margin-bottom: 10px;
-              @include media(">phone", "<=tablet"){
-                // margin-bottom: 14px;
-                // font-size: 1rem;
-                // left:0;
-              }
+                font-size: 4vw;
+                @include media(">=phone"){  //phone defaults above
+                    @include media("landscape"){ //phone landscape
+
+                    }
+                }
+                @include media(">=tablet"){    //tablet portrait
+
+                      @include media("landscape") {  //tablet landscape
+
+                      }
+                    }
+                @include media(">=desktop") {  //desktop
+                  font-size: 3vw;
+                }
               }
               h1{
                 font-family: "ArbescoDT-Bold", Arial, sans-serif;
                 color: #EC9B07;
-                // font-size: 6rem;
                 letter-spacing: 2px;
-                text-transform: capitalize;
-                // position: relative;
-                // left: -60px;
-                @include media(">phone", "<=tablet"){
-                  // left:0;
-                  // font-size: 2.3rem;
+                text-transform: uppercase;
+                font-size: 7.25vw;
+                @include media(">=phone"){  //phone defaults above
+                    @include media("landscape"){ //phone landscape
+
+                    }
+                }
+                @include media(">=tablet"){    //tablet portrait
+
+                      @include media("landscape") {  //tablet landscape
+
+                      }
+                    }
+                @include media(">=desktop") {  //desktop
+                  font-size: 6vw;
                 }
               }
 
             }
+
+
+
+
             button#cta {
               @include button-style;
               transform-style: preserve-3d;
-              border: 3px solid #5B4C41;
-              padding: 0px 45px;
-              height: 83px;
-              outline: none;
-              line-height: 80px;
               text-transform: uppercase;
+              outline: none;
+              border: 3px solid #5B4C41;
+              padding: 0px 15px;
+              height: 50px;
+              line-height: 47px;
               letter-spacing: 1px;
+              font-size: 12px;
+              margin-bottom: 30px;
               font-weight: 600;
               color: #5b4c41;
-              font-size: 20px;
               font-family: 'ArbescoDT-Bold', sans-serif;
               transition: .15s all ease-in-out;
               cursor: pointer;
@@ -220,54 +372,99 @@
               &:active{
                 outline: none;
               }
-
               &:hover{
                 border-color: #A67E5B;
                 color: #87643d;
                 box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
                 transform: translateY(-1px);
               }
-              @include media(">phone", "<=tablet"){
-                padding: 0px 15px;
-                height: 50px;
-                line-height: 47px;
+              @include media(">=phone"){  //phone defaults above
+                  @include media("landscape"){ //phone landscape
+
+                  }
+              }
+              @include media(">=tablet"){    //tablet portrait
+
+                    @include media("landscape") {  //tablet landscape
+
+                    }
+                  }
+              @include media(">=desktop") {  //desktop
+                padding: 0px 45px;
+                height: 63px;
+                line-height: 60px;
                 letter-spacing: 1px;
-                font-size: 12px;
-                margin-bottom: 30px;
+                font-size: 20px;
               }
             }
             #shape-box{
-              margin-top: 210px;
-              position: relative;
-              left: -250px;
-              @include media(">phone", "<=tablet"){
-                position: absolute;
-                bottom: 0px;
-                width: 75%;
-                left: 55%;
-                transform: translateX(-50%) translateY(75%)!important;
-                transform-style: preserve-3d;
-                margin: 0;
+              position: absolute;
+              bottom: 0px;
+              width: 75%;
+              left: 55%;
+              transform: translateX(-50%) translateY(75%);
+              transform-style: preserve-3d;
+              margin: 0;
+              @include media(">=phone"){  //phone defaults above
+                  @include media("landscape"){ //phone landscape
+
+                  }
+              }
+              @include media(">=tablet"){    //tablet portrait
+
+                    @include media("landscape") {  //tablet landscape
+
+                    }
+                  }
+              @include media(">=desktop") {  //desktop
+                transform: translateX(-50%) translateY(-35%);
+                left: 50%;
+                width: 60%;
               }
               #shaper{
-                float: left;
-                shape-outside: polygon(0px 0px, 291px 0px, -44px 300px);
-                width: 350px;
-                height: 270px;
-                @include media(">phone", "<=tablet"){
-                  display: none;
+                display: none;
+                @include media(">=phone"){  //phone defaults above
+                    @include media("landscape"){ //phone landscape
+
+                    }
                 }
+                @include media(">=tablet"){    //tablet portrait
+
+                      @include media("landscape") {  //tablet landscape
+
+                      }
+                    }
+                @include media(">=desktop") {  //desktop
+                  display: block;
+                  float: left;
+                  shape-outside: polygon(0px 0px, 291px 0px, -44px 300px);
+                  width: 350px;
+                  height: 225px;
+                }
+
               }
               p{
                 font-family: 'ArbescoDT-Book', sans-serif;
-                width: 120%;
-                font-size: 22px;
+                width: 100%;
+                font-size: 13px;
                 line-height: 2;
                 color: #685a54;
-                @include media(">phone", "<=tablet"){
-                  width: 100%;
-                  font-size: 13px !important;
+                @include media(">=phone"){  //phone defaults above
+                    @include media("landscape"){ //phone landscape
+
+                    }
                 }
+                @include media(">=tablet"){    //tablet portrait
+
+                      @include media("landscape") {  //tablet landscape
+
+                      }
+                    }
+                @include media(">=desktop") {  //desktop
+                  width: 120%;
+                  font-size: 1.554vw;
+                }
+
                 span{
                   color: $orange;
                   cursor: pointer;
@@ -281,17 +478,28 @@
             }
         }
     }
+
 }
 
 #horchata{
-  height: 100vh;
-  background: url("../img/talaverabeige3.svg");
-  background-size: 30%;
   position: relative;
-  padding: 65px 0;
-  @include media(">phone", "<=tablet"){
-    height: 100vh;
-    padding: 50px 0;
+  height: 100vh;
+  padding: 45px 0;
+  background: url("../img/tileblock2.png");
+  background-size: 3.4%;
+  @include media(">=phone"){  //phone defaults above
+      @include media("landscape"){ //phone landscape
+
+      }
+  }
+  @include media(">=tablet"){    //tablet portrait
+
+        @include media("landscape") {  //tablet landscape
+
+        }
+      }
+  @include media(">=desktop") {  //desktop
+    padding: 65px 0;
   }
   &::before{
     position: absolute;
@@ -303,67 +511,122 @@
     top: -2px;
     left: 2px;
     z-index: 9;
-    @include media(">phone", "<=tablet"){
-
-    }
   }
 
   #promo-container{
     display: grid;
     height: 100%;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    @include media(">phone", "<=tablet"){
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    @include media(">=phone"){  //phone defaults above
+        @include media("landscape"){ //phone landscape
+
+        }
     }
+    @include media(">=tablet"){    //tablet portrait
+
+          @include media("landscape") {  //tablet landscape
+
+          }
+        }
+    @include media(">=desktop") {  //desktop
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+    }
+
     .promo-text{
       background: white;
       display: flex;
       flex-flow: column;
       justify-content: space-between;
       align-items: center;
-      padding: 9% 15%;
       font-family: 'ArbescoDT-Book', sans-serif;
-      @include media(">phone", "<=tablet"){
-        grid-row: 2/3;
-        padding: 8% 10%;
+      grid-row: 2/3;
+      padding: 8% 10%;
+      @include media(">=phone"){  //phone defaults above
+          @include media("landscape"){ //phone landscape
+
+          }
       }
+      @include media(">=tablet"){    //tablet portrait
+
+            @include media("landscape") {  //tablet landscape
+
+            }
+          }
+      @include media(">=desktop") {  //desktop
+        padding: 9% 15%;
+        grid-row: unset;
+      }
+
       h3{
         text-transform: uppercase;
         font-family: 'ArbescoDT-Bold', sans-serif;
         color: #ec9b07;
-        font-size: 1.25rem;
-        @include media(">phone", "<=tablet"){
-          font-size: 1.1rem;
+        font-size: 1.1rem;
+        @include media(">=phone"){  //phone defaults above
+            @include media("landscape"){ //phone landscape
+
+            }
         }
+        @include media(">=tablet"){    //tablet portrait
+
+              @include media("landscape") {  //tablet landscape
+
+              }
+            }
+        @include media(">=desktop") {  //desktop
+          font-size: 1.25rem;
+        }
+
       }
       h2{
         text-transform: capitalize;
         font-family: 'Viner Hand ITC';
         color: #685a54;
-        font-size: 2.2rem;
-        @include media(">phone", "<=tablet"){
-          font-size: 1.5rem;
+        font-size: 1.5rem;
+        @include media(">=phone"){  //phone defaults above
+            @include media("landscape"){ //phone landscape
+
+            }
         }
+        @include media(">=tablet"){    //tablet portrait
+
+              @include media("landscape") {  //tablet landscape
+
+              }
+            }
+        @include media(">=desktop") {  //desktop
+          font-size: 2.2rem;
+        }
+
       }
       p{
         font-family: 'ArbescoDT-Book', sans-serif;
         color: #685a54;
-        font-size: 1.1rem;
-        line-height: 1.5;
-        @include media(">phone", "<=tablet"){
-          font-size: 13px !important;
-          line-height: 2;
+        font-size: 13px;
+        line-height: 2;
+        @include media(">=phone"){  //phone defaults above
+            @include media("landscape"){ //phone landscape
+
+            }
         }
+        @include media(">=tablet"){    //tablet portrait
+
+              @include media("landscape") {  //tablet landscape
+
+              }
+            }
+        @include media(">=desktop") {  //desktop
+          font-size: 1.33vw;
+          line-height: 2.2;
+        }
+
       }
       a{
         text-decoration: none;
         color: #ec9b07;
         font-family: 'ArbescoDT-Bold';
-        @include media(">phone", "<=tablet"){
-
-        }
       }
 
     }
@@ -372,9 +635,22 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      @include media(">phone", "<=tablet"){
-        grid-row: 1/2;
+      grid-row: 1/2;
+      @include media(">=phone"){  //phone defaults above
+          @include media("landscape"){ //phone landscape
+
+          }
       }
+      @include media(">=tablet"){    //tablet portrait
+
+            @include media("landscape") {  //tablet landscape
+
+            }
+          }
+      @include media(">=desktop") {  //desktop
+        grid-row: unset;
+      }
+
     }
   }
 }
@@ -386,10 +662,21 @@
   flex-flow: column;
   justify-content: center;
   position: relative;
-  height: 100vh;
-  @include media(">phone", "<=tablet"){
-    height: auto;
-    padding: 50px 0px 75px 0;
+  height: auto;
+  padding: 50px 0px 75px 0;
+  @include media(">=phone"){  //phone defaults above
+      @include media("landscape"){ //phone landscape
+
+      }
+  }
+  @include media(">=tablet"){    //tablet portrait
+
+        @include media("landscape") {  //tablet landscape
+
+        }
+      }
+  @include media(">=desktop") {  //desktop
+    height: 110vh;
   }
     &::before{
       position: absolute;
@@ -403,72 +690,119 @@
       z-index: 9;
     }
     h1{
-      text-align: left;
+      //these styles should have mixins
+      text-align: center;
+      padding: 0;
+      margin-bottom: 60px;
+      font-size: 2rem;
       font-family: "ArbescoDT-SemiBold", Arial, sans-serif;
       color: #51453f;
-      font-size: 2.75rem;
       letter-spacing: 2px;
       display: inline-block;
       text-transform: capitalize;
-      margin-bottom: 50px;
       position: relative;
-      padding-left: 6rem;
       transform-style: preserve-3d;
       text-decoration: underline;
       text-underline-position: under;
       text-decoration-color: #ec9b07;
       text-decoration-style: double;
-      @include media(">phone", "<=tablet"){
-        text-align: center;
-        padding: 0;
-        margin-bottom: 60px;
-        font-size: 2rem;
+      @include media(">=phone"){  //phone defaults above
+          @include media("landscape"){ //phone landscape
+
+          }
       }
+      @include media(">=tablet"){    //tablet portrait
+
+            @include media("landscape") {  //tablet landscape
+
+            }
+          }
+      @include media(">=desktop") {  //desktop
+        text-align: left;
+        padding-left: 6rem;
+        margin-bottom: 50px;
+        font-size: 2.75rem;
+      }
+
   }
 
     #location-container{
       display: flex;
-      -ms-flex-flow: row;
-      flex-flow: row;
-      -ms-flex-pack: distribute;
-      justify-content: space-around;
-      -ms-flex-align: center;
+      flex-flow: column;
       padding: 0 5%;
-      @include media(">phone", "<=tablet"){
-        flex-flow: column;
-        justify-content: space-around;
-        align-items: center;
+      justify-content: space-around;
+      align-items: center;
+      @include media(">=phone"){  //phone defaults above
+          @include media("landscape"){ //phone landscape
+
+          }
       }
+      @include media(">=tablet"){    //tablet portrait
+
+            @include media("landscape") {  //tablet landscape
+
+            }
+          }
+      @include media(">=desktop") {  //desktop
+        flex-flow: row;
+      }
+
       .location{
         position: relative;
-        width: 350px;
-        height: 425px;
+        width: 65vw;
+        height: 52vw;
+        margin-bottom: 50px;
         border: 1px solid #897e79;
         box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
         overflow: hidden;
         border-radius: 3px;
         cursor: pointer;
-        @include media(">phone", "<=tablet"){
-          width: 65vw;
-          height: 52vw;
-          margin-bottom: 50px;
-          &:last-of-type{
-            margin-bottom: 0;
+        @include media(">=phone"){  //phone defaults above
+            @include media("landscape"){ //phone landscape
+
+            }
+        }
+        @include media(">=tablet"){    //tablet portrait
+
+              @include media("landscape") {  //tablet landscape
+
+              }
+            }
+        @include media(">=desktop") {  //desktop
+          width: 350px;
+          height: 425px
+        }
+        &:last-of-type{
+          margin-bottom: 0;
+          @include media(">=desktop") {  //desktop
+            margin-bottom: 50px;
           }
         }
+
         .zoomable-bg{
           width: 100%;
           height: 100%;
           background-size: cover;
           background-repeat: no-repeat;
-          transition: .2s all ease-in-out;
-          &:hover{
-            transform: scale(1.2);
+          transition: none;
+          @include media(">=phone"){  //phone defaults above
+              @include media("landscape"){ //phone landscape
+
+              }
           }
-          @include media(">phone", "<=tablet"){
-            transition: none;
-            &:hover{
-              transform: none !important;
+          @include media(">=tablet"){    //tablet portrait
+
+                @include media("landscape") {  //tablet landscape
+
+                }
+              }
+          @include media(">=desktop") {  //desktop
+            transition: .2s all ease-in-out;
+          }
+          &:hover{
+            transform: none;
+            @include media(">=desktop"){
+              transform: scale(1.2);
             }
           }
         }
@@ -502,21 +836,30 @@
         h3{
           font-family: "ArbescoDT-SemiBold", sans-serif;
           color: white;
-          font-size: 2rem;
+          font-size: 1.3rem;
           text-transform: uppercase;
           text-align: center;
           width: 100%;
-          padding-top: 11px;
-          line-height: 1.4;
+          height: 53px;
+          line-height: 50px;
           background: rgba(87,73,66,0.85);
           border-top: 3px solid $orange;
           border-bottom: 3px solid $orange;
-          @include media(">phone", "<=tablet"){
-            padding: 0;
-            height: 53px;
-            line-height: 50px;
-            font-size: 1.3rem;
+          @include media(">=phone"){  //phone defaults above
+              @include media("landscape"){ //phone landscape
+
+              }
           }
+          @include media(">=tablet"){    //tablet portrait
+
+                @include media("landscape") {  //tablet landscape
+
+                }
+              }
+          @include media(">=desktop") {  //desktop
+            font-size: 2rem;
+          }
+
         }
       }
     }
@@ -525,32 +868,66 @@
 
 #sourcing{
   height: 100vh;
-  background: url("../img/talaverabeige3.svg");
-  background-size: 30%;
+  background: url("../img/tileblock2.png");
+  background-size: 3.4%;
   position: relative;
-  padding: 65px 0;
-  @include media(">phone", "<=tablet"){
-    height: 100vh;
-    padding: 50px 0;
-  }
+  padding: 45px 0;
+  @include media(">=phone"){  //phone defaults above
+      @include media("landscape"){ //phone landscape
 
+      }
+  }
+  @include media(">=tablet"){    //tablet portrait
+
+        @include media("landscape") {  //tablet landscape
+
+        }
+      }
+  @include media(">=desktop") {  //desktop
+    padding: 65px 0;
+  }
   .promo-container{
     display: grid;
     height: 100%;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    @include media(">phone", "<=tablet"){
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    @include media(">=phone"){  //phone defaults above
+        @include media("landscape"){ //phone landscape
+
+        }
     }
+    @include media(">=tablet"){    //tablet portrait
+
+          @include media("landscape") {  //tablet landscape
+
+          }
+        }
+    @include media(">=desktop") {  //desktop
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+    }
+
     .promo-photo{
       background: url('../img/farmer.jpg');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      @include media(">phone", "<=tablet"){
-        grid-row: 1/2;
+      grid-row: 1/2;
+      @include media(">=phone"){  //phone defaults above
+          @include media("landscape"){ //phone landscape
+
+          }
       }
+      @include media(">=tablet"){    //tablet portrait
+
+            @include media("landscape") {  //tablet landscape
+
+            }
+          }
+      @include media(">=desktop") {  //desktop
+        grid-row: unset;
+      }
+
     }
     .promo-text{
       background: white;
@@ -558,39 +935,88 @@
       flex-flow: column;
       justify-content: space-between;
       align-items: center;
-      padding: 9% 15%;
-      @include media(">phone", "<=tablet"){
-        grid-row: 2/3;
-        padding: 8% 10%;
+      padding: 8% 10%;
+      grid-row: 2/3;
+      @include media(">=phone"){  //phone defaults above
+          @include media("landscape"){ //phone landscape
+
+          }
       }
+      @include media(">=tablet"){    //tablet portrait
+
+            @include media("landscape") {  //tablet landscape
+
+            }
+          }
+      @include media(">=desktop") {  //desktop
+        grid-row: unset;
+        padding: 9% 15%;
+      }
+
       h3{
         text-transform: uppercase;
         font-family: 'ArbescoDT-Bold', sans-serif;
         color: #ec9b07;
-        font-size: 1.25rem;
-        @include media(">phone", "<=tablet"){
-          font-size: 1.1rem;
+        font-size: 1.1rem;
+        @include media(">=phone"){  //phone defaults above
+            @include media("landscape"){ //phone landscape
+
+            }
         }
+        @include media(">=tablet"){    //tablet portrait
+
+              @include media("landscape") {  //tablet landscape
+
+              }
+            }
+        @include media(">=desktop") {  //desktop
+          font-size: 1.25rem;
+        }
+
       }
       h2{
         text-transform: capitalize;
         font-family: 'Viner Hand ITC';
         color: #685a54;
         font-size: 2.2rem;
-        line-height: 1.3;
-        @include media(">phone", "<=tablet"){
-          font-size: 1.5rem;
+        font-size: 1.5rem;
+        @include media(">=phone"){  //phone defaults above
+            @include media("landscape"){ //phone landscape
+
+            }
         }
+        @include media(">=tablet"){    //tablet portrait
+
+              @include media("landscape") {  //tablet landscape
+
+              }
+            }
+        @include media(">=desktop") {  //desktop
+          line-height: 1.3;
+        }
+
       }
       p{
         font-family: 'ArbescoDT-Book', sans-serif;
         color: #685a54;
-        font-size: 1.1rem;
-        line-height: 1.5;
-        @include media(">phone", "<=tablet"){
-          font-size: 13px !important;
-          line-height: 2;
+        font-size: 13px;
+        line-height: 2;
+        @include media(">=phone"){  //phone defaults above
+            @include media("landscape"){ //phone landscape
+
+            }
         }
+        @include media(">=tablet"){    //tablet portrait
+
+              @include media("landscape") {  //tablet landscape
+
+              }
+            }
+        @include media(">=desktop") {  //desktop
+          font-size: 1.33vw;
+          line-height: 2.2;
+        }
+
       }
       a{
         text-decoration: none;
@@ -603,47 +1029,82 @@
 }
 
 #shop{
-  padding: 65px 0 95px 0;
+  padding-top: 60px;
   background: #fbf9f8;
   overflow-x: hidden;
+  @include media(">=phone"){  //phone defaults above
+      @include media("landscape"){ //phone landscape
 
-  @include media(">phone", "<=tablet"){
-
+      }
   }
+  @include media(">=tablet"){    //tablet portrait
+
+        @include media("landscape") {  //tablet landscape
+
+        }
+      }
+  @include media(">=desktop") {  //desktop
+    height: 130vh;
+  }
+
   h1{
-    text-align: left;
+    display: block;
+    text-align: center;
+    padding: 0;
+    align-self: unset;
+    font-size: 2rem;
+    margin-bottom: 65px;
     font-family: "ArbescoDT-SemiBold", Arial, sans-serif;
     color: #51453f;
-    font-size: 2.75rem;
     letter-spacing: 2px;
-    display: inline-block;
     text-transform: capitalize;
     margin-bottom: 30px;
     position: relative;
-    padding-left: 6rem;
     transform-style: preserve-3d;
     text-decoration: underline;
     text-underline-position: under;
     text-decoration-color: #ec9b07;
     text-decoration-style: double;
-    @include media(">phone", "<=tablet"){
-      display: block;
-      text-align: center;
-      padding: 0;
-      align-self: unset;
-      font-size: 2rem;
-      margin-bottom: 65px;
+    @include media(">=phone"){  //phone defaults above
+        @include media("landscape"){ //phone landscape
+
+        }
     }
+    @include media(">=tablet"){    //tablet portrait
+
+          @include media("landscape") {  //tablet landscape
+
+          }
+        }
+    @include media(">=desktop") {  //desktop
+      display: inline-block;
+      text-align: left;
+      padding-left: 6rem;
+      font-size: 2.75rem;
+      margin-bottom: 60px;
+    }
+
 }
 // Explicit height?
   #shop-gallery-container{
     position: relative; //potentially unnecessary
     width: 80%;
     margin: 0 auto;
+    @include media(">=phone"){  //phone defaults above
+        @include media("landscape"){ //phone landscape
 
-    @include media(">phone", "<=tablet"){
+        }
+    }
+    @include media(">=tablet"){    //tablet portrait
+
+          @include media("landscape") {  //tablet landscape
+
+          }
+        }
+    @include media(">=desktop") {  //desktop
 
     }
+
     .slider_btn{
       position: absolute;
       background: none;
@@ -655,37 +1116,101 @@
       outline: inherit;
       top: 50%;
       transform: translateY(-50%);
+      @include media(">=phone"){  //phone defaults above
+          @include media("landscape"){ //phone landscape
+
+          }
+      }
+      @include media(">=tablet"){    //tablet portrait
+
+            @include media("landscape") {  //tablet landscape
+
+            }
+          }
+      @include media(">=desktop") {  //desktop
+        display: none;
+      }
       img{
         width: 25px;
-      }
-      @include media(">phone", "<=tablet"){
+        @include media(">=phone"){  //phone defaults above
+            @include media("landscape"){ //phone landscape
+
+            }
+        }
+        @include media(">=tablet"){    //tablet portrait
+
+              @include media("landscape") {  //tablet landscape
+
+              }
+            }
+        @include media(">=desktop") {  //desktop
+
+        }
 
       }
+
     }
     .slider_btn--left{
       left: -20px;
       z-index: 2;
-      @include media(">phone", "<=tablet"){
+      @include media(">=phone"){  //phone defaults above
+          @include media("landscape"){ //phone landscape
+
+          }
+      }
+      @include media(">=tablet"){    //tablet portrait
+
+            @include media("landscape") {  //tablet landscape
+
+            }
+          }
+      @include media(">=desktop") {  //desktop
 
       }
+
     }
     .slider_btn--right{
       right: -20px;
       z-index: 2;
-      @include media(">phone", "<=tablet"){
+      @include media(">=phone"){  //phone defaults above
+          @include media("landscape"){ //phone landscape
+
+          }
+      }
+      @include media(">=tablet"){    //tablet portrait
+
+            @include media("landscape") {  //tablet landscape
+
+            }
+          }
+      @include media(">=desktop") {  //desktop
 
       }
+
     }
     .slider-track-container{
       position:relative;
       z-index: 1;
       height: 100%; //only necessary if parent shop-gallery-container has explicit height.
-      @include media(">phone", "<=tablet"){
+      @include media(">=phone"){  //phone defaults above
+          @include media("landscape"){ //phone landscape
+
+          }
+      }
+      @include media(">=tablet"){    //tablet portrait
+
+            @include media("landscape") {  //tablet landscape
+
+            }
+          }
+      @include media(">=desktop") {  //desktop
 
       }
+
       .slider-track{
         //remove all list stylings from <ul class= ".slider-track">
         position: relative;
+        height: 475px;
         padding: 0;
         margin: 0;
         list-style: none;
@@ -693,39 +1218,95 @@
         justify-content: center;
         left: 0;
         transition: .4s all ease-in;
+        @include media(">=phone"){  //phone defaults above
+            @include media("landscape"){ //phone landscape
 
-        @include media(">phone", "<=tablet"){
-          height: 475px;
+            }
         }
-        .slide{
+        @include media(">=tablet"){    //tablet portrait
 
-          @include media(">phone", "<=tablet"){
-              width: 80vw;
-              background: #fbf9f8;
-              position: absolute;
+              @include media("landscape") {  //tablet landscape
+
+              }
+            }
+        @include media(">=desktop") {  //desktop
+          height: 100%;
+        }
+
+        .slide{
+          width: 80vw;
+          background: #fbf9f8;
+          position: absolute;
+          @include media(">=phone"){  //phone defaults above
+              @include media("landscape"){ //phone landscape
+
+              }
+          }
+          @include media(">=tablet"){    //tablet portrait
+
+                @include media("landscape") {  //tablet landscape
+
+                }
+              }
+          @include media(">=desktop") {  //desktop
+            width: 33%;
           }
           .product-wrapper{
 
-            @include media(">phone", "<=tablet"){
+            @include media(">=phone"){  //phone defaults above
+                @include media("landscape"){ //phone landscape
+
+                }
+            }
+            @include media(">=tablet"){    //tablet portrait
+
+                  @include media("landscape") {  //tablet landscape
+
+                  }
+                }
+            @include media(">=desktop") {  //desktop
 
             }
+
             .product-image{
               position:relative;
               margin: 0 auto;
-              @include media(">phone", "<=tablet"){
-                width: 80%;
+              width: 80%;
+              @include media(">=phone"){  //phone defaults above
+                  @include media("landscape"){ //phone landscape
 
+                  }
               }
-              img {
+              @include media(">=tablet"){    //tablet portrait
 
-                @include media(">phone", "<=tablet"){
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
+                    @include media("landscape") {  //tablet landscape
+
+                    }
+                  }
+              @include media(">=desktop") {  //desktop
+                width: unset;
+              }
+
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                @include media(">=phone"){  //phone defaults above
+                    @include media("landscape"){ //phone landscape
+
+                    }
+                }
+                @include media(">=tablet"){    //tablet portrait
+
+                      @include media("landscape") {  //tablet landscape
+
+                      }
+                    }
+                @include media(">=desktop") {  //desktop
+
                 }
               }
             }
-
             h4{
               font-weight: 600;
               text-transform: uppercase;
@@ -737,6 +1318,20 @@
               color: rgba(42,24,14,0.768627);
               font-family: 'ArbescoDT-Bold';
               text-align: center;
+              @include media(">=phone"){  //phone defaults above
+                  @include media("landscape"){ //phone landscape
+
+                  }
+              }
+              @include media(">=tablet"){    //tablet portrait
+
+                    @include media("landscape") {  //tablet landscape
+
+                    }
+                  }
+              @include media(">=desktop") {  //desktop
+
+              }
               &:after{
                 position: absolute;
                 content: '';
@@ -747,17 +1342,27 @@
                 left: 50%;
                 transform: translateX(-50%);
               }
-              @include media(">phone", "<=tablet"){
-
-              }
             }
             p{
               line-height: 2;
               margin-bottom: 20px;
-              @include media(">phone", "<=tablet"){
-                font-size: 13px !important;
-                padding: 0 14%;
+              font-size: 13px !important;
+              padding: 0 14%;
+              @include media(">=phone"){  //phone defaults above
+                  @include media("landscape"){ //phone landscape
+
+                  }
               }
+              @include media(">=tablet"){    //tablet portrait
+
+                    @include media("landscape") {  //tablet landscape
+
+                    }
+                  }
+              @include media(">=desktop") {  //desktop
+
+              }
+
             }
             .buy-btn{
               @include button-style;
@@ -776,10 +1381,21 @@
               padding: 0 10px;
               display: block;
               margin: 0 auto;
-              @include media(">phone", "<=tablet"){
+              @include media(">=phone"){  //phone defaults above
+                  @include media("landscape"){ //phone landscape
+
+                  }
+              }
+              @include media(">=tablet"){    //tablet portrait
+
+                    @include media("landscape") {  //tablet landscape
+
+                    }
+                  }
+              @include media(">=desktop") {  //desktop
 
               }
-            }
+            }// close .buy-btn
           } //close .product-wrapper
         } //close .slide
       } //close .slider-track
@@ -790,31 +1406,64 @@
   footer {
     background: $darkbrown;
     height: 65vh;
-    padding: 25px 150px;
+    padding: 20px 120px;
     display: flex;
     flex-flow: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    @include media(">phone", "<=tablet"){
-      padding: 20px 120px;
-      justify-content: center;
+    @include media(">=phone"){  //phone defaults above
+        @include media("landscape"){ //phone landscape
+
+        }
+    }
+    @include media(">=tablet"){    //tablet portrait
+
+          @include media("landscape") {  //tablet landscape
+
+          }
+        }
+    @include media(">=desktop") {  //desktop
+      padding: 25px 150px;
+      justify-content: flex-end;
     }
       #footer-links{
         height: 80%;
         display: flex;
         flex-flow: column;
         justify-content: space-around;
-        align-items:center;
+        align-items: flex-start;
         padding-bottom: 40px;
         padding-top: 10px;
-        @include media(">phone", "<=tablet"){
-          align-items: flex-start;
+        @include media(">=phone"){  //phone defaults above
+            @include media("landscape"){ //phone landscape
+
+            }
+        }
+        @include media(">=tablet"){    //tablet portrait
+
+              @include media("landscape") {  //tablet landscape
+
+              }
+            }
+        @include media(">=desktop") {  //desktop
+          align-items:center;
         }
         .footer-link{
           font-family: 'ArbescoDT-SemiBold';
-          font-size: 1.5rem;
+          font-size: 1.3rem;
           color: white;
-          @include media(">phone", "<=tablet"){
+          @include media(">=phone"){  //phone defaults above
+              @include media("landscape"){ //phone landscape
+
+              }
+          }
+          @include media(">=tablet"){    //tablet portrait
+
+                @include media("landscape") {  //tablet landscape
+
+                }
+              }
+          @include media(">=desktop") {  //desktop
 
           }
           &:hover{
@@ -823,9 +1472,20 @@
         }
       }
     img{
-      width: 50%;
-      @include media(">phone", "<=tablet"){
-        width: 100% !important;
+      width: 120%;
+      @include media(">=phone"){  //phone defaults above
+          @include media("landscape"){ //phone landscape
+
+          }
+      }
+      @include media(">=tablet"){    //tablet portrait
+
+            @include media("landscape") {  //tablet landscape
+
+            }
+          }
+      @include media(">=desktop") {  //desktop
+        width: 50%;
       }
     }
   }
