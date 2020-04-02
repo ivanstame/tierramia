@@ -491,7 +491,7 @@
   height: 100vh;
   padding: 50px 0;
   background: url("../img/tileblock2.png");
-  background-size: 3.4%;
+  background-size: 5%;
   @include media(">=phone"){  //phone defaults above
       @include media("landscape"){ //phone landscape
 
@@ -505,6 +505,7 @@
       }
   @include media(">=desktop") {  //desktop
     padding: 65px 0;
+    background-size: 3.4%;
   }
   &::before{
     position: absolute;
@@ -874,7 +875,7 @@
 #sourcing{
   height: 100vh;
   background: url("../img/tileblock2.png");
-  background-size: 3.4%;
+  background-size: 5%;
   position: relative;
   padding: 50px 0;
   @include media(">=phone"){  //phone defaults above
@@ -890,6 +891,7 @@
       }
   @include media(">=desktop") {  //desktop
     padding: 65px 0;
+    background-size: 3.4%;
   }
   .promo-container{
     display: grid;
@@ -1095,6 +1097,7 @@
     position: relative; //potentially unnecessary
     width: 80%;
     margin: 0 auto;
+    height: 80vh;
     @include media(">=phone"){  //phone defaults above
         @include media("landscape"){ //phone landscape
 
@@ -1107,7 +1110,7 @@
           }
         }
     @include media(">=desktop") {  //desktop
-
+      height: unset;
     }
 
     .slider_btn{
