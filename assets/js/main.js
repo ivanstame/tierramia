@@ -13,6 +13,11 @@ const setSlidePosition = (slide, index) => {
 	slide.style.left = slideWidth * index + 'px';
 };
 
+const moveToSlide = (track, currentSlide, targetSlide) => {
+	track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+	currentSlide.classList.remove('current_slide');
+	targetSlide.classList.add('current_slide');
+};
 
 const addSwipeToSlides = (slide, index) => {
 	slide.addEventListener('swiped-left', e => {
@@ -53,12 +58,6 @@ slides.forEach(addSwipeToSlides);
 // create a function that moves the slides to where they need to go
 // when this functions parameters are created you have to ask yourself "what is
 // needing to be affected by this function in order for it to do its job"
-
-const moveToSlide = (track, currentSlide, targetSlide) => {
-	track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
-	currentSlide.classList.remove('current_slide');
-	targetSlide.classList.add('current_slide');
-};
 
 // when i click left, move slides to the left
 
