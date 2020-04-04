@@ -175,7 +175,7 @@
             flex-flow: column;
             justify-content: space-between;
             align-items: center;
-            padding-bottom: 20%;
+            padding-bottom: 33%;
             margin-left: -2px;
             @include media(">=phone"){  //phone defaults above
                 @include media("landscape"){ //phone landscape
@@ -191,7 +191,7 @@
 
                 }
             @include media(">=desktop") {  //desktop
-              padding-bottom: 30%;
+              padding-bottom: 20%;
             }
             #af-nav{
               display:flex;
@@ -224,7 +224,11 @@
                 letter-spacing: 1px;
                 font-family: "ArbescoDT-Bold", Arial, sans-serif;
                 color: $darkbrown;
+                transition: .2s all ease-in-out;
                 cursor: pointer;
+                &:hover{
+                  color: $orange;
+                }
                 @include media(">=phone"){  //phone defaults above
                     @include media("landscape"){ //phone landscape
                       font-size: 1.6vw;
@@ -285,12 +289,12 @@
                 display: block;
                 position: absolute;
                 width: 100%;
-                height:400%;
+                height:150%;
                 background-image:url('../img/talavera.svg');
                 background-repeat: no-repeat;
                 opacity: 0.06;
                 transform: translateZ(-1px);
-                top: -50%;
+                top: -15%;
                 left: 15px;
                 @include media(">=phone"){  //phone defaults above
                     @include media("landscape"){ //phone landscape
@@ -305,14 +309,14 @@
                       }
                     }
                 @include media(">=desktop") {  //desktop
-                  height: 223%;
-                  margin-top: 30px;
+                  height: 150%;
                 }
               }
               h3{
                 font-family: "Viner Hand ITC", cursive;
                 color: $darkbrown;
                 font-size: 4vw;
+                margin-bottom: 2vw;
                 @include media(">=phone"){  //phone defaults above
                     @include media("landscape"){ //phone landscape
                       font-size: 2.25vw;
@@ -326,7 +330,7 @@
                       }
                     }
                 @include media(">=desktop") {  //desktop
-                  font-size: 3vw;
+                  font-size: 2vw;
                 }
               }
               h1{
@@ -334,7 +338,8 @@
                 color: #EC9B07;
                 letter-spacing: 2px;
                 text-transform: capitalize;
-                font-size: 7.25vw;
+                font-size: 5.25vw;
+                margin-bottom: 4vw;
                 @include media(">=phone"){  //phone defaults above
                     @include media("landscape"){ //phone landscape
                       font-size: 5vw;
@@ -348,15 +353,17 @@
                       }
                     }
                 @include media(">=desktop") {  //desktop
-                  font-size: 6vw;
+                  font-size: 4vw;
+                  margin-bottom: 20px;
                 }
               }
               p{
-                font-family: 'ArbescoDT-Regular', serif;
-                font-size: 0.9rem;
+                font-family: 'ArbescoDT-Book', serif;
+                font-size: 13px;
                 line-height: 2;
                 color: #685a54;
                 text-align: left;
+                padding: 0;
                 @include media(">=phone"){  //phone defaults above
                     @include media("landscape"){ //phone landscape
                       padding: 0 15%;
@@ -371,7 +378,8 @@
                       }
                     }
                 @include media(">=desktop") {  //desktop
-
+                  font-size: 1.33vw;
+                  padding: 0 10%;
                 }
               }
 
@@ -386,15 +394,12 @@
               text-transform: uppercase;
               outline: none;
               border: 3px solid #5B4C41;
-              padding: 0px 15px;
-              height: 50px;
-              line-height: 47px;
-              letter-spacing: 1px;
-              font-size: 12px;
-              margin-bottom: 30px;
-              font-weight: 600;
+              padding: 0px 20px;
+              height: 43px;
+              line-height: 40px;
+              font-size: 16px;
               color: #5b4c41;
-              font-family: 'ArbescoDT-Bold', sans-serif;
+              font-family: 'ArbescoDT-SemiBold', sans-serif;
               transition: .15s all ease-in-out;
               cursor: pointer;
               box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
@@ -422,11 +427,12 @@
                     }
                   }
               @include media(">=desktop") {  //desktop
-                padding: 0px 45px;
-                height: 63px;
-                line-height: 60px;
+                padding: 0px 30px;
+                height: 53px;
+                line-height: 50px;
                 letter-spacing: 1px;
-                font-size: 20px;
+                font-size: 1.33vw;
+                margin-bottom: 60px;
               }
             }
             #shape-box{
@@ -440,7 +446,7 @@
               @include media(">=phone"){  //phone defaults above
                   @include media("landscape"){ //phone landscape
                     left: 60%;
-                    transform: translateX(-50%) translateY(-2%);
+                    transform: translateX(-50%) translateY(4%);
                     width: 60%;
                   }
               }
@@ -451,7 +457,7 @@
                     }
                   }
               @include media(">=desktop") {  //desktop
-                transform: translateX(-50%) translateY(-35%);
+                transform: translateX(-50%) translateY(8%);
                 left: 50%;
                 width: 60%;
               }
@@ -496,7 +502,7 @@
                     }
                 @include media(">=desktop") {  //desktop
                   width: 120%;
-                  font-size: 1.554vw;
+                  font-size: 1.33vw;
                 }
 
                 span{
@@ -521,6 +527,7 @@
   padding: 50px 0;
   background: url("../img/tileblock2.png");
   background-size: 8%;
+  background-position: bottom;
   @include media(">=phone"){  //phone defaults above
       @include media("landscape"){ //phone landscape
 
@@ -533,8 +540,8 @@
         }
       }
   @include media(">=desktop") {  //desktop
-    padding: 65px 0;
-    background-size: 3.4%;
+    padding: 50px 0;
+    background-size: 3%;
   }
   &::before{
     position: absolute;
@@ -818,7 +825,7 @@
               }
           }
           @include media(">=desktop") {  //desktop
-            margin-bottom: 50px;
+            margin-bottom: 0;
           }
         }
 
@@ -913,6 +920,7 @@
   height: 100vh;
   background: url("../img/tileblock2.png");
   background-size: 8%;
+  background-position: bottom;
   position: relative;
   padding: 50px 0;
   @include media(">=phone"){  //phone defaults above
@@ -927,8 +935,8 @@
         }
       }
   @include media(">=desktop") {  //desktop
-    padding: 65px 0;
-    background-size: 3.4%;
+    padding: 50px 0;
+    background-size: 3%;
   }
   .promo-container{
     display: grid;
@@ -1089,7 +1097,7 @@
         }
       }
   @include media(">=desktop") {  //desktop
-    height: 130vh;
+
   }
 
   h1{
@@ -1149,7 +1157,7 @@
           }
         }
     @include media(">=desktop") {  //desktop
-      height: unset;
+      height: 120vh;
     }
 
     .slider_btn{
@@ -1296,7 +1304,7 @@
                 }
               }
           @include media(">=desktop") {  //desktop
-            width: 33%;
+            width: 33vw;
           }
           .product-wrapper{
 
@@ -1393,8 +1401,10 @@
             p{
               line-height: 2;
               margin-bottom: 20px;
-              font-size: 13px !important;
+              font-size: 13px;
               padding: 0 14%;
+              font-family: 'ArbescoDT-Book', serif;
+              color: $lightBrown;
               @include media(">=phone"){  //phone defaults above
                   @include media("landscape"){ //phone landscape
 
@@ -1407,7 +1417,7 @@
                     }
                   }
               @include media(">=desktop") {  //desktop
-
+                font-size: 1vw;
               }
 
             }
@@ -1421,7 +1431,6 @@
               line-height: 30px;
               height: 30px;
               font-family: 'ArbescoDT-SemiBold', sans-serif;
-              font-weight: 600;
               border: 2px solid rgba(42,24,14,0.768627);
               font-size: 0.8rem;
               box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
@@ -1440,7 +1449,10 @@
                     }
                   }
               @include media(">=desktop") {  //desktop
-
+                line-height: 42px;
+                height: 43px;
+                font-size: 1vw;
+                padding: 0 30px;
               }
             }// close .buy-btn
           } //close .product-wrapper
