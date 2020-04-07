@@ -1,3 +1,7 @@
+//fix vh
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 const track = document.querySelector('.slider-track');
 const slides = Array.from(track.children);
 const nextButton = document.querySelector('.slider_btn--right');
