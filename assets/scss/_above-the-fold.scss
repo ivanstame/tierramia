@@ -24,10 +24,10 @@
     .circlelogo-wrapper{
       position: absolute;
       z-index: 4;
-      top: 10px;
+      top: 10%;
       left: 5%;
-      width: 18vw;
-      height: 18vw;
+      width: 9.25vw;
+      height: 9.25vw;
       @include media(">=tablet"){
         width: 14vw;
         height: 14vw;
@@ -38,7 +38,7 @@
 
       } //end tablet mq
       @include media(">=desktop") {
-        top: 10%;
+        top: 10px;
         width: 9.25vw;
         height: 9.25vw;
       } //end desktop mq
