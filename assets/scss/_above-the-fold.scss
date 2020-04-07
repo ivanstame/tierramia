@@ -5,8 +5,8 @@
 #above-fold{
     background: white;
     width:100%;
-    height: 88vh;
-    height: calc(var(--vh, 1vh) * 88);
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     position:relative;
     overflow: hidden;
     @include media(">=tablet"){
@@ -24,10 +24,10 @@
     .circlelogo-wrapper{
       position: absolute;
       z-index: 4;
-      top: 10%;
+      top: 10px;
       left: 5%;
-      width: 9.25vw;
-      height: 9.25vw;
+      width: 18vw;
+      height: 18vw;
       @include media(">=tablet"){
         width: 14vw;
         height: 14vw;
@@ -38,7 +38,6 @@
 
       } //end tablet mq
       @include media(">=desktop") {
-        top: 10px;
         width: 9.25vw;
         height: 9.25vw;
       } //end desktop mq
@@ -801,7 +800,6 @@
         position: relative;
         width: 65vw;
         height: 52vw;
-        height: calc(var(--vh, 1vh) * 52);
         margin-bottom: 50px;
         border: 1px solid #897e79;
         box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
