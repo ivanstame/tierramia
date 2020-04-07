@@ -368,6 +368,7 @@
                 color: #685a54;
                 text-align: left;
                 padding: 0;
+                display: none;
                 @include media(">=phone"){  //phone defaults above
                     @include media("landscape"){ //phone landscape
                       padding: 0 15%;
@@ -384,6 +385,7 @@
                 @include media(">=desktop") {  //desktop
                   font-size: 1.33vw;
                   padding: 0 10%;
+                  display: block;
                 }
               }
 
@@ -1305,7 +1307,7 @@
           position: absolute;
           @include media(">=phone"){  //phone defaults above
               @include media("landscape"){ //phone landscape
-                width: 33%;
+                width: calc(var(--vw, 1vh) * 33);
               }
           }
           @include media(">=tablet"){    //tablet portrait
