@@ -206,11 +206,11 @@
       right: 0;
       top: 0;
       z-index: 999;
-      height: calc(var(--vh, 1vh) * 100);
       display: flex;
       flex-flow: column;
       justify-content: space-between;
       padding-bottom: 50%;
+      height: calc(var(--vh, 1vh) * 75);
       @include media(">=phone"){  //phone defaults above
           @include media("landscape"){ //phone landscape
 
@@ -227,6 +227,7 @@
       @include media(">=desktop") {  //desktop
         width: 60%;
         padding-bottom: 10%;
+        height: calc(var(--vh, 1vh) * 100);
       }
 
       #af-nav{
