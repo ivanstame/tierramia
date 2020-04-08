@@ -358,7 +358,7 @@
         h3{
           font-family: "Viner Hand ITC", cursive;
           color: #fff;
-          font-size: 5.5vw;
+          font-size: 4vw;
           margin-bottom: 2vw;
           @include media(">=phone"){  //phone defaults above
               @include media("landscape"){ //phone landscape
@@ -382,7 +382,7 @@
           color: #EC9B07;
           letter-spacing: 2px;
           text-transform: capitalize;
-          font-size: 5.25vw;
+          font-size: 6.5vw;
           margin-bottom: 4vw;
           @include media(">=phone"){  //phone defaults above
               @include media("landscape"){ //phone landscape
