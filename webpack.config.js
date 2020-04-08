@@ -17,7 +17,7 @@ module.exports = env => {
 	return {
 		entry: {
 			FirstComp: './assets/js/components/FirstComp.js',
-			SApp: './assets/js/components/svelte/SvelteApp.js',
+			// SApp: './assets/js/components/svelte/SvelteApp.js',
 			main: './assets/js/main.js'
 		},
 		output: {
@@ -26,9 +26,9 @@ module.exports = env => {
 		},
 		resolve: {
 			// see below for an explanation // '[name].[chunkhash].js' put this if you want to get hashed files to cache bust
-			alias: { svelte: path.resolve('node_modules', 'svelte') },
-			extensions: ['.mjs', '.js', '.svelte'],
-			mainFields: ['svelte', 'browser', 'module', 'main']
+			// alias: { svelte: path.resolve('node_modules', 'svelte') },
+			extensions: ['.mjs', '.js'], // deleted '.svelte'
+			mainFields: ['browser', 'module', 'main'] // '.svelte'
 		},
 		module: {
 			rules: [
@@ -37,7 +37,7 @@ module.exports = env => {
 					exclude: /node_modules/,
 					use: ['babel-loader', 'prettier-loader']
 				},
-				{ test: /\.svelte$/, exclude: /node_modules/, use: 'svelte-loader' },
+				// { test: /\.svelte$/, exclude: /node_modules/, use: 'svelte-loader' },
 				{
 					test: /\.scss$/,
 					use: [
