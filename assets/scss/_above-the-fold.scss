@@ -202,6 +202,7 @@
         }
     }
     #content-box {
+      height: calc(var(--vh, 1vh) * 75);
       position: absolute;
       right: 0;
       top: 0;
@@ -210,7 +211,6 @@
       flex-flow: column;
       justify-content: space-between;
       padding-bottom: 50%;
-      height: calc(var(--vh, 1vh) * 75);
       @include media(">=phone"){  //phone defaults above
           @include media("landscape"){ //phone landscape
 
