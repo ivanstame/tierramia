@@ -94,6 +94,7 @@
                 }
             @include media(">=desktop") {  //desktop
               width: 70%;
+              filter: unset;
 
             }
             &:nth-of-type(1){
@@ -382,7 +383,7 @@
           color: #EC9B07;
           letter-spacing: 2px;
           text-transform: capitalize;
-          font-size: 6.5vw;
+          font-size: 6vw;
           margin-bottom: 4vw;
           @include media(">=phone"){  //phone defaults above
               @include media("landscape"){ //phone landscape
@@ -475,26 +476,55 @@
         }
       }
     }
-    #shape-box{
-      position: absolute;
-      bottom: 0px;
-      width: 75%;
-      margin: 0;
+}
+
+#welcome-message{
+  height: calc(var(--vh, 1vh) * 30);
+  background: white;
+  @include media(">=phone"){  //phone defaults above
+      @include media("landscape"){ //phone landscape
+
+      }
+  }
+  //
+  @include media(">=tablet"){    //tablet portrait
+
+        @include media("landscape") {  //tablet landscape
+
+        }
+
+      }
+  @include media(">=desktop") {  //desktop
+  position: absolute;
+  background: transparent;
+  transform: translateY(-130%);
+  z-index: 999;
+  }
+  #shape-box{
+    position: static;
+    margin: 0;
+    z-index: 999;
+    transform-style: preserve-3d;
+    @include media(">=phone"){  //phone defaults above
+        @include media("landscape"){ //phone landscape
+
+        }
+    }
+    @include media(">=tablet"){    //tablet portrait
+
+          @include media("landscape") {  //tablet landscape
+
+          }
+        }
+    @include media(">=desktop") {  //desktop
       z-index: 999;
-      transform-style: preserve-3d;
-      left: 50%;
-      transform: translateX(-50%) translateY(0%);
-
-
-
-//new shit
-
-
+      padding-left: 16%;
+    }
+    #shaper{
+      display: none;
       @include media(">=phone"){  //phone defaults above
           @include media("landscape"){ //phone landscape
-            left: 60%;
-            transform: translateX(-50%) translateY(4%);
-            width: 60%;
+
           }
       }
       @include media(">=tablet"){    //tablet portrait
@@ -504,66 +534,47 @@
             }
           }
       @include media(">=desktop") {  //desktop
-        transform: translateX(-50%) translateY(-33%);
-        left: 50%;
-        width: 60%;
+        display: block;
+        float: left;
+        shape-outside: polygon(0px 0px, 291px 0px, -44px 300px);
+        width: 350px;
+        height: 225px;
       }
-      #shaper{
-        display: none;
-        @include media(">=phone"){  //phone defaults above
-            @include media("landscape"){ //phone landscape
 
-            }
-        }
-        @include media(">=tablet"){    //tablet portrait
-
-              @include media("landscape") {  //tablet landscape
-
-              }
-            }
-        @include media(">=desktop") {  //desktop
-          display: block;
-          float: left;
-          shape-outside: polygon(0px 0px, 291px 0px, -44px 300px);
-          width: 350px;
-          height: 225px;
-        }
-
-      }
-      p{
-        font-family: 'ArbescoDT-Book', sans-serif;
-        width: 100%;
-        font-size: 13px;
-        line-height: 2;
-        color: #685a54;
-        @include media(">=phone"){  //phone defaults above
-            @include media("landscape"){ //phone landscape
-              font-size: 0.9rem;
-            }
-        }
-        @include media(">=tablet"){    //tablet portrait
-
-              @include media("landscape") {  //tablet landscape
-
-              }
-            }
-        @include media(">=desktop") {  //desktop
-          width: 120%;
-          font-size: 1.44vw;
-        }
-
-        span{
-          color: $orange;
-          cursor: pointer;
-          &:hover{
-            text-decoration-style: double !important;
-            text-decoration: underline;
-
+    }
+    p{
+      font-family: 'ArbescoDT-Book', sans-serif;
+      width: 100%;
+      font-size: 13px;
+      line-height: 2;
+      color: #685a54;
+      @include media(">=phone"){  //phone defaults above
+          @include media("landscape"){ //phone landscape
+            font-size: 0.9rem;
           }
+      }
+      @include media(">=tablet"){    //tablet portrait
+
+            @include media("landscape") {  //tablet landscape
+
+            }
+          }
+      @include media(">=desktop") {  //desktop
+        font-size: 1.44vw;
+        width: 90%;
+      }
+
+      span{
+        color: $orange;
+        cursor: pointer;
+        &:hover{
+          text-decoration-style: double !important;
+          text-decoration: underline;
+
         }
       }
     }
-
+  }
 }
 
 #horchata{
