@@ -479,12 +479,12 @@
 }
 
 #welcome-message{
-  height: calc(var(--vh, 1vh) * 30);
+  height: auto;
   background: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 10%;
+  padding: 10%;
   @include media(">=phone"){  //phone defaults above
       @include media("landscape"){ //phone landscape
 
@@ -499,6 +499,7 @@
 
       }
   @include media(">=desktop") {  //desktop
+    height: calc(var(--vh, 1vh) * 30);
     display:unset;
     padding: unset;
     position: absolute;
