@@ -1376,6 +1376,7 @@
           width: 80vw;
           background: #fbf9f8;
           position: absolute;
+          height: calc(var(--vh, 1vh) * 90);
           @include media(">=phone"){  //phone defaults above
               @include media("landscape"){ //phone landscape
                 width: calc(var(--vw, 1vh) * 33);

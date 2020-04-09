@@ -59,6 +59,11 @@ const addSwipeToSlides = (slide, index) => {
 };
 
 // then simply plug that shit in
+$('.absolutepos').each(function() {
+	$(this)
+		.parent()
+		.css('height', $(this).height());
+});
 slides.forEach(setSlidePosition);
 slides.forEach(addSwipeToSlides);
 // create a function that moves the slides to where they need to go
