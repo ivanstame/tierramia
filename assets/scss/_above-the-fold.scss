@@ -1224,12 +1224,12 @@
     position: relative; //potentially unnecessary
     width: 80%;
     margin: 0 auto;
-    height: 80vh;
-    height: calc(var(--vh, 1vh) * 80);
+    // height: 80vh;
+    // height: calc(var(--vh, 1vh) * 80);
     @include media(">=phone"){  //phone defaults above
         @include media("landscape"){ //phone landscape
-        height: 130vh;
-        height: calc(var(--vh, 1vh) * 130);
+        // height: 130vh;
+        // height: calc(var(--vh, 1vh) * 130);
         width: 100%;
         }
     }
@@ -1240,8 +1240,8 @@
           }
         }
     @include media(">=desktop") {  //desktop
-      height: 90vh;
-      height: calc(var(--vh, 1vh) * 90);
+      // height: 90vh;
+      // height: calc(var(--vh, 1vh) * 90);
     }
 
     .slider_btn{
