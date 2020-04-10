@@ -13,6 +13,7 @@
         @include media("landscape"){ //phone landscape
           height: unset;
           height: 100vh;
+          height: calc(var(--vh, 1vh) * 80);
         }
     }
     @include media(">=tablet"){    //tablet portrait
