@@ -573,7 +573,7 @@
       #first-letter{
         color: $orange;
         float: left;
-        font-family: Georgia;
+        font-family: 'ArbescoDT-Bold', serif;
         font-size: 75px;
         line-height: 60px;
         padding-top: 4px;
@@ -1414,7 +1414,7 @@
               width: 80%;
               @include media(">=phone"){  //phone defaults above
                   @include media("landscape"){ //phone landscape
-
+                    width: 100%;
                   }
               }
               @include media(">=tablet"){    //tablet portrait
@@ -1492,7 +1492,7 @@
               color: $lightBrown;
               @include media(">=phone"){  //phone defaults above
                   @include media("landscape"){ //phone landscape
-
+                    padding: 0;
                   }
               }
               @include media(">=tablet"){    //tablet portrait
