@@ -1163,7 +1163,7 @@
 }
 
 #shop{
-  padding-top: 60px;
+  padding: 60px 0;
   background: #fbf9f8;
   overflow-x: hidden;
   @include media(">=phone"){  //phone defaults above
@@ -1349,7 +1349,7 @@
       .slider-track{
         //remove all list stylings from <ul class= ".slider-track">
         position: relative;
-        height: 475px;
+        // height: 475px;
         padding: 0;
         margin: 0;
         list-style: none;
@@ -1359,7 +1359,7 @@
         transition: .4s all ease-in;
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
-              height: 100%;
+              // height: 100%;
             }
         }
         @include media(">=tablet"){    //tablet portrait
@@ -1369,14 +1369,14 @@
               }
             }
         @include media(">=desktop") {  //desktop
-          height: 100%;
+          // height: 100%;
         }
 
         .slide{
           width: 80vw;
           background: #fbf9f8;
           position: absolute;
-          height: calc(var(--vh, 1vh) * 90);
+          // height: calc(var(--vh, 1vh) * 90);
           @include media(">=phone"){  //phone defaults above
               @include media("landscape"){ //phone landscape
                 width: calc(var(--vw, 1vh) * 33);

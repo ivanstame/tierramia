@@ -59,18 +59,16 @@ const addSwipeToSlides = (slide, index) => {
 };
 
 // then simply plug that shit in
-$('.absolutepos').each(function() {
-	$(this)
-		.parent()
-		.css('height', $(this).height());
-});
+var slideHeightObject = document.getElementsByClassName('slide')[0];
+
+function setSlideHeight() {
+	slideHeightObject.parentNode.parentNode.style.height =
+		slideHeightObject.getBoundingClientRect().height + 'px';
+}
+
+setSlideHeight();
 slides.forEach(setSlidePosition);
 slides.forEach(addSwipeToSlides);
-// create a function that moves the slides to where they need to go
-// when this functions parameters are created you have to ask yourself "what is
-// needing to be affected by this function in order for it to do its job"
-
-// when i click left, move slides to the left
 
 prevButton.addEventListener('click', e => {
 	const currentSlide = track.querySelector('.current_slide');
@@ -148,6 +146,7 @@ $(window).on('resize', function() {
 	// }
 	// if (win.width() >= 1024) {
 	// }
+	setSlideHeight();
 	slides.forEach(setSlidePosition);
 });
 
