@@ -139,7 +139,7 @@ setInterval(function() {
 	}
 }, 1000);
 
-$(window).on('resize orientationchange', function() {
+$(window).on('resize', function() {
 	slides.forEach(setSlidePosition);
 });
 
