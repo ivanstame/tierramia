@@ -1,7 +1,4 @@
-
-
-$(document).ready(function(){
-	//fix vh
+$(document).ready(function() {
 	let vh = window.innerHeight * 0.01;
 	let vw = window.innerWidth * 0.01;
 	document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -14,7 +11,7 @@ $(document).ready(function(){
 	var targetIndex = 0;
 	prevButton.style.visibility = 'hidden';
 
-	const slideWidth = slides[0].getBoundingClientRect().width;
+	let slideWidth = slides[0].getBoundingClientRect().width;
 
 	// apparently you can set the parameters and anonymous function contents to an operation as a variable
 	const setSlidePosition = (slide, index) => {
@@ -61,15 +58,6 @@ $(document).ready(function(){
 		});
 	};
 
-	// then simply plug that shit in
-	var slideHeightObject = document.getElementsByClassName('slide')[0];
-
-	function setSlideHeight() {
-		slideHeightObject.parentNode.style.height =
-			slideHeightObject.getBoundingClientRect().height + 'px';
-	}
-
-	setSlideHeight();
 	slides.forEach(setSlidePosition);
 	slides.forEach(addSwipeToSlides);
 
@@ -103,18 +91,6 @@ $(document).ready(function(){
 		}
 	});
 
-	//windowPane stuff
-
-	const windowPane = document.querySelector('#path-window');
-
-	windowPane.addEventListener('swiped-right', e => {
-		windowPane.style.transform = 'translateX(25%)';
-	});
-
-	windowPane.addEventListener('swiped-left', e => {
-		windowPane.style.transform = 'translateX(0)';
-	});
-
 	//image slideshow
 	let t = 0;
 
@@ -141,10 +117,13 @@ $(document).ready(function(){
 				break;
 		}
 	}, 1000);
-});
-
-$(window).on('resize', function() {
-	slides.forEach(setSlidePosition);
+	$(window).on('resize', function() {
+		slideWidth = slides[0].getBoundingClientRect().width;
+		slides.forEach(setSlidePosition);
+		console.log('size changed');
+		setSlideHeight();
+		console.log('it worked');
+	});
 });
 
 //when the window resizes we have to have the slides reposition themselves

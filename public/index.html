@@ -4,13 +4,6 @@
     <title>Tierra Mia Coffee</title>
     <meta property="og:title" content="Tierra Mia - Rough Draft">
     <meta name="description" content="">
-    <meta property="og:description" content="">
-    <meta property="og:image" content="https://codingphase.com/img/websitethumb.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="og:site_name" content="Tierra Mia Coffee">
-    <meta name="twitter:image:alt" content="El Mejor Cafe Viene De Tierra Mia">
-    <meta name="twitter:site" content="@codingphase">
-    <meta property="og:url" content="https://codingphase.com">
     <link rel="canonical" href="/">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#ad38f1"/>
@@ -20,8 +13,6 @@
     <meta http-equiv="Expires" content="0">
     <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/styles.css">
-    <script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
   </head>
   <body>
     <section id="above-fold">
@@ -176,15 +167,21 @@
         </ul>
       <img src="./img/transparentwordlogo.png" />
     </footer>
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script type="text/javascript" src="./js/dist/swiped-events.min.js"></script>
-    <script type="text/javascript" src="./js/dist/jquery.fittext.js"></script>
-    <script type="text/javascript" src="./js/dist/main.js"></script>
     <script>
-      // jQuery("#bien-headline").fitText(.8);
-      // jQuery("#mejor-headline").fitText(1.5);
+      var slideHeightObject = document.getElementsByClassName('slide')[0];
+
+      function setSlideHeight() {
+        slideHeightObject.parentNode.style.height =
+          slideHeightObject.getBoundingClientRect().height + 'px';
+      }
+
+      window.onload = function(){
+        setSlideHeight();
+      };
+
     </script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="./js/dist/main.js"></script>
+    <script type="text/javascript" src="./js/dist/swiped-events.min.js"></script>
   </body>
 </html>

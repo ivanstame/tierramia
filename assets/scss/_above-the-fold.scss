@@ -9,17 +9,21 @@
     height: calc(var(--vh, 1vh) * 80);
     position:relative;
     overflow: hidden;
-    @include media(">=tablet"){
-        height: 165vh;
-        height: calc(var(--vh, 1vh) * 165);
-      @include media("landscape") {
-
-      }
-
+    @include media(">=phone"){  //phone defaults above
+        @include media("landscape"){ //phone landscape
+          height: unset;
+          height: 100vh;
+        }
     }
-    @include media(">=desktop") {
-    height: 150vh;
-    height: calc(var(--vh, 1vh) * 150);
+    @include media(">=tablet"){    //tablet portrait
+
+          @include media("landscape") {  //tablet landscape
+
+          }
+        }
+    @include media(">=desktop") {  //desktop
+      height: 150vh;
+      height: calc(var(--vh, 1vh) * 150);
     }
     .circlelogo-wrapper{
       position: absolute;
@@ -31,7 +35,6 @@
       @include media(">=tablet"){
         width: 14vw;
         height: 14vw;
-        height: calc(var(--vh, 1vh) * 14);
         @include media("landscape") {
 
         }
@@ -65,7 +68,7 @@
       	    }
       	}
       	@include media(">=tablet"){    //tablet portrait
-              height: 90%;
+
               @include media("landscape") {  //tablet landscape
 
               }
@@ -487,7 +490,7 @@
   padding: 10%;
   @include media(">=phone"){  //phone defaults above
       @include media("landscape"){ //phone landscape
-
+        padding: 5%;
       }
   }
   //
@@ -608,7 +611,8 @@
   background-position: bottom;
   @include media(">=phone"){  //phone defaults above
       @include media("landscape"){ //phone landscape
-
+        height: unset;
+        height: 100vh;
       }
   }
   @include media(">=tablet"){    //tablet portrait
@@ -882,7 +886,6 @@
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
               height: 25vw;
-              height: calc(var(--vh, 1vh) * 25);
               width: 25vw;
               margin-bottom: 0;
             }
@@ -1006,7 +1009,8 @@
   padding: 50px 0;
   @include media(">=phone"){  //phone defaults above
       @include media("landscape"){ //phone landscape
-
+        height: unset;
+        height: 100vh;
       }
   }
   @include media(">=tablet"){    //tablet portrait
@@ -1379,7 +1383,7 @@
           // height: calc(var(--vh, 1vh) * 90);
           @include media(">=phone"){  //phone defaults above
               @include media("landscape"){ //phone landscape
-                width: calc(var(--vw, 1vh) * 33);
+                width: 33vw;
               }
           }
           @include media(">=tablet"){    //tablet portrait
