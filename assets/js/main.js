@@ -1,48 +1,79 @@
-//fix vh
-let vh = window.innerHeight * 0.01;
-let vw = window.innerWidth * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
-document.documentElement.style.setProperty('--vw', `${vw}px`);
 
-const track = document.querySelector('.slider-track');
-const slides = Array.from(track.children);
-const nextButton = document.querySelector('.slider_btn--right');
-const prevButton = document.querySelector('.slider_btn--left');
-var targetIndex = 0;
-prevButton.style.visibility = 'hidden';
 
-const slideWidth = slides[0].getBoundingClientRect().width;
+$(document).ready(function(){
+	//fix vh
+	let vh = window.innerHeight * 0.01;
+	let vw = window.innerWidth * 0.01;
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+	document.documentElement.style.setProperty('--vw', `${vw}px`);
 
-// apparently you can set the parameters and anonymous function contents to an operation as a variable
-const setSlidePosition = (slide, index) => {
-	slide.style.position = 'absolute';
-	slide.style.left = slideWidth * index + 'px';
-};
+	const track = document.querySelector('.slider-track');
+	const slides = Array.from(track.children);
+	const nextButton = document.querySelector('.slider_btn--right');
+	const prevButton = document.querySelector('.slider_btn--left');
+	var targetIndex = 0;
+	prevButton.style.visibility = 'hidden';
 
-const moveToSlide = (track, currentSlide, targetSlide) => {
-	track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
-	currentSlide.classList.remove('current_slide');
-	targetSlide.classList.add('current_slide');
-};
+	const slideWidth = slides[0].getBoundingClientRect().width;
 
-const addSwipeToSlides = (slide, index) => {
-	slide.addEventListener('swiped-left', e => {
-		// alert('swiped-left!');
-		const currentSlide = track.querySelector('.current_slide');
-		const nextSlide = currentSlide.nextElementSibling;
+	// apparently you can set the parameters and anonymous function contents to an operation as a variable
+	const setSlidePosition = (slide, index) => {
+		slide.style.position = 'absolute';
+		slide.style.left = slideWidth * index + 'px';
+	};
 
-		moveToSlide(track, currentSlide, nextSlide);
-		targetIndex++;
-		prevButton.style.visibility = 'visible';
+	const moveToSlide = (track, currentSlide, targetSlide) => {
+		track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+		currentSlide.classList.remove('current_slide');
+		targetSlide.classList.add('current_slide');
+	};
 
-		if (targetIndex == slides.length - 1) {
-			nextButton.style.visibility = 'hidden';
-		} else {
+	const addSwipeToSlides = (slide, index) => {
+		slide.addEventListener('swiped-left', e => {
+			// alert('swiped-left!');
+			const currentSlide = track.querySelector('.current_slide');
+			const nextSlide = currentSlide.nextElementSibling;
+
+			moveToSlide(track, currentSlide, nextSlide);
+			targetIndex++;
+			prevButton.style.visibility = 'visible';
+
+			if (targetIndex == slides.length - 1) {
+				nextButton.style.visibility = 'hidden';
+			} else {
+				nextButton.style.visibility = 'visible';
+			}
+		});
+		slide.addEventListener('swiped-right', e => {
+			// alert('swiped-right!');
+			const currentSlide = track.querySelector('.current_slide');
+			const previousSlide = currentSlide.previousElementSibling;
+
+			moveToSlide(track, currentSlide, previousSlide);
+
+			targetIndex--;
 			nextButton.style.visibility = 'visible';
-		}
-	});
-	slide.addEventListener('swiped-right', e => {
-		// alert('swiped-right!');
+			if (targetIndex == 0) {
+				prevButton.style.visibility = 'hidden';
+			} else {
+				prevButton.style.visibility = 'visible';
+			}
+		});
+	};
+
+	// then simply plug that shit in
+	var slideHeightObject = document.getElementsByClassName('slide')[0];
+
+	function setSlideHeight() {
+		slideHeightObject.parentNode.style.height =
+			slideHeightObject.getBoundingClientRect().height + 'px';
+	}
+
+	setSlideHeight();
+	slides.forEach(setSlidePosition);
+	slides.forEach(addSwipeToSlides);
+
+	prevButton.addEventListener('click', e => {
 		const currentSlide = track.querySelector('.current_slide');
 		const previousSlide = currentSlide.previousElementSibling;
 
@@ -56,88 +87,61 @@ const addSwipeToSlides = (slide, index) => {
 			prevButton.style.visibility = 'visible';
 		}
 	});
-};
 
-// then simply plug that shit in
-var slideHeightObject = document.getElementsByClassName('slide')[0];
+	nextButton.addEventListener('click', e => {
+		const currentSlide = track.querySelector('.current_slide');
+		const nextSlide = currentSlide.nextElementSibling;
 
-function setSlideHeight() {
-	slideHeightObject.parentNode.parentNode.style.height =
-		slideHeightObject.getBoundingClientRect().height + 'px';
-}
-
-setSlideHeight();
-slides.forEach(setSlidePosition);
-slides.forEach(addSwipeToSlides);
-
-prevButton.addEventListener('click', e => {
-	const currentSlide = track.querySelector('.current_slide');
-	const previousSlide = currentSlide.previousElementSibling;
-
-	moveToSlide(track, currentSlide, previousSlide);
-
-	targetIndex--;
-	nextButton.style.visibility = 'visible';
-	if (targetIndex == 0) {
-		prevButton.style.visibility = 'hidden';
-	} else {
+		moveToSlide(track, currentSlide, nextSlide);
+		targetIndex++;
 		prevButton.style.visibility = 'visible';
-	}
+
+		if (targetIndex == slides.length - 1) {
+			nextButton.style.visibility = 'hidden';
+		} else {
+			nextButton.style.visibility = 'visible';
+		}
+	});
+
+	//windowPane stuff
+
+	const windowPane = document.querySelector('#path-window');
+
+	windowPane.addEventListener('swiped-right', e => {
+		windowPane.style.transform = 'translateX(25%)';
+	});
+
+	windowPane.addEventListener('swiped-left', e => {
+		windowPane.style.transform = 'translateX(0)';
+	});
+
+	//image slideshow
+	let t = 0;
+
+	setInterval(function() {
+		t = t + 1;
+
+		if (t >= 16) {
+			t = 0;
+			$('#img1').show();
+			$('#img2').show();
+			$('#img3').show();
+		}
+
+		switch (t) {
+			case 5:
+				$('#img3').fadeOut('slow');
+				break;
+			case 10:
+				$('#img2').fadeOut('slow');
+				break;
+			case 15:
+				$('#img1').fadeOut('slow');
+				$('#img3').fadeIn('slow');
+				break;
+		}
+	}, 1000);
 });
-
-nextButton.addEventListener('click', e => {
-	const currentSlide = track.querySelector('.current_slide');
-	const nextSlide = currentSlide.nextElementSibling;
-
-	moveToSlide(track, currentSlide, nextSlide);
-	targetIndex++;
-	prevButton.style.visibility = 'visible';
-
-	if (targetIndex == slides.length - 1) {
-		nextButton.style.visibility = 'hidden';
-	} else {
-		nextButton.style.visibility = 'visible';
-	}
-});
-
-//windowPane stuff
-
-const windowPane = document.querySelector('#path-window');
-
-windowPane.addEventListener('swiped-right', e => {
-	windowPane.style.transform = 'translateX(25%)';
-});
-
-windowPane.addEventListener('swiped-left', e => {
-	windowPane.style.transform = 'translateX(0)';
-});
-
-//image slideshow
-let t = 0;
-
-setInterval(function() {
-	t = t + 1;
-
-	if (t >= 16) {
-		t = 0;
-		$('#img1').show();
-		$('#img2').show();
-		$('#img3').show();
-	}
-
-	switch (t) {
-		case 5:
-			$('#img3').fadeOut('slow');
-			break;
-		case 10:
-			$('#img2').fadeOut('slow');
-			break;
-		case 15:
-			$('#img1').fadeOut('slow');
-			$('#img3').fadeIn('slow');
-			break;
-	}
-}, 1000);
 
 $(window).on('resize', function() {
 	slides.forEach(setSlidePosition);
