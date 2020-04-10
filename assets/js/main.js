@@ -15,8 +15,6 @@ const slideWidth = slides[0].getBoundingClientRect().width;
 
 // apparently you can set the parameters and anonymous function contents to an operation as a variable
 const setSlidePosition = (slide, index) => {
-	slideWidth = slides[0].getBoundingClientRect().width;
-
 	slide.style.position = 'absolute';
 	slide.style.left = slideWidth * index + 'px';
 };
@@ -142,7 +140,6 @@ setInterval(function() {
 }, 1000);
 
 $(window).on('resize orientationchange', function() {
-	// setSlideHeight();
 	slides.forEach(setSlidePosition);
 });
 
