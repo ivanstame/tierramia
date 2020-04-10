@@ -1492,7 +1492,7 @@
               color: $lightBrown;
               @include media(">=phone"){  //phone defaults above
                   @include media("landscape"){ //phone landscape
-                    padding: 0;
+
                   }
               }
               @include media(">=tablet"){    //tablet portrait
