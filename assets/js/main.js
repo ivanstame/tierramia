@@ -141,15 +141,9 @@ setInterval(function() {
 	}
 }, 1000);
 
-// $(window).on('resize', function() {
-// 	setSlideHeight();
-// 	slides.forEach(setSlidePosition);
-// });
-
-window.addEventListener("resize", function() {
+$(window).on('resize orientationchange', function() {
 	setSlideHeight();
 	slides.forEach(setSlidePosition);
-
-}, false);
+});
 
 //when the window resizes we have to have the slides reposition themselves
