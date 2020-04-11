@@ -1,0 +1,105 @@
+@import "variables";
+@import "node_modules/include-media/dist/include-media";
+
+header{
+
+  @include media(">=phone"){  //phone defaults above
+    @include media("landscape"){ //phone landscape
+
+      }
+  }
+  @include media(">=tablet"){    //tablet portrait
+
+    @include media("landscape") {  //tablet landscape
+
+    }
+  }
+  @include media(">=desktop") {  //desktop
+
+  }
+  .circlelogo-wrapper{
+
+    @include media(">=phone"){  //phone defaults above
+      @include media("landscape"){ //phone landscape
+
+        }
+    }
+    @include media(">=tablet"){    //tablet portrait
+
+      @include media("landscape") {  //tablet landscape
+
+      }
+    }
+    @include media(">=desktop") {  //desktop
+
+    }
+    img.circle-logo{
+
+      @include media(">=phone"){  //phone defaults above
+        @include media("landscape"){ //phone landscape
+
+          }
+      }
+      @include media(">=tablet"){    //tablet portrait
+
+        @include media("landscape") {  //tablet landscape
+
+        }
+      }
+      @include media(">=desktop") {  //desktop
+
+      }
+    }
+  }
+  nav{
+
+    @include media(">=phone"){  //phone defaults above
+      @include media("landscape"){ //phone landscape
+
+        }
+    }
+    @include media(">=tablet"){    //tablet portrait
+
+      @include media("landscape") {  //tablet landscape
+
+      }
+    }
+    @include media(">=desktop") {  //desktop
+
+    }
+    ul#main-nav{
+
+      @include media(">=phone"){  //phone defaults above
+        @include media("landscape"){ //phone landscape
+
+          }
+      }
+      @include media(">=tablet"){    //tablet portrait
+
+        @include media("landscape") {  //tablet landscape
+
+        }
+      }
+      @include media(">=desktop") {  //desktop
+
+      }
+      li.nav-item{
+
+        @include media(">=phone"){  //phone defaults above
+          @include media("landscape"){ //phone landscape
+
+            }
+        }
+        @include media(">=tablet"){    //tablet portrait
+
+          @include media("landscape") {  //tablet landscape
+
+          }
+        }
+        @include media(">=desktop") {  //desktop
+
+        }
+      }
+    }
+  }
+} //end <HEADER>
