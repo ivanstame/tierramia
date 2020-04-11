@@ -1,8 +1,16 @@
 @import "variables";
 @import "node_modules/include-media/dist/include-media";
 
-header{
 
+body#cafes-page
+{
+background: #FEFEFE;
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid blue;
+  padding: 10px 5%;
   @include media(">=phone"){  //phone defaults above
     @include media("landscape"){ //phone landscape
 
@@ -18,7 +26,10 @@ header{
 
   }
   .circlelogo-wrapper{
-
+    width: 18vw;
+    height: 18vw;
+    border-radius: 50%;
+    border: 2px solid #3b2a14;
     @include media(">=phone"){  //phone defaults above
       @include media("landscape"){ //phone landscape
 
@@ -31,10 +42,12 @@ header{
       }
     }
     @include media(">=desktop") {  //desktop
-
+      width: 9.25vw;
+      height: 9.25vw;
     }
     img.circle-logo{
-
+      width: 100%;
+      height: 100%;
       @include media(">=phone"){  //phone defaults above
         @include media("landscape"){ //phone landscape
 
@@ -52,7 +65,7 @@ header{
     }
   }
   nav{
-
+    width: 70vw;
     @include media(">=phone"){  //phone defaults above
       @include media("landscape"){ //phone landscape
 
@@ -68,7 +81,12 @@ header{
 
     }
     ul#main-nav{
-
+        display:flex;
+        flex-flow:row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+        font-weight: 600;
       @include media(">=phone"){  //phone defaults above
         @include media("landscape"){ //phone landscape
 
@@ -84,7 +102,19 @@ header{
 
       }
       li.nav-item{
-
+          font-size: 2.4vw;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-family: "ArbescoDT-Bold", Arial, sans-serif;
+          color: $darkbrown;
+          transition: .2s all ease-in-out;
+          cursor: pointer;
+        &:hover{
+          color: $orange;
+        }
+        &:last-child{
+          display: none;
+        }
         @include media(">=phone"){  //phone defaults above
           @include media("landscape"){ //phone landscape
 
@@ -103,3 +133,64 @@ header{
     }
   }
 } //end <HEADER>
+    #location-nav{
+        display: grid;
+        grid-template-rows: auto auto;
+        border: 1px solid pink;
+        font-family: 'ArbescoDT-Book', serif;
+        
+        @include media(">=phone"){  //phone defaults above
+            @include media("landscape"){ //phone landscape
+
+            }
+        }      
+        @include media(">=tablet"){    //tablet portrait
+
+            @include media("landscape") {  //tablet landscape
+
+            }
+        } 
+        @include media(">=desktop") {  //desktop 
+
+        }
+        div#counties{
+            padding: 2.5vh;
+            ul#counties-nav{
+
+                
+                li.county-item{
+                    display: inline;
+                }
+            }
+        }
+        div#cities{
+            padding: 2vh;
+            background: pink;
+            position: relative;
+            ul.cities-list{
+                &:nth-of-type(1){
+                    transform: scale(1);
+                }
+                &:nth-of-type(2){
+                    transform: scale(0);
+                    height: 0;
+                }
+                &:nth-of-type(3){
+                    transform: scale(0);
+                    height: 0;
+                }
+                li.city{
+                   display: inline-block;
+                   padding: 0 5px;
+                    line-height: 1.75;
+ 
+                    
+                }
+            }
+            
+        }
+    }
+
+    
+}//end body#cafe-page
+

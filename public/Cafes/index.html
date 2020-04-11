@@ -14,7 +14,7 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="../css/styles.css">
   </head>
-  <body>
+  <body id="cafes-page">
     <header>
       <div class="circlelogo-wrapper">
         <img class = "circle-logo" src="../img/circlelogo.png" />
@@ -31,39 +31,37 @@
     </header>
     <div id="location-nav">
       <div id="counties">
-        <ul class="counties-wrapper">
-          <li class="county-moniker">Cafe Locations <span>></span> </li>
+        <ul id="counties-nav">
+          <li class="county-item">Cafe Locations <span>></span> </li>
           <li class="county-item">Los Angeles County</li>
           <li class="county-item">Orange County</li>
           <li class="county-item">Northern California</li>
         </ul>
       </div>
       <div id="cities">
-        <ul id="la-county">
-          <li class="la-city">Lincon Heights</li>
-          <li class="la-city">Long Beach</li>
-          <li class="la-city">Pico Rivera</li>
-          <li class="la-city">Highland Park</li>
-          <li class="la-city">Huntington Park</li>
-          <li class="la-city">El Monte</li>
-          <li class="la-city">Echo Park</li>
-          <li class="la-city">South Gate</li>
-          <li class="la-city">Montebello</li>
-          <li class="la-city">Lynwood</li>
-          <li class="la-city">West Covina</li>
-          <li class="la-city">Downtown LA</li>
-          <li class="la-city">Sante Fe Springs</li>
-          <li class="la-city">Cal State LA</li>
-          <li class="la-city">Pomona (Coming Soon)</li>
+        <ul data-county="la-county-cities" class="cities-list la-county-cities">
+          <li class="city">Lincon Heights</li>
+          <li class="city">Long Beach</li>
+          <li class="city">Pico Rivera</li>
+          <li class="city">Highland Park</li>
+          <li class="city">Huntington Park</li>
+          <li class="city">El Monte</li>
+          <li class="city">Echo Park</li>
+          <li class="city">South Gate</li>
+          <li class="city">Montebello</li>
+          <li class="city">Lynwood</li>
+          <li class="city">West Covina</li>
+          <li class="city">Downtown LA</li>
+          <li class="city">Sante Fe Springs</li>
         </ul>
-        <ul id="orange-county">
-          <li class="oc-city">Anaheim</li>
-          <li class="oc-city">Santa Ana</li>
-          <li class="oc-city">La Habra</li>
+        <ul data-county="orange-county-cities" class="cities-list orange-county-cities">
+          <li class="city">Anaheim</li>
+          <li class="city">Santa Ana</li>
+          <li class="city">La Habra</li>
         </ul>
-        <ul id="norcal">
-          <li class="norcal-city">San Francisco</li>
-          <li class="norcal-city">Oakland</li>
+        <ul data-county="norcal-cities" class="cities-list norcal-cities">
+          <li class="city">San Francisco</li>
+          <li class="city">Oakland</li>
         </ul>
       </div>
     </div>

@@ -33,27 +33,27 @@ gulp.task(
 
 // Use Webpack to compile latest Javascript to ES5
 // Webpack on Development Mode
-gulp.task(
-	'webpack:dev',
-	gulp.series(cb => {
-		return exec('npm run dev:webpack', function(err, stdout, stderr) {
-			console.log(stdout);
-			console.log(stderr);
-			cb(err);
-		});
-	})
-);
+// gulp.task(
+// 	'webpack:dev',
+// 	gulp.series(cb => {
+// 		return exec('npm run dev:webpack', function(err, stdout, stderr) {
+// 			console.log(stdout);
+// 			console.log(stderr);
+// 			cb(err);
+// 		});
+// 	})
+// );
 // Webpack on Production Mode
-gulp.task(
-	'webpack:prod',
-	gulp.series(cb => {
-		return exec('npm run build:webpack', function(err, stdout, stderr) {
-			console.log(stdout);
-			console.log(stderr);
-			cb(err);
-		});
-	})
-);
+// gulp.task(
+// 	'webpack:prod',
+// 	gulp.series(cb => {
+// 		return exec('npm run build:webpack', function(err, stdout, stderr) {
+// 			console.log(stdout);
+// 			console.log(stderr);
+// 			cb(err);
+// 		});
+// 	})
+// );
 
 // Browser-sync to get live reload and sync with mobile devices
 gulp.task(
@@ -108,11 +108,11 @@ gulp.task(
 	'default',
 	gulp.parallel([
 		gulp.series([
-			'webpack:dev',
+// 			'webpack:dev',
 			'styles',
 			function runningWatch() {
 				gulp.watch('./assets/scss/**/*', gulp.parallel('styles'));
-				gulp.watch('./assets/js/**/*', gulp.parallel('webpack:dev'));
+// 				gulp.watch('./assets/js/**/*', gulp.parallel('webpack:dev'));
 				gulp.watch(['./public/**/*', './public/*']).on('change', reload);
 			}
 		]),
@@ -125,11 +125,11 @@ gulp.task(
 	'watch-proxy',
 	gulp.parallel([
 		gulp.series([
-			'webpack:dev',
+// 			'webpack:dev',
 			'styles',
 			function runningWatch() {
 				gulp.watch('./assets/scss/**/*', gulp.parallel('styles'));
-				gulp.watch('./assets/js/**/*', gulp.parallel('webpack:dev'));
+// 				gulp.watch('./assets/js/**/*', gulp.parallel('webpack:dev'));
 				gulp.watch(['./public/**/*', './public/*']).on('change', reload);
 			}
 		]),
@@ -137,7 +137,7 @@ gulp.task(
 	])
 );
 // This is the production build for your app
-gulp.task('build', gulp.series([gulp.parallel(['styles', 'webpack:prod'])]));
+gulp.task('build', gulp.series([gulp.parallel(['styles'])]));
 
 /*
 |--------------------------------------------------------------------------
@@ -202,14 +202,12 @@ gulp.task(
 	gulp.parallel([
 		gulp.series([
 			'views',
-			'webpack:dev',
 			'styles',
 			'cleanTemp',
 			function runningWatch() {
 				gulp.watch('./assets/views/**/*', gulp.series('views'));
 				gulp.watch('./assets/views/**/*', gulp.series('cleanTemp'));
 				gulp.watch('./assets/scss/**/*', gulp.parallel('styles'));
-				gulp.watch('./assets/js/**/*', gulp.parallel('webpack:dev'));
 				gulp.watch(['./public/**/*', './public/*']).on('change', reload);
 			}
 		]),
@@ -222,6 +220,6 @@ gulp.task(
 	'static-build',
 	gulp.series([
 		gulp.series(['views', 'cleanTemp']),
-		gulp.parallel(['styles', 'webpack:prod'])
+		gulp.parallel(['styles'])
 	])
 );
