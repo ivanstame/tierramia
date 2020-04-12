@@ -152,17 +152,19 @@ background: #FEFEFE;
 
       }
       div#counties{
-          padding: 2vw 1vw;
-          font-size: 2.65vw;
+          padding: 3vw 1vw;
+          font-size: 2.4vw;
+          text-transform: uppercase;
           background: $lightBrown;
           ul#counties-nav{
-            line-height: 0.5;
+            line-height: 1;
 
               li.county-item{
                   cursor: pointer;
                   display: inline-block;
-                  padding: 2vw;
+                  margin-right: 3vw;
                   color: white;
+                  border-bottom: 2px solid $lightBrown;
                   &:hover{
                     color: $orange;
                   }
@@ -173,9 +175,13 @@ background: #FEFEFE;
                     font-weight: 600;
                     font-family: 'Viner Hand ITC', cursive;
                     cursor: unset;
+                    border-bottom: none;
                     &:hover{
                       color: white;
                     }
+                  }
+                  &:last-child{
+                    margin-right: none;
                   }
               }
           }
@@ -187,10 +193,10 @@ background: #FEFEFE;
           ul.cities-list{
             background: url('../img/talaverabeige3.svg');
             background-size: 50%;
-            padding: 1vw 5vw;
+            padding: 3vw 5vw;
               &:nth-of-type(1){
-                  transform: scale(0);
-                  height: 0;
+                  transform: scale(1);
+
               }
               &:nth-of-type(2){
                   transform: scale(0);
@@ -281,3 +287,8 @@ background: #FEFEFE;
   }
 
 }//end body#cafe-page
+
+.county-active {
+  border-bottom: 2px solid $orange !important;
+  color: $orange !important;
+}
