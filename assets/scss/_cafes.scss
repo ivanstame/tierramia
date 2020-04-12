@@ -101,7 +101,7 @@ background: #FEFEFE;
 
         }
         li.nav-item{
-            font-size: 2.4vw;
+            font-size: 3vw;
             text-transform: uppercase;
             letter-spacing: 1px;
             font-family: "ArbescoDT-Bold", Arial, sans-serif;
@@ -160,7 +160,7 @@ background: #FEFEFE;
             display: flex;
             justify-content: center;
               li.county-item{
-                  font-size: 2.75vw;
+                  font-size: 3.5vw;
                   cursor: pointer;
                   display: inline-block;
                   margin-right: 3vw;
@@ -179,12 +179,12 @@ background: #FEFEFE;
           }
       }
       div#cities{
-
           position: relative;
           ul.cities-list{
             background: url('../img/talaverabeige3.svg');
             background-size: 50%;
             padding: 3vw 5vw;
+            text-align: center;
               &:nth-of-type(1){
                   transform: scale(1);
 
@@ -198,11 +198,12 @@ background: #FEFEFE;
                   height: 0;
               }
               li.city{
-                font-size: 2.65vw;
+                font-weight: 600;
+                font-size: 3vw;
                 color: $darkbrown;
                 display: inline-block;
-                padding: 0 5px;
-                line-height: 1.75;
+                padding: 0 8px;
+                line-height: 2.25;
                 text-transform: uppercase;
 
 
@@ -219,6 +220,23 @@ background: #FEFEFE;
       div.photo-wrapper{
         width: 100vw;
         height: 65vw;
+        position: relative;
+        .overlay{
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          background: rgba(0,0,0,0.7);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          h3{
+            color: $lightYellow;
+            font-size: 9vw;
+            font-family: 'Viner Hand ITC', cursive;
+          }
+        }
         img{
           object-fit: cover;
           width: 100%;
@@ -226,6 +244,7 @@ background: #FEFEFE;
       }
       div.cafe-details{
         font-family: 'ArbescoDT-Book', serif;
+        color: $darkbrown;
         width: 100vw;
         height: 50vw;
         background: white;
@@ -237,6 +256,7 @@ background: #FEFEFE;
         justify-items: center;
         align-items: center;
         div.address{
+          justify-self: start;
           grid-column: 1/2;
           grid-row: 1/2;
         }
@@ -244,7 +264,8 @@ background: #FEFEFE;
           grid-column: 2/3;
           grid-row: 1/2;
           span{
-
+            font-weight: 600;
+            text-transform: uppercase;
           }
         }
         button{
@@ -273,6 +294,10 @@ background: #FEFEFE;
         div.contact{
           grid-column: 2/3;
           grid-row: 2/3;
+          align-self: start;
+          span{
+            font-weight: 600;
+          }
 
         }
       }
@@ -282,6 +307,6 @@ background: #FEFEFE;
 }//end body#cafe-page
 
 .county-active {
-  border-bottom: 2px solid $orange !important;
-  color: $orange !important;
+  border-bottom: 2px solid $lightYellow !important;
+  color: $lightYellow !important;
 }
