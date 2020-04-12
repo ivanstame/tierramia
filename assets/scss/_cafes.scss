@@ -227,13 +227,13 @@ background: #FEFEFE;
           bottom: 0;
           right: 0;
           left: 0;
-          background: rgba(0,0,0,0.7);
+          background: rgba(0,0,0,0.6);
           display: flex;
           justify-content: center;
           align-items: center;
           h3{
             color: $lightYellow;
-            font-size: 9vw;
+            font-size: 11vw;
             font-family: 'Viner Hand ITC', cursive;
           }
         }
@@ -247,13 +247,13 @@ background: #FEFEFE;
         color: $darkbrown;
         width: 100vw;
         height: 50vw;
-        background: white;
+        background: #fbf9f8;
         display: grid;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
         padding: 5vw 5vw;
         position: relative;
-        justify-items: center;
+        justify-content: center;
         align-items: center;
         div.address{
           justify-self: start;
