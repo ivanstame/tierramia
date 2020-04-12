@@ -152,14 +152,14 @@ background: #FEFEFE;
 
       }
       div#counties{
-          padding: 3vw 1vw;
-          font-size: 2.4vw;
+          padding: 4vw 1vw;
           text-transform: uppercase;
           background: $lightBrown;
           ul#counties-nav{
             line-height: 1;
 
               li.county-item{
+                  font-size: 2.75vw;
                   cursor: pointer;
                   display: inline-block;
                   margin-right: 3vw;
@@ -189,7 +189,6 @@ background: #FEFEFE;
       div#cities{
 
           position: relative;
-          font-size: 2.5vw;
           ul.cities-list{
             background: url('../img/talaverabeige3.svg');
             background-size: 50%;
@@ -207,10 +206,12 @@ background: #FEFEFE;
                   height: 0;
               }
               li.city{
+                font-size: 2.65vw;
                 color: $darkbrown;
                 display: inline-block;
                 padding: 0 5px;
                 line-height: 1.75;
+                text-transform: uppercase;
 
 
               }
