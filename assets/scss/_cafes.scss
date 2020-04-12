@@ -153,11 +153,12 @@ background: #FEFEFE;
       }
       div#counties{
           padding: 4vw 1vw;
-          text-transform: uppercase;
           background: $lightBrown;
           ul#counties-nav{
             line-height: 1;
-
+            font-family: 'Viner Hand ITC', cursive;
+            display: flex;
+            justify-content: center;
               li.county-item{
                   font-size: 2.75vw;
                   cursor: pointer;
@@ -170,15 +171,6 @@ background: #FEFEFE;
                   }
                   span{
                     font-weight: 400;
-                  }
-                  &:first-child{
-                    font-weight: 600;
-                    font-family: 'Viner Hand ITC', cursive;
-                    cursor: unset;
-                    border-bottom: none;
-                    &:hover{
-                      color: white;
-                    }
                   }
                   &:last-child{
                     margin-right: none;
