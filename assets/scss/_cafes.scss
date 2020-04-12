@@ -9,7 +9,7 @@ background: #FEFEFE;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 5%;
+    padding: 4% 5%;
     @include media(">=phone"){  //phone defaults above
       @include media("landscape"){ //phone landscape
 
@@ -152,8 +152,8 @@ background: #FEFEFE;
 
       }
       div#counties{
-          padding: 1vw;
-          font-size: 2.6vw;
+          padding: 2vw 1vw;
+          font-size: 2.65vw;
           background: $lightBrown;
           ul#counties-nav{
             line-height: 0.5;
@@ -189,7 +189,8 @@ background: #FEFEFE;
             background-size: 50%;
             padding: 1vw 5vw;
               &:nth-of-type(1){
-                  transform: scale(1);
+                  transform: scale(0);
+                  height: 0;
               }
               &:nth-of-type(2){
                   transform: scale(0);
