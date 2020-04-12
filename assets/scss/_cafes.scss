@@ -5,67 +5,11 @@
 body#cafes-page
 {
 background: #FEFEFE;
-header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid blue;
-  padding: 10px 5%;
-  @include media(">=phone"){  //phone defaults above
-    @include media("landscape"){ //phone landscape
-
-      }
-  }
-  @include media(">=tablet"){    //tablet portrait
-
-    @include media("landscape") {  //tablet landscape
-
-    }
-  }
-  @include media(">=desktop") {  //desktop
-
-  }
-  .circlelogo-wrapper{
-    width: 18vw;
-    height: 18vw;
-    border-radius: 50%;
-    border: 2px solid #3b2a14;
-    @include media(">=phone"){  //phone defaults above
-      @include media("landscape"){ //phone landscape
-
-        }
-    }
-    @include media(">=tablet"){    //tablet portrait
-
-      @include media("landscape") {  //tablet landscape
-
-      }
-    }
-    @include media(">=desktop") {  //desktop
-      width: 9.25vw;
-      height: 9.25vw;
-    }
-    img.circle-logo{
-      width: 100%;
-      height: 100%;
-      @include media(">=phone"){  //phone defaults above
-        @include media("landscape"){ //phone landscape
-
-          }
-      }
-      @include media(">=tablet"){    //tablet portrait
-
-        @include media("landscape") {  //tablet landscape
-
-        }
-      }
-      @include media(">=desktop") {  //desktop
-
-      }
-    }
-  }
-  nav{
-    width: 70vw;
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
     @include media(">=phone"){  //phone defaults above
       @include media("landscape"){ //phone landscape
 
@@ -80,13 +24,11 @@ header{
     @include media(">=desktop") {  //desktop
 
     }
-    ul#main-nav{
-        display:flex;
-        flex-flow:row;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: center;
-        font-weight: 600;
+    .circlelogo-wrapper{
+      width: 18vw;
+      height: 18vw;
+      border-radius: 50%;
+      border: 2px solid #3b2a14;
       @include media(">=phone"){  //phone defaults above
         @include media("landscape"){ //phone landscape
 
@@ -99,22 +41,12 @@ header{
         }
       }
       @include media(">=desktop") {  //desktop
-
+        width: 9.25vw;
+        height: 9.25vw;
       }
-      li.nav-item{
-          font-size: 2.4vw;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          font-family: "ArbescoDT-Bold", Arial, sans-serif;
-          color: $darkbrown;
-          transition: .2s all ease-in-out;
-          cursor: pointer;
-        &:hover{
-          color: $orange;
-        }
-        &:last-child{
-          display: none;
-        }
+      img.circle-logo{
+        width: 100%;
+        height: 100%;
         @include media(">=phone"){  //phone defaults above
           @include media("landscape"){ //phone landscape
 
@@ -131,66 +63,220 @@ header{
         }
       }
     }
-  }
-} //end <HEADER>
-    #location-nav{
-        display: grid;
-        grid-template-rows: auto auto;
-        border: 1px solid pink;
-        font-family: 'ArbescoDT-Book', serif;
-        
+    nav{
+      width: 70vw;
+      @include media(">=phone"){  //phone defaults above
+        @include media("landscape"){ //phone landscape
+
+          }
+      }
+      @include media(">=tablet"){    //tablet portrait
+
+        @include media("landscape") {  //tablet landscape
+
+        }
+      }
+      @include media(">=desktop") {  //desktop
+
+      }
+      ul#main-nav{
+          display:flex;
+          flex-flow:row;
+          flex-wrap: nowrap;
+          justify-content: space-around;
+          align-items: center;
+          font-weight: 600;
         @include media(">=phone"){  //phone defaults above
-            @include media("landscape"){ //phone landscape
+          @include media("landscape"){ //phone landscape
 
             }
-        }      
+        }
         @include media(">=tablet"){    //tablet portrait
+
+          @include media("landscape") {  //tablet landscape
+
+          }
+        }
+        @include media(">=desktop") {  //desktop
+
+        }
+        li.nav-item{
+            font-size: 2.4vw;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: "ArbescoDT-Bold", Arial, sans-serif;
+            color: $darkbrown;
+            transition: .2s all ease-in-out;
+            cursor: pointer;
+          &:hover{
+            color: $orange;
+          }
+          &:last-child{
+            display: none;
+          }
+          @include media(">=phone"){  //phone defaults above
+            @include media("landscape"){ //phone landscape
+
+              }
+          }
+          @include media(">=tablet"){    //tablet portrait
 
             @include media("landscape") {  //tablet landscape
 
             }
-        } 
-        @include media(">=desktop") {  //desktop 
+          }
+          @include media(">=desktop") {  //desktop
 
+          }
         }
-        div#counties{
-            padding: 2.5vh;
-            ul#counties-nav{
-
-                
-                li.county-item{
-                    display: inline;
-                }
-            }
-        }
-        div#cities{
-            padding: 2vh;
-            background: pink;
-            position: relative;
-            ul.cities-list{
-                &:nth-of-type(1){
-                    transform: scale(1);
-                }
-                &:nth-of-type(2){
-                    transform: scale(0);
-                    height: 0;
-                }
-                &:nth-of-type(3){
-                    transform: scale(0);
-                    height: 0;
-                }
-                li.city{
-                   display: inline-block;
-                   padding: 0 5px;
-                    line-height: 1.75;
- 
-                    
-                }
-            }
-            
-        }
+      }
     }
+  } //end <HEADER>
+  #location-nav{
+      display: grid;
+      grid-template-rows: auto auto;
+      font-family: 'ArbescoDT-Book', serif;
 
-    
+      @include media(">=phone"){  //phone defaults above
+          @include media("landscape"){ //phone landscape
+
+          }
+      }
+      @include media(">=tablet"){    //tablet portrait
+
+          @include media("landscape") {  //tablet landscape
+
+          }
+      }
+      @include media(">=desktop") {  //desktop
+
+      }
+      div#counties{
+          padding: 1vw;
+          font-size: 2.6vw;
+          background: $lightBrown;
+          ul#counties-nav{
+            line-height: 0.5;
+
+              li.county-item{
+                  cursor: pointer;
+                  display: inline-block;
+                  padding: 2vw;
+                  color: white;
+                  &:hover{
+                    color: $orange;
+                  }
+                  span{
+                    font-weight: 400;
+                  }
+                  &:first-child{
+                    font-weight: 600;
+                    font-family: 'Viner Hand ITC', cursive;
+                    cursor: unset;
+                    &:hover{
+                      color: white;
+                    }
+                  }
+              }
+          }
+      }
+      div#cities{
+
+          position: relative;
+          font-size: 2.5vw;
+          ul.cities-list{
+            background: url('../img/talaverabeige3.svg');
+            background-size: 50%;
+            padding: 1vw 5vw;
+              &:nth-of-type(1){
+                  transform: scale(1);
+              }
+              &:nth-of-type(2){
+                  transform: scale(0);
+                  height: 0;
+              }
+              &:nth-of-type(3){
+                  transform: scale(0);
+                  height: 0;
+              }
+              li.city{
+                color: $darkbrown;
+                display: inline-block;
+                padding: 0 5px;
+                line-height: 1.75;
+
+
+              }
+          }
+
+      }
+  } //end of div#location-nav
+  section#locations-container{
+    div.cafe-wrapper{
+      display: grid;
+      grid-template-rows: auto auto;
+
+      div.photo-wrapper{
+        width: 100vw;
+        height: 65vw;
+        img{
+          object-fit: cover;
+          width: 100%;
+        }
+      }
+      div.cafe-details{
+        font-family: 'ArbescoDT-Book', serif;
+        width: 100vw;
+        height: 50vw;
+        background: white;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        padding: 5vw 5vw;
+        position: relative;
+        justify-items: center;
+        align-items: center;
+        div.address{
+          grid-column: 1/2;
+          grid-row: 1/2;
+        }
+        div.hours{
+          grid-column: 2/3;
+          grid-row: 1/2;
+          span{
+
+          }
+        }
+        button{
+          grid-column: 1/2;
+          grid-row: 2/3;
+          // position: absolute;
+          justify-self: start;
+          align-self: start;
+          @include button-style;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          cursor: pointer;
+          color: rgba(42,24,14,0.768627);
+          outline: none;
+          line-height: 30px;
+          height: 30px;
+          font-family: 'ArbescoDT-SemiBold', sans-serif;
+          border: 2px solid rgba(42,24,14,0.768627);
+          font-size: 0.8rem;
+          box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+          padding: 0 10px;
+          display: block;
+          ;
+
+        }
+        div.contact{
+          grid-column: 2/3;
+          grid-row: 2/3;
+
+        }
+      }
+    }
+  }
+
 }//end body#cafe-page
-
