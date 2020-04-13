@@ -1,0 +1,134 @@
+var citiesList = document.getElementsByClassName('cities-list');
+var laCountyOGHeight = citiesList[0].getBoundingClientRect().height;
+var orangeCountyOGHeight = citiesList[1].getBoundingClientRect().height;
+var bayAreaOGHeight = citiesList[2].getBoundingClientRect().height;
+var laCountyCities = citiesList[0]; // the LA County City List <ul>
+var orangeCountyCities = citiesList[1]; // the Orange County City List <ul>
+var bayAreaCities = citiesList[2]; // the Orange County City List <ul>
+var laCounty = document.getElementsByClassName('county-item')[0];
+var orangeCounty = document.getElementsByClassName('county-item')[1];
+var bayArea = document.getElementsByClassName('county-item')[2];
+var i = 0;
+while (i < citiesList.length){
+  citiesList[i].style.height = "0px";
+  i++;
+  console.log('heights reduced to 0');
+}
+var z = 0;
+while (z < citiesList.length){
+  citiesList[z].classList.add('out-of-the-way');
+  z++;
+  console.log('scales reduced to 0');
+}
+
+laCounty.addEventListener('click', function(){
+  citiesList[0].classList.remove('out-of-the-way');
+  orangeCountyCities.style.height = "0px";
+  bayAreaCities.style.height = "0px";
+  if(laCountyCities.style.height == "0px")
+  {
+    laCountyCities.style.height = laCountyOGHeight + "px";
+  }
+  else
+  {
+    laCountyCities.style.height = "0px";
+  }
+
+  laCounty.classList.toggle('county-active');
+  orangeCounty.classList.remove('county-active');
+  bayArea.classList.remove('county-active');
+  for(j=0; j < citiesList.length; j++)
+  {
+    if(j == 0){
+      console.log('it was zero at least once')
+    }
+    else {
+      citiesList[j].classList.add('out-of-the-way');
+      console.log('it is now ' + j);
+    }
+  }
+});
+
+orangeCounty.addEventListener('click', function(){
+  citiesList[1].classList.remove('out-of-the-way');
+  laCountyCities.style.height = "0px";
+  bayAreaCities.style.height = "0px";
+  if(orangeCountyCities.style.height == "0px")
+  {
+    orangeCountyCities.style.height = orangeCountyOGHeight + "px";
+  }
+  else
+  {
+    orangeCountyCities.style.height = "0px";
+  }
+  orangeCounty.classList.toggle('county-active');
+  laCounty.classList.remove('county-active');
+  bayArea.classList.remove('county-active');
+  for(j=0; j < citiesList.length; j++)
+  {
+    if(j == 1){
+      console.log('it was zero at least once')
+    }
+    else {
+      citiesList[j].classList.add('out-of-the-way');
+      console.log('it is now ' + j);
+    }
+  }
+});
+
+bayArea.addEventListener('click', function(){
+  citiesList[2].classList.remove('out-of-the-way');
+  laCountyCities.style.height = "0px";
+  orangeCountyCities.style.height = "0px";
+  if(bayAreaCities.style.height == "0px")
+  {
+    bayAreaCities.style.height = bayAreaOGHeight + "px";
+  }
+  else
+  {
+    bayAreaCities.style.height = "0px";
+  }
+  bayArea.classList.toggle('county-active');
+  laCounty.classList.remove('county-active');
+  orangeCounty.classList.remove('county-active');
+  for(j=0; j < citiesList.length; j++)
+  {
+    if(j == 2){
+      console.log('it was zero at least once')
+    }
+    else {
+      citiesList[j].classList.add('out-of-the-way');
+      console.log('it is now ' + j);
+    }
+  }
+});
+
+function initialSetup(){
+  citiesList[0].classList.remove('out-of-the-way');
+  orangeCountyCities.style.height = "0px";
+  bayAreaCities.style.height = "0px";
+  if(laCountyCities.style.height == "0px")
+  {
+    laCountyCities.style.height = laCountyOGHeight + "px";
+  }
+  else
+  {
+    laCountyCities.style.height = "0px";
+  }
+
+  laCounty.classList.toggle('county-active');
+  orangeCounty.classList.remove('county-active');
+  bayArea.classList.remove('county-active');
+  for(j=0; j < citiesList.length; j++)
+  {
+    if(j == 0){
+      console.log('it was zero at least once')
+    }
+    else {
+      citiesList[j].classList.add('out-of-the-way');
+      console.log('it is now ' + j);
+    }
+  }
+}
+
+initialSetup();
