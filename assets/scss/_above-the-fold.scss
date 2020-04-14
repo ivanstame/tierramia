@@ -313,7 +313,7 @@
         width: 100%;
         margin-top: 65px;
         text-align: center;
-        padding: 0 18%;
+        padding: 0 5%;
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
 
@@ -362,8 +362,9 @@
         h3{
           font-family: "Viner Hand ITC", cursive;
           color: #fff;
-          font-size: 4vw;
+          font-size: 4.5vw;
           margin-bottom: 2vw;
+          text-shadow: 0px 0px 1px black;
           @include media(">=phone"){  //phone defaults above
               @include media("landscape"){ //phone landscape
                 font-size: 2.25vw;
@@ -382,11 +383,13 @@
           }
         }
         h1{
-          font-family: "ArbescoDT-Bold", Arial, sans-serif;
-          color: #EC9B07;
-          letter-spacing: 2px;
-          text-transform: capitalize;
-          font-size: 5.5vw;
+          font-family: "ArbescoDT-SemiBold", Arial, sans-serif;
+          color: $lightYellow;
+                  text-shadow: 0px 0px 1px black;
+                  letter-spacing: 1px;
+
+          text-transform: uppercase;
+          font-size: 7vw;
           margin-bottom: 4vw;
           @include media(">=phone"){  //phone defaults above
               @include media("landscape"){ //phone landscape
@@ -411,7 +414,8 @@
           line-height: 2;
           color: #fff;
           text-align: left;
-          padding-bottom: 30px;
+          padding: 0 15% 30px 15%;
+          text-shadow: 0px 0px 1px black;
           @include media(">=phone"){  //phone defaults above
               @include media("landscape"){ //phone landscape
                 padding: 0 15%;
@@ -574,11 +578,12 @@
         width: 90%;
       }
       #first-letter{
-        color: $orange;
+        color: $lightYellow;
         float: left;
         font-family: 'ArbescoDT-Bold', serif;
         font-size: 75px;
         line-height: 60px;
+        text-shadow: 0px 0px 1px black;
         padding-top: 4px;
         padding-right: 8px;
         padding-left: 3px;
@@ -687,7 +692,9 @@
       h3{
         text-transform: uppercase;
         font-family: 'ArbescoDT-Bold', sans-serif;
-        color: #ec9b07;
+        color: $lightYellow;
+                text-shadow: 0px 0px 1px black;
+                letter-spacing: 1px;
         font-size: 1.1rem;
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
@@ -750,7 +757,9 @@
       }
       a{
         text-decoration: none;
-        color: #ec9b07;
+        color: $lightYellow;
+                text-shadow: 0px 0px 1px black;
+                letter-spacing: 1px;
         font-family: 'ArbescoDT-Bold';
       }
 
@@ -830,7 +839,7 @@
       transform-style: preserve-3d;
       text-decoration: underline;
       text-underline-position: under;
-      text-decoration-color: #ec9b07;
+      text-decoration-color: $lightYellow;
       text-decoration-style: double;
       @include media(">=phone"){  //phone defaults above
           @include media("landscape"){ //phone landscape
@@ -976,8 +985,8 @@
           height: 53px;
           line-height: 50px;
           background: rgba(87,73,66,0.85);
-          border-top: 3px solid $orange;
-          border-bottom: 3px solid $orange;
+          border-top: 3px solid $lightYellow;
+          border-bottom: 3px solid $lightYellow;
           @include media(">=phone"){  //phone defaults above
               @include media("landscape"){ //phone landscape
 
@@ -1094,7 +1103,9 @@
       h3{
         text-transform: uppercase;
         font-family: 'ArbescoDT-Bold', sans-serif;
-        color: #ec9b07;
+        color: $lightYellow;
+                text-shadow: 0px 0px 1px black;
+                letter-spacing: 1px;
         font-size: 1.1rem;
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
@@ -1158,7 +1169,9 @@
       }
       a{
         text-decoration: none;
-        color: #ec9b07;
+        color: $lightYellow;
+                text-shadow: 0px 0px 1px black;
+                letter-spacing: 1px;
         font-family: 'ArbescoDT-Bold';
       }
 
@@ -1201,7 +1214,7 @@
     transform-style: preserve-3d;
     text-decoration: underline;
     text-underline-position: under;
-    text-decoration-color: #ec9b07;
+    text-decoration-color: $lightYellow;
     text-decoration-style: double;
     @include media(">=phone"){  //phone defaults above
         @include media("landscape"){ //phone landscape
@@ -1482,7 +1495,7 @@
                 display: block;
                 height: 2px;
                 width: 40%;
-                background: #EC9B07;
+                background: $lightYellow;
                 left: 50%;
                 transform: translateX(-50%);
               }

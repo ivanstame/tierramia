@@ -134,7 +134,7 @@ background: #FEFEFE;
     }
   } //end <HEADER>
   .hero{
-    background: url('https://nebula.wsimg.com/2e50ec70d201af223e027fd3e4479341?AccessKeyId=0A547B94FD14E2142AB9&disposition=0&alloworigin=1');
+    background: url('../img/cafes-hero.jpeg');
     background-size: cover;
     height: 40vh;
     position: relative;
@@ -184,9 +184,11 @@ background: #FEFEFE;
       }
       h3{
         color: $lightYellow;
-        font-size: 8vw;
+        font-size: 7vw;
         font-family: 'ArbescoDT-SemiBold', serif;
         text-transform: uppercase;
+        letter-spacing: 1px;
+        text-shadow: 0px 0px 1px black;
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
 
@@ -313,6 +315,7 @@ background: #FEFEFE;
             color: $lightYellow;
             font-size: 11vw;
             font-family: 'Viner Hand ITC', cursive;
+
           }
         }
         img{
@@ -398,12 +401,12 @@ background: #FEFEFE;
   @include button-style;
   border-radius: 50%;
   position: fixed;
-  top: 85vh;
+  bottom: 5vw;
   right: 5vw;
   border: none;
   z-index: 9999;
-  width: 10vw;
-  height: 10vw;
+  width: 15vw;
+  height: 15vw;
   color: $darkbrown;
   border: 2px solid $darkbrown;
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
