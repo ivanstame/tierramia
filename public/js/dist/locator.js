@@ -1,3 +1,4 @@
+import LatLon from 'https://cdn.jsdelivr.net/npm/geodesy@2.2.0/latlon-spherical.min.js';
 
   window.onload = function() {
     navigator.geolocation.getCurrentPosition(sortResults);
