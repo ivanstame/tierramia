@@ -133,6 +133,77 @@ background: #FEFEFE;
       }
     }
   } //end <HEADER>
+  .hero{
+    background: url('https://nebula.wsimg.com/2e50ec70d201af223e027fd3e4479341?AccessKeyId=0A547B94FD14E2142AB9&disposition=0&alloworigin=1');
+    background-size: cover;
+    height: 40vh;
+    position: relative;
+    @include media(">=phone"){  //phone defaults above
+        @include media("landscape"){ //phone landscape
+
+        }
+    }
+    @include media(">=tablet"){    //tablet portrait
+
+        @include media("landscape") {  //tablet landscape
+
+        }
+    }
+    @include media(">=desktop") {  //desktop
+
+    }
+    .overlay{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      pointer-events: none;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-flow: column;
+      flex-flow: column;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-align: center;
+      align-items: center;
+      background: rgba(0,0,0,0.6);
+      @include media(">=phone"){  //phone defaults above
+          @include media("landscape"){ //phone landscape
+
+          }
+      }
+      @include media(">=tablet"){    //tablet portrait
+
+          @include media("landscape") {  //tablet landscape
+
+          }
+      }
+      @include media(">=desktop") {  //desktop
+
+      }
+      h3{
+        color: $lightYellow;
+        font-size: 8vw;
+        font-family: 'ArbescoDT-SemiBold', serif;
+        text-transform: uppercase;
+        @include media(">=phone"){  //phone defaults above
+            @include media("landscape"){ //phone landscape
+
+            }
+        }
+        @include media(">=tablet"){    //tablet portrait
+
+            @include media("landscape") {  //tablet landscape
+
+            }
+        }
+        @include media(">=desktop") {  //desktop
+
+        }
+      }
+    }
+  }
   #location-nav{
       display: grid;
       grid-template-rows: auto auto;
