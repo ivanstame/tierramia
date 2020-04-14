@@ -219,6 +219,6 @@ function scrollToY(scrollTargetY, speed, easing) {
 $(".sliding-link").click(function(e) {
     e.preventDefault();
     var aid = $(this).attr("href");
-    $(document).animate({scrollTop: $(aid).offset().top},'fast');
+    $('html,body').animate({scrollTop: $(aid).offset().top},'slow');
 });
 // scroll it!
