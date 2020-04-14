@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../css/styles.css">
   </head>
   <body id="cafes-page">
+    <button id="top-btn"><i class="fas fa-chevron-up"></i></button>
     <header>
       <div class="circlelogo-wrapper">
         <img class = "circle-logo" src="../img/circlelogo.png" />
@@ -39,28 +40,29 @@
       </div>
       <div id="cities">
         <ul data-county="la-county-cities" class="cities-list la-county-cities">
-          <li class="city">Lincon Heights</li>
-          <li class="city">Long Beach</li>
-          <li class="city">Pico Rivera</li>
-          <li class="city">Highland Park</li>
-          <li class="city">Huntington Park</li>
-          <li class="city">El Monte</li>
-          <li class="city">Echo Park</li>
-          <li class="city">South Gate</li>
-          <li class="city">Montebello</li>
-          <li class="city">Lynwood</li>
-          <li class="city">West Covina</li>
-          <li class="city">Downtown LA</li>
-          <li class="city">Sante Fe Springs</li>
+          <li class="city"><a href="#lincoln-heights">Lincon Heights</a></li>
+          <li class="city"><a href="#long-beach">Long Beach</a></li>
+          <li class="city"><a href="#pico-rivera">Pico Rivera</a></li>
+          <li class="city"><a href="#highland-park">Highland Park</a></li>
+          <li class="city"><a href="#huntington-park">Huntington Park</a></li>
+          <li class="city"><a href="#el-monte">El Monte</a></li>
+          <li class="city"><a href="#echo-park">Echo Park</a></li>
+          <li class="city"><a href="#south-gate">South Gate</a></li>
+          <li class="city"><a href="#montebello">Montebello</a></li>
+          <li class="city"><a href="#lynwood">Lynwood</a></li>
+          <li class="city"><a href="#west-covina">West Covina</a></li>
+          <li class="city"><a href="#downtown-la">Downtown LA</a></li>
+          <li class="city"><a href="#sante-fe-springs">Sante Fe Springs</a></li>
+          <li class="city"><a href="#eastern-ave">Eastern Ave</a></li>
         </ul>
         <ul data-county="orange-county-cities" class="cities-list orange-county-cities">
-          <li class="city">Anaheim</li>
-          <li class="city">Santa Ana</li>
-          <li class="city">La Habra</li>
+          <li class="city"><a href="#anaheim">Anaheim</a></li>
+          <li class="city"><a href="#santa-ana">Santa Ana</a></li>
+          <li class="city"><a href="#la-habra">La Habra</a></li>
         </ul>
         <ul data-county="norcal-cities" class="cities-list norcal-cities">
-          <li class="city">San Francisco</li>
-          <li class="city">Oakland</li>
+          <li class="city"><a href="#san-francisco">San Francisco</a></li>
+          <li class="city"><a href="#oakland">Oakland</a></li>
         </ul>
       </div>
     </div>
@@ -70,7 +72,7 @@
           <div class="overlay">
             <h3>Lincoln Heights</h3>
           </div>
-          <img src="../img/la_broadway.jpg" />
+          <a name="lincoln-heights"><img src="../img/la_broadway.jpg" /></a>
         </div>
         <div class="cafe-details">
           <div class="address">2108 N Broadway<br />Los Angeles, CA 90031</div>
@@ -84,7 +86,7 @@
           <div class="overlay">
             <h3>Long Beach</h3>
           </div>
-          <img src="../img/lbc_pch.jpg" />
+          <a name="long-beach"><img src="../img/lbc_pch.jpg" /></a>
         </div>
         <div class="cafe-details">
           <div class="address">425 Pacific Coast Highway <br />Long Beach, CA 90806</div>
@@ -98,7 +100,7 @@
           <div class="overlay">
             <h3>Pico Rivera</h3>
           </div>
-          <img data-city="pico-rivera" src="../img/pico_rivera.jpg" />
+          <a name="pico-rivera"><img data-city="pico-rivera" src="../img/pico_rivera.jpg" /></a>
         </div>
         <div class="cafe-details">
           <div class="address">9220 Slauson Ave<br /> Pico Rivera, CA 90660</div>
@@ -112,7 +114,7 @@
           <div class="overlay">
             <h3>Highland Park</h3>
           </div>
-          <img data-city="highland-park" src="../img/highland_park.jpg" />
+          <a name="highland-park"><img data-city="highland-park" src="../img/highland_park.jpg" /></a>
         </div>
         <div class="cafe-details">
           <div class="address">5528 Monte Vista St<br /> Los Angeles, CA 90042</div>
@@ -126,7 +128,7 @@
           <div class="overlay">
             <h3>Huntington Park</h3>
           </div>
-          <img data-city="huntington-park" src="../img/huntington_park.jpg" />
+          <a name="huntington-park"><img data-city="huntington-park" src="../img/huntington_park.jpg" /></a>
         </div>
         <div class="cafe-details">
           <div class="address">6706 Pacific Blvd<br /> Huntington Park, CA 90255</div>
@@ -143,7 +145,7 @@
           <div class="overlay">
             <h3>El Monte</h3>
           </div>
-          <img data-city="el-monte" src="../img/el_monte.jpg" />
+          <a name="el-monte"><img data-city="el-monte" src="../img/el_monte.jpg" /></a>
         </div>
         <div class="cafe-details">
           <div class="address">3748 Peck Rd<br /> El Monte, CA 91731</div>
@@ -157,7 +159,7 @@
           <div class="overlay">
             <h3>Echo Park</h3>
           </div>
-          <img data-city="echo-park" src="../img/echo_park1.jpg" />
+          <a name="echo-park"><img data-city="echo-park" src="../img/echo_park1.jpg" /></a>
         </div>
         <div class="cafe-details">
           <div class="address">1202 N Alvarado St<br /> Los Angeles, CA 90026</div>
@@ -174,7 +176,7 @@
           <div class="overlay">
             <h3>South Gate</h3>
           </div>
-          <img data-city="south-gate" src="../img/south_gate.jpg" />
+          <a name="south-gate"><img data-city="south-gate" src="../img/south_gate.jpg" /></a>
         </div>
         <div class="cafe-details">
           <div class="address">4914 Firestone Blvd <br /> South Gate, CA 90280</div>
@@ -190,7 +192,7 @@
           <div class="overlay">
             <h3>Montebello</h3>
           </div>
-          <img data-city="montebello" src="../img/montebello.jpg" />
+          <a name="montebello"><img data-city="montebello" src="../img/montebello.jpg" /></a>
         </div>
         <div class="cafe-details">
           <div class="address">1416 W Beverly Blvd<br /> Montebello, CA 90640</div>
@@ -207,7 +209,7 @@
           <div class="overlay">
             <h3>Lynwood</h3>
           </div>
-          <img data-city="lynwood" src="../img/lynwood.jpg" />
+          <a name="lynwood"><img data-city="lynwood" src="../img/lynwood.jpg" /></a>
         </div>
         <div class="cafe-details">
           <div class="address">11004 Atlantic Ave<br /> Lynwood, CA 90262</div>
@@ -224,7 +226,7 @@
           <div class="overlay">
             <h3>West Covina</h3>
           </div>
-          <img data-city="west-covina" src="../img/west_covina.jpg" />
+          <a name="west-covina"><img data-city="west-covina" src="../img/west_covina.jpg" /></a>
         </div>
         <div class="cafe-details">
           <div class="address">2301 S Azusa Ave<br /> West Covina, CA 91792</div>
@@ -240,7 +242,7 @@
           <div class="overlay">
             <h3>Downtown LA</h3>
           </div>
-          <img data-city="downtown-la" src="../img/downtown.jpg" />
+          <a name="downtown-la"><img data-city="downtown-la" src="../img/downtown.jpg" /></a>
         </div>
         <div class="cafe-details">
           <div class="address">653 S Spring St<br /> Los Angeles, CA 90014</div>
@@ -257,7 +259,7 @@
           <div class="overlay">
             <h3>Santa Fe Springs</h3>
           </div>
-          <img data-city="santa-fe-springs" src="../img/santa_fe_springs.jpg" />
+          <a name="santa-fe-springs"><img data-city="santa-fe-springs" src="../img/santa_fe_springs.jpg" /></a>
         </div>
         <div class="cafe-details">
           <div class="address">11700 Telegraph Rd<br /> Santa Fe Springs, CA 90670</div>
@@ -276,7 +278,7 @@
           <div class="overlay">
             <h3>Eastern Ave</h3>
           </div>
-          <img data-city="east-ave" src="../img/eastern.jpg" />
+          <a name="eastern-ave"><img data-city="east-ave" src="../img/eastern.jpg" /></a>
         </div>
         <div class="cafe-details">
           <div class="address">1704 N Eastern Ave<br /> Los Angeles, CA 90032</div>
@@ -292,7 +294,7 @@
           <div class="overlay">
             <h3>Anaheim</h3>
           </div>
-          <img data-city="anaheim" src="../img/anaheim.jpg" />
+          <a name="anaheim"><img data-city="anaheim" src="../img/anaheim.jpg" /></a>
         </div>
         <div class="cafe-details">
           <div class="address">201 N State College Blvd<br /> Anaheim, CA 92806</div>
@@ -308,7 +310,7 @@
           <div class="overlay">
             <h3>Santa Ana</h3>
           </div>
-          <img data-city="santa-ana" src="../img/santa_ana.jpg" />
+          <a name="santa-ana"><img data-city="santa-ana" src="../img/santa_ana.jpg" /></a>
         </div>
         <div class="cafe-details">
           <div class="address">1708 S Main St<br /> Santa Ana, CA 92707</div>
@@ -324,7 +326,7 @@
           <div class="overlay">
             <h3>La Habra</h3>
           </div>
-          <img data-city="la-habra" src="../img/la_habra.jpg" />
+          <a name="la-habra"><img data-city="la-habra" src="../img/la_habra.jpg" /></a>
         </div>
         <div class="cafe-details">
           <div class="address">1315 W Whittier Blvd<br /> La Habra, CA 90631</div>
@@ -340,7 +342,7 @@
           <div class="overlay">
             <h3>San Francisco</h3>
           </div>
-          <img data-city="san-francisco" src="../img/sf.jpg" />
+          <a name="san-francisco"><img data-city="san-francisco" src="../img/sf.jpg" /></a>
         </div>
         <div class="cafe-details">
           <div class="address">3188 Mission St<br /> San Francisco, CA 94110</div>
@@ -354,7 +356,7 @@
       <div class="cafe-wrapper">
         <div class="photo-wrapper">
           <div class="overlay">
-            <h3>Oakland</h3>
+            <a name="oakland"><h3>Oakland</h3></a>
           </div>
           <img data-city="oakland" src="../img/oakland.jpg" />
         </div>
@@ -379,9 +381,7 @@
         </ul>
       <img src="../img/transparentwordlogo.png" />
     </footer>
-    <script>
-
-    </script>
+    <script src="https://kit.fontawesome.com/6abd2d5d3d.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="./js/dist/swiped-events.min.js"></script>
     <script type="text/javascript" src="../js/dist/cafes.js"></script>

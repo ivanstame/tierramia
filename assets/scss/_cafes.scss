@@ -4,6 +4,7 @@
 
 body#cafes-page
 {
+  transition: 1s all;
 background: #FEFEFE;
   header{
     display: flex;
@@ -258,6 +259,7 @@ background: #FEFEFE;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
         padding: 5vw 5vw;
+        padding-left: 10vw;
         position: relative;
         justify-content: center;
         align-items: center;
@@ -319,4 +321,21 @@ background: #FEFEFE;
 
 .out-of-the-way{
   transform: scale(0);
+}
+
+#top-btn {
+  @include button-style;
+  border-radius: 50%;
+  position: fixed;
+  top: 85vh;
+  right: 5vw;
+  border: none;
+  z-index: 9999;
+  width: 10vw;
+  height: 10vw;
+  color: $darkbrown;
+  border: 2px solid $darkbrown;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+  cursor: pointer;
+  display: none;
 }
