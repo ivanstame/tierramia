@@ -5,7 +5,9 @@
 
 
     nearestCafe.addEventListener('click', function(){
-      window.location.href = "#" + data[0].name;
+      // window.location.href = "#" + data[0].name;
+      var closestCity = data[0].name;
+      moveToNew(closestCity);
     });
 
   }
