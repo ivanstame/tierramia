@@ -7,7 +7,7 @@
   var data = [{
           name: "lincoln-heights",
           lat: "34.072960",
-          lng: "118.218540",
+          lng: "-118.218540",
       },{
           name: "long-beach",
           lat: "33.790100",
@@ -19,7 +19,7 @@
       }, {
           name: "highland-park",
           lat: "34.110840",
-          lng: "118.196210",
+          lng: "-118.196210",
       }, {
           name: "huntington-park",
           lat: "33.977490",
