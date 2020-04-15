@@ -6,7 +6,7 @@
     var nearestCafe = document.getElementById('nearest-cafe');
 
     nearestCafe.addEventListener('click', function(){
-      aler('clicked');
+      alert('clicked');
       console.log("#" + data[0].name);
       window.location.href = "#" + data[0].name;
     });
