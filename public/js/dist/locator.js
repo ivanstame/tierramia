@@ -114,5 +114,6 @@
   var nearestCafe = document.getElementById('nearest-cafe');
 
   nearestBtn.addEventListener('click', function(){
+    console.log("#" + data[0].name);
     window.location.href = "#" + data[0].name;
   });
