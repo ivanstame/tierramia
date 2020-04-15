@@ -8,11 +8,7 @@
           name: "lincoln-heights",
           lat: "34.072960",
           lng: "118.218540",
-      }, {
-          name: "long-beach",
-          lat: "33.790100",
-          lng: "-118.187460",
-      }, {
+      },{
           name: "long-beach",
           lat: "33.790100",
           lng: "-118.187460",
@@ -76,10 +72,6 @@
           name: "la-habra",
           lat: "33.939730",
           lng: "-117.961270",
-      }, {
-          name: "san-francisco",
-          lat: "37.745960",
-          lng: "-122.419720",
       }, {
           name: "san-francisco",
           lat: "37.745960",
