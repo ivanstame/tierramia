@@ -110,3 +110,9 @@
         return distA - distB;
       });
   }
+
+  var nearestBtn = document.getElementById('nearest-cafe');
+
+  nearestBtn.addEventListener('click', function(){
+    document.getElementById(data[0].name).click();
+  });
