@@ -2,6 +2,14 @@
   window.onload = function() {
     navigator.geolocation.getCurrentPosition(sortResults);
     console.log(data);
+
+    var nearestCafe = document.getElementById('nearest-cafe');
+
+    nearestCafe.addEventListener('click', function(){
+      aler('clicked');
+      console.log("#" + data[0].name);
+      window.location.href = "#" + data[0].name;
+    });
   }
 
   var data = [{
@@ -110,10 +118,3 @@
         return distA - distB;
       });
   }
-
-  var nearestCafe = document.getElementById('nearest-cafe');
-
-  nearestCafe.addEventListener('click', function(){
-    console.log("#" + data[0].name);
-    window.location.href = "#" + data[0].name;
-  });
