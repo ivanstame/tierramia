@@ -111,8 +111,8 @@
       });
   }
 
-  var nearestBtn = document.getElementById('nearest-cafe');
+  var nearestCafe = document.getElementById('nearest-cafe');
 
   nearestBtn.addEventListener('click', function(){
-    document.getElementById(data[0].name).click();
+    window.location.href = "#" + data[0].name;
   });
