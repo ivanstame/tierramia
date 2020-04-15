@@ -5,87 +5,87 @@
   }
 
   var data = [{
-          name: "lincoln-heights"
+          name: "lincoln-heights",
           lat: "34.072960",
           lng: "118.218540",
       }, {
-          name: "long-beach"
+          name: "long-beach",
           lat: "33.790100",
           lng: "-118.187460",
       }, {
-          name: "long-beach"
+          name: "long-beach",
           lat: "33.790100",
           lng: "-118.187460",
       }, {
-          name: "pico-rivera"
+          name: "pico-rivera",
           lat: "33.969300",
           lng: "-118.100610",
       }, {
-          name: "highland-park"
+          name: "highland-park",
           lat: "34.110840",
           lng: "118.196210",
       }, {
-          name: "huntington-park"
+          name: "huntington-park",
           lat: "33.977490",
           lng: "-118.225080",
       }, {
-          name: "el-monte"
+          name: "el-monte",
           lat: "34.073810",
           lng: "-118.022500",
       }, {
-          name: "echo-park"
+          name: "echo-park",
           lat: "34.078190",
           lng: "-118.263050",
       }, {
-          name: "south-gate"
+          name: "south-gate",
           lat: "33.951410",
           lng: "-118.182280",
       }, {
-          name: "montebello"
+          name: "montebello",
           lat: "34.019040",
           lng: "-118.113140",
       }, {
-          name: "lynwood"
+          name: "lynwood",
           lat: "33.930100",
           lng: "-118.183390",
       }, {
-          name: "west-covina"
+          name: "west-covina",
           lat: "34.033030",
           lng: "-117.914680",
       }, {
-          name: "downtown-la"
+          name: "downtown-la",
           lat: "34.045130",
           lng: "-118.251800",
       }, {
-          name: "santa-fe-springs"
+          name: "santa-fe-springs",
           lat: "33.946450",
           lng: "-118.084210",
       }, {
-          name: "eastern-ave"
+          name: "eastern-ave",
           lat: "34.061630",
           lng: "-118.175270",
       }, {
-          name: "anaheim"
+          name: "anaheim",
           lat: "33.842290",
           lng: "-117.889620",
       }, {
-          name: "santa-ana"
+          name: "santa-ana",
           lat: "33.724610",
           lng: "-117.867940",
       }, {
-          name: "la-habra"
+          name: "la-habra",
           lat: "33.939730",
           lng: "-117.961270",
       }, {
-          name: "san-francisco"
+          name: "san-francisco",
           lat: "37.745960",
           lng: "-122.419720",
       }, {
-          name: "san-francisco"
+          name: "san-francisco",
           lat: "37.745960",
           lng: "-122.419720",
       }, {
-          name: "oakland"
+          name: "oakland",
           lat: "37.809190",
           lng: "-122.268170",
       }]
