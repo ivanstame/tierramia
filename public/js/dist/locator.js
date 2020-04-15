@@ -5,9 +5,7 @@
 
 
     nearestCafe.addEventListener('click', function(){
-      alert('clicked');
-      // console.log("#" + data[0].name);
-      // window.location.href = "#" + data[0].name;
+      window.location.href = "#" + data[0].name;
     });
 
   }

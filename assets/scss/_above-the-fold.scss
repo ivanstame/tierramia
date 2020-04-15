@@ -435,21 +435,17 @@
             color: #685a54;
           }
         }
-        button#cta {
-          @include button-style;
-          transform-style: preserve-3d;
-          text-transform: uppercase;
-          outline: none;
-          border: 3px solid #5B4C41;
-          padding: 0px 20px;
-          height: 43px;
-          line-height: 40px;
-          font-size: 16px;
-          color: #5b4c41;
-          font-family: 'ArbescoDT-SemiBold', sans-serif;
-          transition: .15s all ease-in-out;
-          cursor: pointer;
-          box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+        div#cta {
+          border: 3px solid #f2c572;
+              padding: 4vw 5vw;
+              font-family: 'ArbescoDT-SemiBold', serif;
+              color: #f2c572;
+              margin-top: 20px;
+              cursor: pointer;
+              text-transform: uppercase;
+              font-size: 4.5vw;
+              width: 80%;
+              margin: 0 auto;
           &:focus{
             outline: none;
           }
