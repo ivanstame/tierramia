@@ -113,9 +113,6 @@
       var poslng = position.coords.longitude;
 
       data.sort(function(a,b){
-        var locA  = a.lat;
-        var locB  = b.lng;
-
         distA = distance(poslat, poslng, a.lat, a.lng, "K")
         distB = distance(poslat, poslng, b.lat, b.lng, "K");
         return distA - distB;
