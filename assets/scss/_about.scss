@@ -1,0 +1,269 @@
+@import "variables";
+@import "node_modules/include-media/dist/include-media";
+
+body#about-page{
+  // mobile content here
+  @include media(">=phone"){  //phone defaults above
+    @include media("landscape"){ //phone landscape
+
+    }
+  }
+  @include media(">=tablet"){    //tablet portrait
+
+    @include media("landscape") {  //tablet landscape
+
+    }
+  }
+  @include media(">=desktop") {  //desktop
+
+  }
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4% 5%;
+    @include media(">=phone"){  //phone defaults above
+      @include media("landscape"){ //phone landscape
+
+        }
+    }
+    @include media(">=tablet"){    //tablet portrait
+
+      @include media("landscape") {  //tablet landscape
+
+      }
+    }
+    @include media(">=desktop") {  //desktop
+
+    }
+    .circlelogo-wrapper{
+      width: 18vw;
+      height: 18vw;
+      border-radius: 50%;
+      border: 2px solid #3b2a14;
+      @include media(">=phone"){  //phone defaults above
+        @include media("landscape"){ //phone landscape
+
+          }
+      }
+      @include media(">=tablet"){    //tablet portrait
+
+        @include media("landscape") {  //tablet landscape
+
+        }
+      }
+      @include media(">=desktop") {  //desktop
+        width: 9.25vw;
+        height: 9.25vw;
+      }
+      img.circle-logo{
+        width: 100%;
+        height: 100%;
+        @include media(">=phone"){  //phone defaults above
+          @include media("landscape"){ //phone landscape
+
+            }
+        }
+        @include media(">=tablet"){    //tablet portrait
+
+          @include media("landscape") {  //tablet landscape
+
+          }
+        }
+        @include media(">=desktop") {  //desktop
+
+        }
+      }
+    }
+    nav{
+      width: 70vw;
+      @include media(">=phone"){  //phone defaults above
+        @include media("landscape"){ //phone landscape
+
+          }
+      }
+      @include media(">=tablet"){    //tablet portrait
+
+        @include media("landscape") {  //tablet landscape
+
+        }
+      }
+      @include media(">=desktop") {  //desktop
+
+      }
+      ul#main-nav{
+          display:flex;
+          flex-flow:row;
+          flex-wrap: nowrap;
+          justify-content: space-around;
+          align-items: center;
+          font-weight: 600;
+        @include media(">=phone"){  //phone defaults above
+          @include media("landscape"){ //phone landscape
+
+            }
+        }
+        @include media(">=tablet"){    //tablet portrait
+
+          @include media("landscape") {  //tablet landscape
+
+          }
+        }
+        @include media(">=desktop") {  //desktop
+
+        }
+        li.nav-item{
+            font-size: 3vw;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: "ArbescoDT-Bold", Arial, sans-serif;
+            color: $darkbrown;
+            transition: .2s all ease-in-out;
+            cursor: pointer;
+          &:hover{
+            color: $orange;
+          }
+          &:last-child{
+            display: none;
+          }
+          @include media(">=phone"){  //phone defaults above
+            @include media("landscape"){ //phone landscape
+
+              }
+          }
+          @include media(">=tablet"){    //tablet portrait
+
+            @include media("landscape") {  //tablet landscape
+
+            }
+          }
+          @include media(">=desktop") {  //desktop
+
+          }
+        }// end nav-item
+      } // end #main-nav
+    } // end nav
+  } //end header
+  #hero{
+    background: url('../img/tm_mobile_hero/faces4.jpg');
+    background-size: cover;
+    height: 50vh;
+    position: relative;
+    @include media(">=phone"){  //phone defaults above
+        @include media("landscape"){ //phone landscape
+
+        }
+    }
+    @include media(">=tablet"){    //tablet portrait
+
+        @include media("landscape") {  //tablet landscape
+
+        }
+    }
+    @include media(">=desktop") {  //desktop
+
+    }
+    .overlay{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-flow: column;
+      flex-flow: column;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-align: center;
+      align-items: center;
+      background: rgba(0,0,0,0.5);
+      @include media(">=phone"){  //phone defaults above
+          @include media("landscape"){ //phone landscape
+
+          }
+      }
+      @include media(">=tablet"){    //tablet portrait
+
+          @include media("landscape") {  //tablet landscape
+
+          }
+      }
+      @include media(">=desktop") {  //desktop
+
+      }
+      h3{
+        color: $lightYellow;
+        font-size: 7vw;
+        font-family: 'ArbescoDT-SemiBold', serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-shadow: 0px 0px 1px black;
+        @include media(">=phone"){  //phone defaults above
+            @include media("landscape"){ //phone landscape
+
+            }
+        }
+        @include media(">=tablet"){    //tablet portrait
+
+            @include media("landscape") {  //tablet landscape
+
+            }
+        }
+        @include media(">=desktop") {  //desktop
+
+        }
+      }
+    } // end overlay
+  }// end hero
+  #story{
+    padding: 50px 0;
+    blockquote{
+      padding: 0 30px;
+    font-family: 'ArbescoDT-Bold';
+    font-size: 1.5rem;
+    line-height: 1.75;
+    margin-bottom: 50px;
+    color: #3b2a14;
+    }
+    .chapter{
+      padding: 0 30px;
+      h3{
+        text-align: left;
+        padding: 0;
+        margin-bottom: 50px;
+        font-family: "ArbescoDT-SemiBold", Arial, sans-serif;
+        color: #51453f;
+        letter-spacing: 2px;
+        font-size: 2rem;
+        display: inline-block;
+        text-transform: capitalize;
+        position: relative;
+        transform-style: preserve-3d;
+        text-decoration: underline;
+        text-underline-position: under;
+        text-decoration-color: $lightYellow;
+        text-decoration-style: double;
+      }
+      p{
+        text-align: center;
+        font-family: 'ArbescoDT-Book', serif;
+        font-size: 0.9rem;
+        color: $lightBrown;
+        line-height: 1.5;
+        margin-bottom: 25px;
+
+      }
+    }
+    .photo-wrapper{
+      height: 40vh;
+      margin: 50px 0;
+      img{
+        width: 100%;
+        height: 100%;
+
+      }
+    }
+
+  }
+}// End #about-page total
