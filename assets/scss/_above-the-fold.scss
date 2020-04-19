@@ -311,7 +311,7 @@
       #top-heading{
         transform-style: preserve-3d;
         width: 100%;
-        margin-top: 65px;
+        margin-top: 80px;
         text-align: center;
         padding: 0 5%;
         @include media(">=phone"){  //phone defaults above
@@ -557,7 +557,7 @@
       width: 100%;
       font-size: 13px;
       line-height: 2;
-      color: #685a54;
+      color: $darkerbrown;
       @include media(">=phone"){  //phone defaults above
           @include media("landscape"){ //phone landscape
             font-size: 0.9rem;
@@ -689,9 +689,9 @@
         text-transform: uppercase;
         font-family: 'ArbescoDT-Bold', sans-serif;
         color: $lightYellow;
-                text-shadow: 0px 0px 1px black;
                 letter-spacing: 1px;
         font-size: 1.1rem;
+        font-weight: 600;
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
 
@@ -731,7 +731,7 @@
       }
       p{
         font-family: 'ArbescoDT-Book', sans-serif;
-        color: #685a54;
+        color: $darkerbrown;
         font-size: 13px;
         line-height: 2;
         @include media(">=phone"){  //phone defaults above
@@ -754,7 +754,6 @@
       a{
         text-decoration: none;
         color: $lightYellow;
-                text-shadow: 0px 0px 1px black;
                 letter-spacing: 1px;
         font-family: 'ArbescoDT-Bold';
       }
@@ -1100,9 +1099,9 @@
         text-transform: uppercase;
         font-family: 'ArbescoDT-Bold', sans-serif;
         color: $lightYellow;
-                text-shadow: 0px 0px 1px black;
                 letter-spacing: 1px;
         font-size: 1.1rem;
+        font-weight: 600;
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
 
@@ -1143,7 +1142,7 @@
       }
       p{
         font-family: 'ArbescoDT-Book', sans-serif;
-        color: #685a54;
+        color: $darkerbrown;
         font-size: 13px;
         line-height: 2;
         @include media(">=phone"){  //phone defaults above
@@ -1166,7 +1165,6 @@
       a{
         text-decoration: none;
         color: $lightYellow;
-                text-shadow: 0px 0px 1px black;
                 letter-spacing: 1px;
         font-family: 'ArbescoDT-Bold';
       }
@@ -1502,7 +1500,7 @@
               font-size: 13px;
               padding: 0 14%;
               font-family: 'ArbescoDT-Book', serif;
-              color: $lightBrown;
+              color: $darkerbrown;
               @include media(">=phone"){  //phone defaults above
                   @include media("landscape"){ //phone landscape
 
