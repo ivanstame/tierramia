@@ -215,6 +215,12 @@ body#about-page{
 
         }
       }
+      h4{
+        color: $lightYellow;
+        font-family: 'Viner Hand ITC', cursive;
+        position: absolute;
+        bottom: 0;
+      }
     } // end overlay
   }// end hero
   #story{
