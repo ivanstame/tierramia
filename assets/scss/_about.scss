@@ -147,7 +147,7 @@ body#about-page{
   #hero{
     background: url('../img/tm_mobile_hero/faces4.jpg');
     background-size: cover;
-    height: 50vh;
+    height: 35vh;
     position: relative;
     @include media(">=phone"){  //phone defaults above
         @include media("landscape"){ //phone landscape
@@ -195,8 +195,8 @@ body#about-page{
       }
       h3{
         color: $lightYellow;
-        font-size: 7vw;
-        font-family: 'ArbescoDT-SemiBold', serif;
+        font-size: 7.25vw;
+        font-family: 'ArbescoDT-Bold', serif;
         text-transform: uppercase;
         letter-spacing: 1px;
         text-shadow: 0px 0px 1px black;
@@ -224,11 +224,11 @@ body#about-page{
     } // end overlay
   }// end hero
   #story{
-    padding: 50px 0;
+    padding: 35px 0;
       blockquote{
         padding: 0 30px;
         font-family: 'ArbescoDT-Bold';
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         line-height: 1.75;
         margin-bottom: 50px;
         color: #3b2a14;
@@ -256,7 +256,7 @@ body#about-page{
         font-family: "ArbescoDT-SemiBold", Arial, sans-serif;
         color: #51453f;
         letter-spacing: 2px;
-        font-size: 2rem;
+        font-size: 1.5rem;
         display: inline-block;
         text-transform: capitalize;
         position: relative;

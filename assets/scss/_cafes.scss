@@ -136,7 +136,7 @@ background: #FEFEFE;
   #hero{
     background: url('../img/cafes-hero.jpeg');
     background-size: cover;
-    height: 50vh;
+    height: 35vh;
     position: relative;
     @include media(">=phone"){  //phone defaults above
         @include media("landscape"){ //phone landscape
@@ -153,7 +153,7 @@ background: #FEFEFE;
 
     }
     .overlay{
-      padding: 10vw;
+      padding: 17vw 10vw 5vw 10vw;
       position: absolute;
       top: 0;
       bottom: 0;
@@ -163,10 +163,8 @@ background: #FEFEFE;
       display: flex;
       -ms-flex-flow: column;
       flex-flow: column;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -ms-flex-align: center;
-      align-items: center;
+      justify-content: space-around;
+      align-items: center;;
       background: rgba(0,0,0,0.5);
       @include media(">=phone"){  //phone defaults above
           @include media("landscape"){ //phone landscape
@@ -184,8 +182,8 @@ background: #FEFEFE;
       }
       h3{
         color: $lightYellow;
-        font-size: 7vw;
-        font-family: 'ArbescoDT-SemiBold', serif;
+        font-size: 7.25vw;
+        font-family: 'ArbescoDT-Bold', serif;
         text-transform: uppercase;
         letter-spacing: 1px;
         text-shadow: 0px 0px 1px black;
@@ -251,7 +249,7 @@ background: #FEFEFE;
 
       }
       div#counties{
-          padding: 6vw 1vw;
+          padding: 5vw 1vw;
           background: $lightBrown;
           ul#counties-nav{
             line-height: 1;
@@ -262,7 +260,7 @@ background: #FEFEFE;
             align-items: center;
             grid-auto-rows: 0;
               li.county-item{
-                  font-size: 4vw;
+                  font-size: 3.5vw;
                   cursor: pointer;
                   // display: inline-block;
                   color: white;
@@ -304,14 +302,11 @@ background: #FEFEFE;
               }
               li.city{
                 font-weight: 600;
-                font-size: 3vw;
+                font-size: 3.5vw;
                 color: $darkbrown;
                 display: inline-block;
                 padding: 0px 8px;
                 line-height: 3;
-                text-transform: uppercase;
-
-
               }
           }
 
@@ -339,7 +334,8 @@ background: #FEFEFE;
           align-items: center;
           h3{
             color: $lightYellow;
-            font-size: 6.75vw;
+            font-size: 6.25vw;
+            line-height: 1px;
             font-family: 'ArbescoDT-SemiBold', serif;
             text-transform: uppercase;
             width: 100%;
