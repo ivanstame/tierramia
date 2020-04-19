@@ -80,18 +80,20 @@ a{
 }
 
 .sub-nav{
-  padding: 5vw 1vw;
+  padding: 2.5vw 1vw;
   background: #685a54;
   .int-anchor-container{
     list-style: none;
     line-height: 1;
-    font-family: 'Viner Hand ITC', cursive;
+    font-family: 'ArbescoDT-Bold', cursive;
     display: flex;
     flex-flow: row;
     justify-content: space-around;
     align-items: center;
     .int-anchor{
+      margin-top: 3px;
       font-size: 3.75vw;
+      text-transform: uppercase;
       cursor: pointer;
       color: white;
       border-bottom: 2px solid #685a54;

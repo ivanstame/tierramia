@@ -136,7 +136,8 @@ background: #FEFEFE;
   #hero{
     background: url('../img/tm_mobile_hero/beautifulshot1.jpg');
     background-size: cover;
-    height: 35vh;
+    background-position: center;
+    height: 30vh;
     position: relative;
     @include media(">=phone"){  //phone defaults above
         @include media("landscape"){ //phone landscape
@@ -231,7 +232,7 @@ background: #FEFEFE;
   }
   #menu-body{
     padding: 20px;
-    background: $lightYellow;
+    background: white;
     h1,h2,h3,h4,h5,h6{
       text-align: center !important;
       font-family: 'ArbescoDT-SemiBold', serif;
@@ -250,7 +251,7 @@ background: #FEFEFE;
         letter-spacing: 2px;
         text-decoration: underline;
         text-underline-position: under;
-        text-decoration-color: #fafafa;
+        text-decoration-color: $lightYellow;
         text-decoration-style: double;
       }
       div.sub-menu-list-wrapper{
@@ -266,7 +267,7 @@ background: #FEFEFE;
           text-transform: lowercase;
           text-align: center;
           margin-bottom: 15px;
-          color: $lightBrown;
+          color: $otherOrange;
         }
         ul.sub-menu-list{
 
