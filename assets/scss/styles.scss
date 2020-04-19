@@ -38,3 +38,63 @@ a{
   text-decoration: none;
   color: unset;
 }
+
+#decorative-box{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  .inside-corner{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    &:nth-of-type(1){
+      top: 0;
+      left: 0;
+      border-left: 3px solid #f2c572;
+      border-top: 3px solid #f2c572;
+    }
+    &:nth-of-type(2){
+      top: 0;
+      right: 0;
+      border-top: 3px solid #f2c572;
+      border-right: 3px solid #f2c572;
+    }
+    &:nth-of-type(3){
+      bottom: 0;
+      left: 0;
+      border-bottom: 3px solid #f2c572;
+      border-left: 3px solid #f2c572;
+    }
+    &:nth-of-type(4){
+      bottom: 0;
+      right: 0;
+      border-bottom: 3px solid #f2c572;
+      border-right: 3px solid #f2c572;
+    }
+  }
+}
+
+.sub-nav{
+  padding: 6vw 1vw;
+  background: #685a54;
+  .int-anchor-container{
+    list-style: none;
+    line-height: 1;
+    font-family: 'Viner Hand ITC', cursive;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    grid-auto-rows: 0;
+    .int-anchor{
+      font-size: 4vw;
+      cursor: pointer;
+      color: white;
+      border-bottom: 2px solid #685a54;
+    }
+  }
+}
