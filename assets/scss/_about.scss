@@ -2,7 +2,7 @@
 @import "node_modules/include-media/dist/include-media";
 
 body#about-page{
-  overflow: hidden;
+  overflow-x: hidden;
   // mobile content here
   @include media(">=phone"){  //phone defaults above
     @include media("landscape"){ //phone landscape
