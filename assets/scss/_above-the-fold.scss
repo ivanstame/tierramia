@@ -605,8 +605,8 @@
 #horchata{
   position: relative;
   height: 100vh;
-  height: calc(var(--vh, 1vh) * 110);
-  padding: 25px 0;
+  height: calc(var(--vh, 1vh) * 100);
+  padding: 50px 0;
   background: url("../img/tileblock2.png");
   background-size: 8%;
   background-position: bottom;
@@ -1005,12 +1005,12 @@
 
 #sourcing{
   height: 100vh;
-  height: calc(var(--vh, 1vh) * 110);
+  height: calc(var(--vh, 1vh) * 100);
   background: url("../img/tileblock2.png");
   background-size: 8%;
   background-position: bottom;
   position: relative;
-  padding: 25px 0;
+  padding: 50px 0;
   @include media(">=phone"){  //phone defaults above
       @include media("landscape"){ //phone landscape
         height: unset;
