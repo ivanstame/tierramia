@@ -446,6 +446,7 @@
               font-size: 4.5vw;
               width: 80%;
               margin: 0 auto;
+              background: rgba(0,0,0,0.6);
           &:focus{
             outline: none;
           }
@@ -760,7 +761,7 @@
 
     }
     .promo-photo{
-      background: url('../img/cafe-latte.jpg');
+      background: url('../img/echo_park.jpg');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
