@@ -6,8 +6,8 @@ var bayAreaOGHeight = citiesList[2].getBoundingClientRect().height;
 var laCountyCities = citiesList[0]; // the LA County City List <ul>
 var orangeCountyCities = citiesList[1]; // the Orange County City List <ul>
 var bayAreaCities = citiesList[2]; // the Orange County City List <ul>
-var laCounty = document.getElementsByClassName('county-item')[0];
-var orangeCounty = document.getElementsByClassName('county-item')[1];
+var laCounty = document.getElementsByClassName('county-item')[1];
+var orangeCounty = document.getElementsByClassName('county-item')[0];
 var bayArea = document.getElementsByClassName('county-item')[2];
 var i = 0;
 while (i < citiesList.length){
