@@ -35,13 +35,13 @@
     </section>
     <div class="sub-nav">
       <ul class="int-anchor-container">
-        <li class="int-anchor">Hot</li>
-        <li class="int-anchor active">Cold</li>
-        <li class="int-anchor">Pastries</li>
+        <li id="hot-btn" class="int-anchor">Hot</li>
+        <li id="cold-btn" class="int-anchor active">Cold</li>
+        <li id="pastries-btn" class="int-anchor">Pastries</li>
       </ul>
     </div>
     <section id="menu-body">
-      <div class="menu-list" id="ice-blended">
+      <div class="menu-list" id="cold-beverages">
         <h2 class="menu-list-title">Bebidas Heladas</h2>
         <div class="sub-menu-list-wrapper">
           <h3 class="sub-menu-list-title">Blended Cafe Frappe</h3>
@@ -79,35 +79,82 @@
           </ul>
         </div>
         <div class="sub-menu-list-wrapper">
-          <h3 class="sub-menu-list-title">Blended Cream Helado</h3>
-          <p class="header-description">Ice Blended Cream Flavors Topped With Whipped Cream</p>
+          <h3 class="sub-menu-list-title">Iced Coffee, Tea & Lemonades</h3>
+          <p class="header-description">simply refreshing classic and innovative selections</p>
           <ul class="sub-menu-list">
-            <li class="sub-menu-list-item">Coconut Cream</li>
-            <li class="sub-menu-list-item">Horchata Cream</li>
-            <li class="sub-menu-list-item">Mazapan Cream</li>
-            <li class="sub-menu-list-item">Mango Cream</li>
-            <li class="sub-menu-list-item">Strawberries & Cream</li>
-            <li class="sub-menu-list-item">Chocolate Cream</li>
-            <li class="sub-menu-list-item">Vanilla Cream</li>
+            <li class="sub-menu-list-item">Iced Coffee</li>
+            <li class="sub-menu-list-item">Green Iced Tea</li>
+            <li class="sub-menu-list-item">Mojito Mint Lemonade</li>
+            <li class="sub-menu-list-item">Strawberry Mojito Tea Lemonade</li>
+            <li class="sub-menu-list-item">Green Tea Lemonade</li>
+            <li class="sub-menu-list-item">Strawberry Lemonade</li>
           </ul>
         </div>
       </div>
-      <div class="menu-list" id="hot-beverages">
+      <div class="menu-list visuallyhidden hidden" id="hot-beverages">
         <h2 class="menu-list-title">Bebidas Calientes</h2>
         <div class="sub-menu-list-wrapper">
           <h3 class="sub-menu-list-title">Tierra Mia Specialties</h3>
-          <p class="header-description">Ice Blended Coffee Flavors Topped With Whipped Cream</p>
+          <p class="header-description">all drinks can be ordered iced</p>
           <ul class="sub-menu-list">
-            <li class="sub-menu-list-item">Horchata Frappe</li>
-            <li class="sub-menu-list-item">Chocolate Mexicano Frappe</li>
-            <li class="sub-menu-list-item">Rice & Beans Frappe</li>
-            <li class="sub-menu-list-item">Coco Loco Frappe</li>
-            <li class="sub-menu-list-item">Cafe Corazon Frappe</li>
-            <li class="sub-menu-list-item">Caramel Frappe</li>
-            <li class="sub-menu-list-item">Mocha Frappe</li>
+            <li class="sub-menu-list-item">Horchata Latte</li>
+            <li class="sub-menu-list-item">Mocha Mexicano</li>
+            <li class="sub-menu-list-item">Cafecito Cubano con Leche</li>
+            <li class="sub-menu-list-item">Coco Loco Latte</li>
+          </ul>
+        </div>
+        <div class="sub-menu-list-wrapper">
+          <h3 class="sub-menu-list-title">Traditional Beverages</h3>
+          <p class="header-description">all drinks can be ordered iced</p>
+          <ul class="sub-menu-list">
+            <li class="sub-menu-list-item">Mocha</li>
+            <li class="sub-menu-list-item">Mocha Blanco</li>
+            <li class="sub-menu-list-item">Caramelo Macchiato</li>
+            <li class="sub-menu-list-item">Vanilla Latte</li>
+            <li class="sub-menu-list-item">Latte</li>
+            <li class="sub-menu-list-item">Americano</li>
+            <li class="sub-menu-list-item">Cappuccino Italiano</li>
+            <li class="sub-menu-list-item">Espresso Machiato</li>
+            <li class="sub-menu-list-item">Espresso</li>
+          </ul>
+        </div>
+        <div class="sub-menu-list-wrapper">
+          <h3 class="sub-menu-list-title">Tea & Hot Chocolates</h3>
+          <p class="header-description">comforting and delicious creations</p>
+          <ul class="sub-menu-list">
+            <li class="sub-menu-list-item">Chai Tea Latte</li>
+            <li class="sub-menu-list-item">Vanilla Tea Latte</li>
+            <li class="sub-menu-list-item">Honey Vanilla Tea Latte</li>
+            <li class="sub-menu-list-item">Hot Loose Leaf Teas*</li>
+            <li class="sub-menu-list-item">Chocolate Mexicano de Guadalajara</li>
+            <li class="sub-menu-list-item">Leche De Coco</li>
+            <li class="sub-menu-list-item">Hot Chocolate</li>
+          </ul>
+        </div>
+        <div class="sub-menu-list-wrapper">
+          <h3 class="sub-menu-list-title">Brewed Coffee</h3>
+          <p class="header-description">the highest grade coffee from latin america and around the world.  See our current rotating selection. </p>
+        </div>
+      </div>
+      <div class="menu-list visuallyhidden hidden" id="pastries">
+        <h2 class="menu-list-title">Tasty Pastries</h2>
+        <div class="sub-menu-list-wrapper">
+          <h3 class="sub-menu-list-title">Baked Fresh Daily</h3>
+          <ul class="sub-menu-list">
+            <li class="sub-menu-list-item">Tres Leches Muffin</li>
+            <li class="sub-menu-list-item">Churro Muffin</li>
+            <li class="sub-menu-list-item">Chocolate Chip Muffin</li>
+            <li class="sub-menu-list-item">Banana Nut Muffin</li>
+            <li class="sub-menu-list-item">Blueberry Muffin</li>
+            <li class="sub-menu-list-item">Guava Cheese Pastry</li>
+            <li class="sub-menu-list-item">Cheese Delight</li>
+            <li class="sub-menu-list-item">Chocolate Croissant</li>
+            <li class="sub-menu-list-item">Butter Croissant</li>
+            <li class="sub-menu-list-item">Dulce Almond Danish</li>
           </ul>
         </div>
       </div>
+
 
     </section>
 
@@ -126,5 +173,6 @@
     </footer>
     <script src="https://kit.fontawesome.com/6abd2d5d3d.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../js/dist/menu_page.js"></script>
   </body>
 </html>

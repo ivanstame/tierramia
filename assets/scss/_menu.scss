@@ -241,6 +241,7 @@ background: #FEFEFE;
       font-family: 'ArbescoDT-Book', serif;
     }
     div.menu-list{ // three panes, cold - hot - pastries
+      transition: all .5s;
       h2.menu-list-title{
         text-transform: uppercase;
         font-size: 1.5rem;
@@ -277,10 +278,27 @@ background: #FEFEFE;
             text-transform: capitalize;
             line-height: 3;
             letter-spacing: 1px;
-            font-size: 1rem;
+            font-size: 0.85rem;
           }
         }
       }
     }
+    div#cold-beverages{
+
+    }
+    div#hot-beverages{
+    }
+    div#pastries{
+      h3{
+        margin-bottom: 15px;
+      }
+    }
   }
+}
+
+.hidden{
+  display: none;
+}
+.visuallyhidden{
+  opacity: 0;
 }
