@@ -32,10 +32,15 @@ laCounty.addEventListener('click', function(){
   }
   else
   {
-    laCountyCities.style.height = "0px";
+    // laCountyCities.style.height = "0px";
   }
 
-  laCounty.classList.toggle('county-active');
+  if(!laCounty.classList.contains('county-active')){
+    laCounty.classList.add('county-active');
+  } else {
+    // do nothing
+  }
+
   orangeCounty.classList.remove('county-active');
   bayArea.classList.remove('county-active');
   for(j=0; j < citiesList.length; j++)
@@ -60,9 +65,15 @@ orangeCounty.addEventListener('click', function(){
   }
   else
   {
-    orangeCountyCities.style.height = "0px";
+    // orangeCountyCities.style.height = "0px";
   }
-  orangeCounty.classList.toggle('county-active');
+
+  if(!orangeCounty.classList.contains('county-active')){
+    orangeCounty.classList.add('county-active');
+  } else{
+    //do nothing
+  }
+
   laCounty.classList.remove('county-active');
   bayArea.classList.remove('county-active');
   for(j=0; j < citiesList.length; j++)
@@ -87,9 +98,15 @@ bayArea.addEventListener('click', function(){
   }
   else
   {
-    bayAreaCities.style.height = "0px";
+    // bayAreaCities.style.height = "0px";
   }
-  bayArea.classList.toggle('county-active');
+
+  if(!bayArea.classList.contains('county-active')){
+    bayArea.classList.add('county-active');
+  } else {
+    // do nothing
+  }
+
   laCounty.classList.remove('county-active');
   orangeCounty.classList.remove('county-active');
   for(j=0; j < citiesList.length; j++)
