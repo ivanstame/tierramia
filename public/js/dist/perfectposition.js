@@ -16,7 +16,7 @@ function test2(e) {
 
 function offset(el) {
     var rect = el.getBoundingClientRect(),
-        scrollLeft = window.pageYOffset || document.documentElement.scrollTop;
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         return { top: rect.top + scrollTop}
 }
 
