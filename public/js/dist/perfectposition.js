@@ -1,6 +1,7 @@
 function moveToNew(e){
   //get y position of element to move to using getBoundingClientRect().y
-  var currentPosition = offset(e).top;
+  var target = document.getElementById(e);
+  var currentPosition = offset(target).top;
   var screenHeight = window.innerHeight;
   var moveAmount = screenHeight / 5;
   var newPosition = currentPosition - moveAmount;
