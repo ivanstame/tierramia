@@ -137,7 +137,7 @@ background: #FEFEFE;
     background: url('../img/tm_mobile_hero/beautifulshot1.jpg');
     background-size: cover;
     background-position: center;
-    height: 30vh;
+    height: 35vh;
     position: relative;
     @include media(">=phone"){  //phone defaults above
         @include media("landscape"){ //phone landscape

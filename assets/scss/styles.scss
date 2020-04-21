@@ -80,8 +80,9 @@ a{
 }
 
 .sub-nav{
+  margin-top: 15px;
   padding: 1.75vw 1vw;
-  background: #685a54;
+  background: #fff;
   .int-anchor-container{
     list-style: none;
     line-height: 1;
@@ -95,11 +96,14 @@ a{
       font-size: 3.75vw;
       text-transform: uppercase;
       cursor: pointer;
-      color: white;
+      color: $darkerbrown;
+      border-bottom: 1px solid white;
+      padding-bottom: 3px;
     }
   }
 }
 
 .active {
-  color: $lightYellow !important;
+  color: $otherOrange !important;
+  border-color: $darkbrown !important;
 }

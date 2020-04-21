@@ -136,7 +136,7 @@ background: #FEFEFE;
   #hero{
     background: url('../img/tm_mobile_hero/1000.jpg');
     background-size: cover;
-    height: 30vh;
+    height: 35vh;
     position: relative;
     @include media(">=phone"){  //phone defaults above
         @include media("landscape"){ //phone landscape
@@ -229,7 +229,34 @@ background: #FEFEFE;
       }
     }
   }
+  blockquote{
+    padding: 0 30px;
+    font-family: 'ArbescoDT-Bold';
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 50px 30px;
+    line-height: 1.75;
+    text-transform: capitalize;
+    color: $darkbrown;
+    position: relative;
+    transform-style: preserve-3d;
+
+  &:after{
+    display: block;
+    content: '';
+    position: absolute;
+    background: url(../img/talavera.svg);
+    height: 70%;
+    width: 100%;
+    top: 15%;
+    left: -1%;
+    transform: translateZ(-1px);
+    opacity: 0.06;
+
+  }
+  }
   #location-nav{
+      margin-top: 15px;
       display: grid;
       grid-template-rows: auto auto;
       font-family: 'ArbescoDT-Book', serif;
@@ -250,21 +277,23 @@ background: #FEFEFE;
       }
       div#counties{
           padding: 1.75vw 10vw;
-          background: $lightBrown;
           ul#counties-nav{
             line-height: 1;
             display: flex;
             flex-flow: row;
             justify-content: space-around;
             align-items: center;
+            margin-bottom: 15px;
               li.county-item{
                   font-family: 'ArbescoDT-Bold', cursive;
-                  font-size: 3.75vw;
+                  font-size: 4.25vw;
                   cursor: pointer;
                   text-transform: uppercase;
-                  color: white;
+                  color: $darkerbrown;
+                  border-bottom: 1px solid white;
+                  padding-bottom: 3px;
                   &:hover{
-                    color: $orange;
+
                   }
                   span{
                     font-weight: 400;
@@ -274,9 +303,9 @@ background: #FEFEFE;
       }
       div#cities{
           position: relative;
+          padding: 0 30px;
+          margin-bottom: 15px;
           ul.cities-list{
-            background: url('../img/talaverabeige3.svg');
-            background-size: 50%;
             text-align: center;
             transition: .2s all ease-in-out;
             transform-origin: top;
@@ -407,7 +436,8 @@ background: #FEFEFE;
 }//end body#cafe-page
 
 .county-active {
-  color: $lightYellow !important;
+  color: $otherOrange !important;
+  border-color: $darkbrown !important;
 }
 
 .out-of-the-way{

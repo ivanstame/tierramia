@@ -488,7 +488,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10%;
+  padding: 15% 10%;
   @include media(">=phone"){  //phone defaults above
       @include media("landscape"){ //phone landscape
         padding: 5%;
@@ -556,7 +556,7 @@
     p{
       font-family: 'ArbescoDT-Book', sans-serif;
       width: 100%;
-      font-size: 13px;
+      font-size: 14px;
       line-height: 2;
       color: $darkerbrown;
       @include media(">=phone"){  //phone defaults above
