@@ -13,12 +13,12 @@ function test2(e) {
   moveToNew(dataName);
 }
 
-function moveToNew(e){
-  //get y position of element to move to using getBoundingClientRect().y
-  var currentPosition = document.getElementById(e).getBoundingClientRect().y;
-  var screenHeight = window.innerHeight;
-  var moveAmount = screenHeight / 5;
-  var newPosition = currentPosition - moveAmount;
-
-  window.scrollTo(0, newPosition)
-}
+// function moveToNew(e){
+//   //get y position of element to move to using getBoundingClientRect().y
+//   var currentPosition = document.getElementById(e).getBoundingClientRect().y;
+//   var screenHeight = window.innerHeight;
+//   var moveAmount = screenHeight / 5;
+//   var newPosition = currentPosition - moveAmount;
+//
+//   window.scrollTo(0, newPosition)
+// }
