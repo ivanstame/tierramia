@@ -25,38 +25,135 @@
       height: 150vh;
       height: calc(var(--vh, 1vh) * 150);
     }
-    .circlelogo-wrapper{
+    header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4% 5%;
       position: absolute;
-      z-index: 4;
-      top: 2.5%;
-      left: 5%;
-      width: 18vw;
-      height: 18vw;
-      @include media(">=tablet"){
-        width: 14vw;
-        height: 14vw;
-        @include media("landscape") {
+      width: 100%;
+      z-index: 999;
+      @include media(">=phone"){  //phone defaults above
+        @include media("landscape"){ //phone landscape
+
+          }
+      }
+      @include media(">=tablet"){    //tablet portrait
+
+        @include media("landscape") {  //tablet landscape
 
         }
-
-      } //end tablet mq
-      @include media(">=desktop") {
-        width: 9.25vw;
-        height: 9.25vw;
-      } //end desktop mq
-      .circle-logo{
-        width: 100%;
-        height: 100%;
-        @include media(">=tablet") {
-
-        }
-        @include media(">=desktop"){
-
-        }
+      }
+      @include media(">=desktop") {  //desktop
 
       }
-    }
+      .circlelogo-wrapper{
+        width: 18vw;
+        height: 18vw;
+        border-radius: 50%;
+        @include media(">=phone"){  //phone defaults above
+          @include media("landscape"){ //phone landscape
 
+            }
+        }
+        @include media(">=tablet"){    //tablet portrait
+
+          @include media("landscape") {  //tablet landscape
+
+          }
+        }
+        @include media(">=desktop") {  //desktop
+          width: 9.25vw;
+          height: 9.25vw;
+        }
+        img.circle-logo{
+          width: 100%;
+          height: 100%;
+          @include media(">=phone"){  //phone defaults above
+            @include media("landscape"){ //phone landscape
+
+              }
+          }
+          @include media(">=tablet"){    //tablet portrait
+
+            @include media("landscape") {  //tablet landscape
+
+            }
+          }
+          @include media(">=desktop") {  //desktop
+
+          }
+        }
+      }
+      nav{
+        width: 75%;
+        @include media(">=phone"){  //phone defaults above
+          @include media("landscape"){ //phone landscape
+
+            }
+        }
+        @include media(">=tablet"){    //tablet portrait
+
+          @include media("landscape") {  //tablet landscape
+
+          }
+        }
+        @include media(">=desktop") {  //desktop
+
+        }
+        ul#main-nav{
+            display:flex;
+            flex-flow:row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+            font-weight: 600;
+          @include media(">=phone"){  //phone defaults above
+            @include media("landscape"){ //phone landscape
+
+              }
+          }
+          @include media(">=tablet"){    //tablet portrait
+
+            @include media("landscape") {  //tablet landscape
+
+            }
+          }
+          @include media(">=desktop") {  //desktop
+
+          }
+          li.nav-item{
+              font-size: 3.5vw;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              font-family: "ArbescoDT-Bold", Arial, sans-serif;
+              color: #fff;
+              transition: .2s all ease-in-out;
+              cursor: pointer;
+            &:hover{
+              color: $orange;
+            }
+            &:last-child{
+              display: none;
+            }
+            @include media(">=phone"){  //phone defaults above
+              @include media("landscape"){ //phone landscape
+
+                }
+            }
+            @include media(">=tablet"){    //tablet portrait
+
+              @include media("landscape") {  //tablet landscape
+
+              }
+            }
+            @include media(">=desktop") {  //desktop
+
+            }
+          }// end nav-item
+        } // end #main-nav
+      } // end nav
+    } //end header
     #carousel-stack-container{
         position:absolute;
         height:100%;
@@ -80,7 +177,7 @@
         .carousel-image{
             position:absolute;
             width: 100%;
-            filter: brightness(0.8);
+            filter: brightness(0.75);
             height: 100%;
             @include media(">=phone"){  //phone defaults above
           	    @include media("landscape"){ //phone landscape
@@ -206,15 +303,16 @@
         }
     }
     #content-box {
-      height: calc(var(--vh, 1vh) * 75);
+      height: 100%;
       position: absolute;
       right: 0;
       top: 0;
       z-index: 999;
       display: flex;
       flex-flow: column;
-      justify-content: space-between;
-      padding-bottom: 5%;
+      justify-content: center;
+      padding-top: 25%;
+      z-index: 900;
       @include media(">=phone"){  //phone defaults above
           @include media("landscape"){ //phone landscape
 
@@ -232,81 +330,6 @@
         width: 60%;
         padding-bottom: 10%;
         height: calc(var(--vh, 1vh) * 100);
-      }
-
-      #af-nav{
-        display:flex;
-        flex-flow:row;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: center;
-        padding: 47px 20px 30px 0;
-        font-weight: 600;
-        width: 100%;
-        padding-left: 25vw;
-        @include media(">=phone"){  //phone defaults above
-            @include media("landscape"){ //phone landscape
-
-            }
-        }
-        //
-        @include media(">=tablet"){    //tablet portrait
-
-              @include media("landscape") {  //tablet landscape
-
-              }
-
-            }
-        @include media(">=desktop") {  //desktop
-          padding-top: 70px;
-          padding-left: unset;
-        }
-        li{
-          font-size: 3vw;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          font-family: "ArbescoDT-Bold", Arial, sans-serif;
-          color: #fff;
-          transition: .2s all ease-in-out;
-          cursor: pointer;
-          &:hover{
-            color: $orange;
-          }
-          @include media(">=phone"){  //phone defaults above
-              @include media("landscape"){ //phone landscape
-                font-size: 1.6vw;
-              }
-          }
-          //
-          @include media(">=tablet"){    //tablet portrait
-
-                @include media("landscape") {  //tablet landscape
-
-                }
-
-              }
-          @include media(">=desktop") {  //desktop
-            font-size: 1.25vw;
-            color: $darkbrown;
-          }
-        }
-        li:nth-of-type(5){
-          display: none;
-          @include media(">=phone"){  //phone defaults above
-              @include media("landscape"){ //phone landscape
-              }
-          }
-          //
-          @include media(">=tablet"){    //tablet portrait
-            display: inline-block;
-                @include media("landscape") {  //tablet landscape
-                  display: inline-block;
-                }
-              }
-          @include media(">=desktop") {  //desktop
-            display: inline-block;
-          }
-        }
       }
       #top-heading{
         transform-style: preserve-3d;

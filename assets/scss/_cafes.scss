@@ -11,6 +11,9 @@ background: #FEFEFE;
     justify-content: space-between;
     align-items: center;
     padding: 4% 5%;
+    position: absolute;
+    z-index: 999;
+    width: 100%;
     @include media(">=phone"){  //phone defaults above
       @include media("landscape"){ //phone landscape
 
@@ -29,7 +32,6 @@ background: #FEFEFE;
       width: 18vw;
       height: 18vw;
       border-radius: 50%;
-      border: 2px solid #3b2a14;
       @include media(">=phone"){  //phone defaults above
         @include media("landscape"){ //phone landscape
 
@@ -65,7 +67,7 @@ background: #FEFEFE;
       }
     }
     nav{
-      width: 70vw;
+      width: 75%;
       @include media(">=phone"){  //phone defaults above
         @include media("landscape"){ //phone landscape
 
@@ -102,11 +104,11 @@ background: #FEFEFE;
 
         }
         li.nav-item{
-            font-size: 3vw;
+            font-size: 3.5vw;
             text-transform: uppercase;
             letter-spacing: 1px;
             font-family: "ArbescoDT-Bold", Arial, sans-serif;
-            color: $darkbrown;
+            color: #fff;
             transition: .2s all ease-in-out;
             cursor: pointer;
           &:hover{
@@ -136,7 +138,8 @@ background: #FEFEFE;
   #hero{
     background: url('../img/tm_mobile_hero/1000.jpg');
     background-size: cover;
-    height: 35vh;
+    height: 60vh;
+    height: calc(var(--vh, 1vh) * 60);
     position: relative;
     @include media(">=phone"){  //phone defaults above
         @include media("landscape"){ //phone landscape
@@ -153,7 +156,8 @@ background: #FEFEFE;
 
     }
     .overlay{
-      padding: 17vw 0vw 5vw 0vw;
+      padding: 10vw;
+      padding-top: 20%;
       position: absolute;
       top: 0;
       bottom: 0;
@@ -163,9 +167,9 @@ background: #FEFEFE;
       display: flex;
       -ms-flex-flow: column;
       flex-flow: column;
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0,0,0,0.4);
       @include media(">=phone"){  //phone defaults above
           @include media("landscape"){ //phone landscape
 
@@ -181,7 +185,7 @@ background: #FEFEFE;
 
       }
       h3{
-        color: $lightYellow;
+        color: #fff;
         font-size: 11vw;
         font-family: 'ArbescoDT-Bold', serif;
         text-transform: uppercase;
@@ -210,6 +214,9 @@ background: #FEFEFE;
         text-transform: uppercase;
         font-size: 4vw;
         background: rgba(0,0,0,0.3);
+        position: relative;
+        top: 17vw;
+        width: 80%;
 
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
