@@ -156,7 +156,7 @@ background: #FEFEFE;
 
     }
     .overlay{
-      padding: 10vw;
+      padding: 10vw 0vw;
       padding-top: 20%;
       position: absolute;
       top: 0;
@@ -186,7 +186,7 @@ background: #FEFEFE;
       }
       h3{
         color: #fff;
-        font-size: 11vw;
+        font-size: 13vw;
         font-family: 'ArbescoDT-Bold', serif;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -207,17 +207,16 @@ background: #FEFEFE;
       }
       #nearest-cafe{
         border: 3px solid $lightYellow;
-        padding: 2vw 5vw;
+        padding: 4vw 5vw;
         font-family: 'ArbescoDT-SemiBold', serif;
         color: $lightYellow;
         cursor: pointer;
         text-transform: uppercase;
-        font-size: 4vw;
+        font-size: 4.5vw;
         background: rgba(0,0,0,0.3);
-        position: relative;
-        top: 17vw;
+        position: absolute;
         width: 80%;
-
+        bottom: 10%;
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
 
