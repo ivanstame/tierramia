@@ -216,7 +216,7 @@ background: #FEFEFE;
         background: rgba(0,0,0,0.3);
         position: absolute;
         width: 70%;
-        bottom: 15%;
+        bottom: 10%;
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
 
@@ -308,7 +308,7 @@ background: #FEFEFE;
       }
       div#cities{
           position: relative;
-          padding: 0 10vw;
+          padding: 0 5vw;
           margin-bottom: 15px;
           ul.cities-list{
             text-align: center;
@@ -325,10 +325,10 @@ background: #FEFEFE;
               }
               li.city{
                 font-weight: 600;
-                font-size: 3.5vw;
+                font-size: 3.75vw;
                 color: $darkbrown;
                 display: inline-block;
-                padding: 0px 8px;
+                padding: 0px 3%;
                 line-height: 3;
               }
           }
