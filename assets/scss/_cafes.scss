@@ -182,11 +182,10 @@ background: #FEFEFE;
       }
       h3{
         color: $lightYellow;
-        font-size: 9vw;
+        font-size: 11vw;
         font-family: 'ArbescoDT-Bold', serif;
         text-transform: uppercase;
         letter-spacing: 1px;
-        text-shadow: 0px 0px 1px black;
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
 
@@ -203,10 +202,10 @@ background: #FEFEFE;
         }
       }
       #nearest-cafe{
-        border: 3px solid #f2c572;
+        border: 3px solid $lightYellow;
         padding: 2vw 5vw;
         font-family: 'ArbescoDT-SemiBold', serif;
-        color: #f2c572;
+        color: $lightYellow;
         cursor: pointer;
         text-transform: uppercase;
         font-size: 4vw;

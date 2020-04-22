@@ -196,11 +196,10 @@ body#about-page{
       }
       h3{
         color: $lightYellow;
-        font-size: 9vw;
+        font-size: 11vw;
         font-family: 'ArbescoDT-Bold', serif;
         text-transform: uppercase;
         letter-spacing: 1px;
-        text-shadow: 0px 0px 1px black;
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
 

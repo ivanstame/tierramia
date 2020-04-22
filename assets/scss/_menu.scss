@@ -182,12 +182,11 @@ background: #FEFEFE;
       }
       h3{
         color: $lightYellow;
-        font-size: 9vw;
+        font-size: 11vw;
         text-align: center;
         font-family: 'ArbescoDT-Bold', serif;
         text-transform: uppercase;
         letter-spacing: 1px;
-        text-shadow: 0px 0px 1px black;
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
 
