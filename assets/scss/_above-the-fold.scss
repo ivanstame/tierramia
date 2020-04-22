@@ -411,7 +411,7 @@
           text-transform: uppercase;
           font-size: 13vw;
           line-height: 1.5;
-          margin-bottom: 17vw;
+          margin-bottom: 5vw;
           @include media(">=phone"){  //phone defaults above
               @include media("landscape"){ //phone landscape
                 font-size: 5vw;
