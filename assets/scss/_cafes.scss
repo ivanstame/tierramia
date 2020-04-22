@@ -215,8 +215,8 @@ background: #FEFEFE;
         font-size: 4.5vw;
         background: rgba(0,0,0,0.3);
         position: absolute;
-        width: 80%;
-        bottom: 10%;
+        width: 70%;
+        bottom: 15%;
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
 
