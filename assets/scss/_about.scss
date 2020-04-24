@@ -3,6 +3,7 @@
 
 body#about-page{
   overflow-x: hidden;
+  background: $background;
   // mobile content here
   @include media(">=phone"){  //phone defaults above
     @include media("landscape"){ //phone landscape
