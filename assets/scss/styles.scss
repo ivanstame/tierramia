@@ -108,3 +108,26 @@ a{
   color: $otherOrange !important;
   border-color: $darkbrown !important;
 }
+
+.translate-container{
+    padding: 1.75vw 1vw;
+    background: #fff;
+    margin-bottom: -10px;
+    margin-left: 30px;
+    margin-top: 10px;
+
+  button{
+    margin-top: 3px;
+    font-size: 3.25vw;
+    margin-right: 15px;
+    cursor: pointer;
+    color: #26160D;
+    border: none;
+    border-bottom: 1px solid white;
+    padding: 0;
+    padding-bottom: 3px;
+    outline: none;
+    background: white;
+    font-family: 'ArbescoDT-SemiBold', serif;
+  }
+}

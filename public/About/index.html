@@ -30,34 +30,38 @@
     </header>
     <section id="hero">
       <div class="overlay">
-        <h3>About Us</h3>
+        <h3 class="lang" key="about-title">About Us</h3>
       </div>
     </section>
     <section id="story">
-      <blockquote>
+      <div class="translate-container">
+        <button id="en" class="translate active">English</button>
+        <button id="es" class="translate">Español</button>
+      </div>
+      <blockquote class="lang" key="blockquote">
         Our goal is to provide you with the highest quality Latin-inspired coffee, beverages, and pastries in a setting that is comfortable, contemporary and highly reflective of Latin American culture.
       </blockquote>
       <div class="chapter">
-        <h3>Beginnings</h3>
-        <p>Tierra Mia's story is one about coffee - naturally.  But it is also one about family, work ethic, and community. Long before our founder, Ulysses Romero, opened the first cafe doors in South Gate in 2008, he was carefully crafting our menu with the help of an espresso machine he set up in his family's kitchen. </p>
-        <p>His mother would help with the recipes and was always willing to lend her critique.  His father, co-founder of Romero's Food Products, remembers - "Sometimes she was already in bed and he'd come in to ask her to taste something.  He wants to make the best coffee he can".  That dedication is what has helped Tierra Mia grow to now 19 stores across California in just twelve short years.</p>
+        <h3 class="lang" key="beginnings">Beginnings</h3>
+        <p class="lang" key="chapter1-par1">Tierra Mia's story is one about coffee - naturally.  But it is also one about family, work ethic, and community. Long before our founder, Ulysses Romero, opened the first cafe doors in South Gate in 2008, he was carefully crafting our menu with the help of an espresso machine he set up in his family's kitchen. </p>
+        <p class="lang" key="chapter1-par2">His mother would help with the recipes and was always willing to lend her critique.  His father, co-founder of Romero's Food Products, remembers - "Sometimes she was already in bed and he'd come in to ask her to taste something.  He wants to make the best coffee he can".  That dedication is what has helped Tierra Mia grow to now 19 stores across California in just twelve short years.</p>
       </div>
       <div class="photo-wrapper">
         <img src="../img/south_gate_outside.jpg" alt="">
       </div>
       <div class="chapter">
-        <h3>The Difference</h3>
-        <p>The welcoming environment we strive to create in our cafes, from the decor to the music, is meant to capture and evoke the Latin-American spirit.  Along with the beautiful surroundings you'll be served by some of the friendliest and well-trained baristas around.  We train our staff to make everything from a classic pour over to a frappe and to do it all exceedingly well.  </p>
-        <p>The quality provided by the skill of our staff is matched by the quality of the ingredients they work with everyday to create your favorite drinks and pastries.  Every bean in our coffees was roasted to perfection by our own Master Roasters and every delicious bite of our pastries was baked in our bakery.  Our customers can taste the difference quality makes, so we go to great lengths to make sure you receive only the best, everytime.</p>
+        <h3 class="lang" key="difference">The Difference</h3>
+        <p class="lang" key="chapter2-par1">The welcoming environment we strive to create in our cafes, from the decor to the music, is meant to capture and evoke the Latin-American spirit.  Along with the beautiful surroundings you'll be served by some of the friendliest and well-trained baristas around.  We train our staff to make everything from a classic pour over to a frappe and to do it all exceedingly well.  </p>
+        <p class="lang" key="chapter2-par2">The quality provided by the skill of our staff is matched by the quality of the ingredients they work with everyday to create your favorite drinks and pastries.  Every bean in our coffees was roasted to perfection by our own Master Roasters and every delicious bite of our pastries was baked in our bakery.  Our customers can taste the difference quality makes, so we go to great lengths to make sure you receive only the best, everytime.</p>
       </div>
       <div class="photo-wrapper">
         <img src="../img/tierramiacares.jpg" alt="">
       </div>
       <div class="chapter">
-        <h3>Commitment</h3>
-        <p>Finally, we believe strongly in supporting our communities in a multitude of ways.  With a staff of over 200, Tierra Mia is at the heart of the life of each neighborhood we serve.  We stand behind our commitment to work hard to provide opportunities for leadership and growth for everyone we employ.</p>
+        <h3 class="lang" key="commitment">Commitment</h3>
+        <p class="lang" key="chapter3-par1">Finally, we believe strongly in supporting our communities in a multitude of ways.  With a staff of over 200, Tierra Mia is at the heart of the life of each neighborhood we serve.  We stand behind our commitment to work hard to provide opportunities for leadership and growth for everyone we employ.</p>
 
-          <p>In addition to supporting our communities by providing quality career opportunities we also started the Tierra Mia Cares Foundation in 2015.  Partnered with Families With Schools, Tierra Mia Cares sponsors the "Read With Me" program to promote literacy for classrooms in South Gate, Lynwood, and Pico Rivera with the hopes to eventually have each Tierra Mia store be partnered with a specific school. </p><p>“It gives a deeper sense of meaning to the work we do. It is important to the culture of our company,” says Ulysses. “We care about the communities that allow us to exist.” </p>
+          <p class="lang" key="chapter3-par2">In addition to supporting our communities by providing quality career opportunities we also started the Tierra Mia Cares Foundation in 2015.  Partnered with Families With Schools, Tierra Mia Cares sponsors the "Read With Me" program to promote literacy for classrooms in South Gate, Lynwood, and Pico Rivera with the hopes to eventually have each Tierra Mia store be partnered with a specific school. </p><p class="lang" key="chapter3-par3">“It gives a deeper sense of meaning to the work we do. It is important to the culture of our company,” says Ulysses. “We care about the communities that allow us to exist.” </p>
       </div>
 
     </section>
@@ -78,5 +82,61 @@
     </footer>
     <script src="https://kit.fontawesome.com/6abd2d5d3d.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+      var arrLang = {
+        'en': {
+          'about-title':'About Us',
+          'blockquote':'Our goal is to provide you with the highest quality Latin-inspired coffee, beverages, and pastries in a setting that is comfortable, contemporary and highly reflective of Latin American culture.',
+          'beginnings':'Beginnings',
+          'chapter1-par1':'Tierra Mia\'s story is one about coffee - naturally.  But it is also one about family, work ethic, and community. Long before our founder, Ulysses Romero, opened the first cafe doors in South Gate in 2008, he was carefully crafting our menu with the help of an espresso machine he set up in his family\'s kitchen.',
+          'chapter1-par2':'His mother would help with the recipes and was always willing to lend her critique.  His father, co\-founder of Romero\'s Food Products, remembers\: \"Sometimes she was already in bed and he\'d come in to ask her to taste something.  He wants to make the best coffee he can\".  That dedication is what has helped Tierra Mia grow to now 19 stores across California in just twelve short years.',
+          'difference':'The Difference',
+          'chapter2-par1':'The welcoming environment we strive to create in our cafes, from the decor to the music, is meant to capture and evoke the Latin-American spirit.  Along with the beautiful surroundings you\'ll be served by some of the friendliest and well-trained baristas around.  We train our staff to make everything from a classic pour over to a frappe and to do it all exceedingly well.',
+          'chapter2-par2':'The quality provided by the skill of our staff is matched by the quality of the ingredients they work with everyday to create your favorite drinks and pastries.  Every bean in our coffees was roasted to perfection by our own Master Roasters and every delicious bite of our pastries was baked in our bakery.  Our customers can taste the difference quality makes, so we go to great lengths to make sure you receive only the best, everytime.',
+          'commitment':'Commitment',
+          'chapter3-par1':'Finally, we believe strongly in supporting our communities in a multitude of ways.  With a staff of over 200, Tierra Mia is at the heart of the life of each neighborhood we serve.  We stand behind our commitment to work hard to provide opportunities for leadership and growth for everyone we employ.',
+          'chapter3-par2':'In addition to supporting our communities by providing quality career opportunities we also started the Tierra Mia Cares Foundation in 2015.  Partnered with Families With Schools, Tierra Mia Cares sponsors the "Read With Me" program to promote literacy for classrooms in South Gate, Lynwood, and Pico Rivera with the hopes to eventually have each Tierra Mia store be partnered with a specific school.',
+          'chapter3-par3':'\"It gives a deeper sense of meaning to the work we do. It is important to the culture of our company,\" says Ulysses. \"We care about the communities that allow us to exist.\" ',
+        },
+        'es': {
+          'about-title':'Acerca de Nosotros',
+          'blockquote':'Nuestro objetivo es proporcionarte café, bebidas y repostería de          inspiración latina de la más alta calidad en un ambiente que sea cómodo, contemporáneo y altamente reflexivo de la cultura latinoamericana.',
+          'beginnings':'El Principio',
+          'chapter1-par1':'La historia de Tierra Mia es una sobre el café, naturalmente. Pero también es una de una familia, de ética laboral y de comunidad. Mucho antes de que nuestro fundador, Ulysses Romero, abriera las primeras puertas del café en South Gate en 2008, estaba elaborando cuidadosamente nuestro menú con la ayuda de una máquina de café espresso que instaló en la cocina de su familia.',
+          'chapter1-par2':'Su madre lo ayudaría con las recetas y siempre estaba dispuesta a prestar su crítica. Su padre, co\-fundador de Romero\'s Food Products, recuerda\: \"A veces ella ya estaba en la cama y él entraba para pedirle que probara algo. Él quiere hacer el mejor café que pueda\". Esa dedicación es lo que ha ayudado a que Tierra Mia crezca a ahora 19 tiendas a lo largo de California en solo doce cortos años.',
+          'difference':'La Diferencia',
+          'chapter2-par1':'El ambiente acogedor que nos esforzamos por crear en nuestros cafés, desde la decoración hasta la música, está destinado a capturar y evocar el espíritu latinoamericano. Junto con los hermosos alrededores, serás atendido por algunos de los baristas de los alrededores más amables y mejor capacitados. Capacitamos a nuestro personal para hacer de todo, desde un clásico vertido hasta un frappé y hacerlo todo extremadamente bien.',
+          'chapter2-par2':'La calidad proporcionada por las habilidades de nuestro personal, corresponde con la calidad de los ingredientes con los que ellos trabajan todos los días para crear tus bebidas y repostería favorita. Cada grano en nuestros cafés fue tostado a la perfección por nuestros propios Tostadores Maestros y cada delicioso bocado de nuestra repostería fue horneado en nuestra panadería. Nuestros clientes pueden saborear la diferencia que hace la calidad, por lo que hacemos todo lo posible para asegurarnos de que recibas solo lo mejor, en todo momento.',
+          'commitment':'Compromiso',
+          'chapter3-par1':'Finalmente, creemos firmemente en apoyar a nuestras comunidades de muchas maneras. Con un personal de más de 200, Tierra Mia está en el corazón de la vida de cada vecindario que servimos. Respaldamos nuestro compromiso de trabajar duro para brindar oportunidades de liderazgo y crecimiento a todos los que empleamos.',
+          'chapter3-par2':'Además de apoyar a nuestras comunidades al brindarles oportunidades profesionales de calidad, también iniciamos la Fundación Tierra Mia Cares en 2015. En asociación con Families With Schools, Tierra Mia Cares patrocina el programa "Read With Me" para promover la alfabetización en las aulas de South Gate, Lynwood, y Pico Rivera con la esperanza de que eventualmente, cada tienda Tierra Mia se asocie con una escuela en específico.',
+          'chapter3-par3':'\"Le da un sentido más profundo de significado al trabajo que hacemos. Es importante para la cultura de nuestra compañía\", dice Ulysses. \"Nos preocupamos por las comunidades que nos permiten existir\".',
+        }
+      }// Json arrLang object
+
+      $(function() {
+        $('.translate').click(function() {
+          var lang = $(this).attr('id');
+
+          $('.lang').each(function(index, item) {
+            $(this).text(arrLang[lang][$(this).attr('key')]);
+          });
+        });
+      });
+
+      $('#en').click(function(){
+        if(!$(this).hasClass('active')){
+          $(this).toggleClass('active');
+          $('#es').toggleClass('active');
+        }
+      })
+      $('#es').click(function(){
+        if(!$(this).hasClass('active')){
+          $(this).toggleClass('active');
+          $('#en').toggleClass('active');
+        }
+      })
+    </script>
+
   </body>
 </html>
