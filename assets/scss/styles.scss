@@ -98,7 +98,7 @@ a{
       text-transform: uppercase;
       cursor: pointer;
       color: $darkerbrown;
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid $background;
       padding-bottom: 3px;
     }
   }
@@ -123,7 +123,7 @@ a{
     cursor: pointer;
     color: #26160D;
     border: none;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid $background;
     padding: 0;
     padding-bottom: 3px;
     outline: none;
