@@ -1649,10 +1649,15 @@
           &:hover{
             cursor: pointer;
           }
+          // a {
+          //   font-family: 'ArbescoDT-SemiBold';
+          //   font-size: 1.3rem;
+          //   color: white;
+          // }
         }
       }
     img{
-      width: 120%;
+      width: 200%;
       @include media(">=phone"){  //phone defaults above
           @include media("landscape"){ //phone landscape
             width: 50%;
