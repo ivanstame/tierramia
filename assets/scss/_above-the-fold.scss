@@ -682,6 +682,7 @@
     }
 
     .promo-text{
+      background: $background;
       display: flex;
       flex-flow: column;
       justify-content: space-between;
@@ -1092,6 +1093,7 @@
 
     }
     .promo-text{
+      background: $background;
       display: flex;
       flex-flow: column;
       justify-content: space-between;
