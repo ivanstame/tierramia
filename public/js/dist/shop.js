@@ -15,22 +15,25 @@ const client = ShopifyBuy.buildClient({
 client.product.fetchAll().then((products) => {
   // products is now an array
   // assign variables to each products image src - 
+
     var imgUrls = [];
     //loop through and push all the values to it
     var i = 0;
     while (i < products.length){
+        productObjects.push(products[i]);
         imgUrls.push( client.image.helpers.imageForSize(products[i].variants[0].image, {maxWidth: 200, maxHeight: 200}) );
         i++;
     }
+    console.log(productObjects);
     
-    console.log(imgUrls);
+//     console.log(imgUrls);
     //loop through the products array and assign the img srcs from the imgURLS array
     var j = 0;
     while(j<products.length){
-        var url = client.image.helpers.imageForSize(products[j].variants[0].image, {maxWidth: 200, maxHeight: 200});
+        var url = client.image.helpers.imageForSize(productObjects[j].variants[0].image, {maxWidth: 200, maxHeight: 200});
         $(wares[j]).children('img').attr('src', url);
-        $(wares[j]).children('h3').text(products[j].title);
-        productObjects.push(products[j]);
+        $(wares[j]).children('h3').text(productObjects[j].title);
+
 //         $(wares[j]).children('button').click(function(){
 //             var variantId = products[j].id;
 //             var name = products[j].title;
@@ -52,7 +55,6 @@ client.product.fetchAll().then((products) => {
 //         });
         j++;
     }
-       console.log(productObjects);
 //     console.log(products);
 });
   
