@@ -1,3 +1,5 @@
+import Client from 'shopify-buy';
+
 var wares = document.getElementsByClassName('product');
 var productObjects = [];
 var lineItemsToAdd = [];
@@ -7,7 +9,11 @@ console.log(wares[0]);
 
 
 //Initialize Client
-const client = ShopifyBuy.buildClient({
+// const client = ShopifyBuy.buildClient({
+//     domain: 'tierra-mia-coffee.myshopify.com',
+//     storefrontAccessToken: 'c45f5526ed444a515f62cd7173b7a44b'
+// });
+const client = Client.buildClient({
     domain: 'tierra-mia-coffee.myshopify.com',
     storefrontAccessToken: 'c45f5526ed444a515f62cd7173b7a44b'
 });
