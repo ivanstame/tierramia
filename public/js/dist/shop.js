@@ -1,6 +1,7 @@
 var wares = document.getElementsByClassName('product');
 var lineItemsToAdd = [];
-var checkoutId = '';
+// it doesn't seem that the stored variable "cart" points to the same object as the one created by the createcheckout operation
+var checkoutId;
 var catalogLength = 0;
 var productObjects = [];
 
@@ -10,6 +11,8 @@ const client = ShopifyBuy.buildClient({
     domain: 'tierra-mia-coffee.myshopify.com',
     storefrontAccessToken: 'c45f5526ed444a515f62cd7173b7a44b'
 });
+
+
 
 
 client.product.fetchAll().then((products) => {
@@ -32,6 +35,15 @@ client.product.fetchAll().then((products) => {
            while(m<catalogLength){
                if (productObjects[m].title == name){
                    console.log(productObjects[m].id);
+                   var lineItemsToAdd = [{
+                       variantId: products[m].variants[0].id,
+                       quantity: 1,
+                       customAttributes: [{key: "title", value: products[m].title}],
+                   }];
+                   console.log(lineItemsToAdd);
+                   client.checkout.addLineItems(checkoutId, lineItemsToAdd).then((checkout) => {
+                        console.log(checkout);
+                    });
                }
                m++;
            }
@@ -40,10 +52,9 @@ client.product.fetchAll().then((products) => {
     } // end of while loop 
 }); // end of fetch request
 
+//create the cart
+client.checkout.create().then((checkout) => {
+    checkoutId = checkout.id;
+    console.log(checkout);
+});
 
-
-// client.checkout.create().then((checkout) => {
-//   // Do something with the checkout
-//     checkoutId = checkout.id;
-//   console.log(checkout);
-// });
