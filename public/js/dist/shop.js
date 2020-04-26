@@ -1,11 +1,8 @@
-// import Client from 'shopify-buy';
-
 var wares = document.getElementsByClassName('product');
-var productObjects = [];
 var lineItemsToAdd = [];
 var checkoutId = '';
-
-console.log(wares[0]);
+var catalogLength = 0;
+var productObjects = [];
 
 
 //Initialize Client
@@ -13,61 +10,40 @@ const client = ShopifyBuy.buildClient({
     domain: 'tierra-mia-coffee.myshopify.com',
     storefrontAccessToken: 'c45f5526ed444a515f62cd7173b7a44b'
 });
-// const client = Client.buildClient({
-//     domain: 'tierra-mia-coffee.myshopify.com',
-//     storefrontAccessToken: 'c45f5526ed444a515f62cd7173b7a44b'
-// });
+
 
 client.product.fetchAll().then((products) => {
-  // products is now an array
-  // assign variables to each products image src - 
-
+    catalogLength = products.length;
     var imgUrls = [];
-    //loop through and push all the values to it
     var i = 0;
+    var url = client.image.helpers.imageForSize(products[i].variants[0].image, {maxWidth: 200, maxHeight: 200});
     while (i < products.length){
+        imgUrls.push( client.image.helpers.imageForSize(products[i].variants[0].image, {maxWidth: 300, maxHeight: 300}) );
         productObjects.push(products[i]);
-        imgUrls.push( client.image.helpers.imageForSize(products[i].variants[0].image, {maxWidth: 200, maxHeight: 200}) );
+        //assign images and titles
+        $(wares[i]).children('img').attr('src', url);
+        $(wares[i]).children('h3').text(products[i].title);
+        $(wares[i]).children('button').attr('data-hook', products[i].title);
+        //assign event listeners to pull up corresponding productObject
+       $(wares[i]).children('button').click(function(){
+           var name = event.currentTarget.dataset.hook;
+           console.log(name);
+           var m = 0;
+           while(m<catalogLength){
+               if (productObjects[m].title == name){
+                   console.log(productObjects[m].id);
+               }
+               m++;
+           }
+        }); // end of click listener
         i++;
-    }
-    console.log(productObjects);
-    
-//     console.log(imgUrls);
-    //loop through the products array and assign the img srcs from the imgURLS array
-    var j = 0;
-    while(j<products.length){
-        var url = client.image.helpers.imageForSize(productObjects[j].variants[0].image, {maxWidth: 200, maxHeight: 200});
-        $(wares[j]).children('img').attr('src', url);
-        $(wares[j]).children('h3').text(productObjects[j].title);
+    } // end of while loop 
+}); // end of fetch request
 
-//         $(wares[j]).children('button').click(function(){
-//             var variantId = products[j].id;
-//             var name = products[j].title;
-//             var itemAdded = {};
-//             itemAdded.variantId = variantId;
-//             itemAdded.quantity = 1;
-//             itemAdded.title = name;
-//             console.log("the most recent item selected is below this line");
-//             console.log(itemAdded);
-//             lineItemsToAdd.push(itemAdded);
-//             console.log("the Items to be added to the Cart are below this line");
-//             console.log(lineItemsToAdd);
-            
-//             client.checkout.addLineItems(checkoutId, lineItemsToAdd).then((checkout) => {
-//                  // Do something with the updated checkout
-//              console.log("the contents of the cart in total is below this line");
-//              console.log(checkout.lineItems); // Array with one additional line item
+
+
+// client.checkout.create().then((checkout) => {
+//   // Do something with the checkout
+//     checkoutId = checkout.id;
+//   console.log(checkout);
 // });
-//         });
-        j++;
-    }
-//     console.log(products);
-});
-  
-
-
-client.checkout.create().then((checkout) => {
-  // Do something with the checkout
-    checkoutId = checkout.id;
-  console.log(checkout);
-});
