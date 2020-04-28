@@ -4,6 +4,8 @@ var lineItemsToAdd = [];
 var checkoutId;
 var catalogLength = 0;
 var productObjects = [];
+var cartTotal = document.getElementById('total');
+var cart = document.getElementById('cart');
 
 
 //Initialize Client
@@ -42,8 +44,11 @@ client.product.fetchAll().then((products) => {
                    }];
                    console.log(lineItemsToAdd);
                    client.checkout.addLineItems(checkoutId, lineItemsToAdd).then((checkout) => {
-                        console.log(checkout);
+                    cartTotal.innerText = "Total: " + checkout.totalPrice;
+                       console.log(checkout);
                     });
+
+
                }
                m++;
            }
