@@ -5,7 +5,7 @@ var checkoutId;
 var catalogLength = 0;
 var productObjects = [];
 var cartTotal = document.getElementById('total');
-var cart = document.getElementById('cart');
+var cartTable = document.getElementById('cart-table');
 
 
 //Initialize Client
@@ -36,15 +36,33 @@ client.product.fetchAll().then((products) => {
            var m = 0;
            while(m<catalogLength){
                if (productObjects[m].title == name){
-                   console.log(productObjects[m].id);
+                   console.log(productObjects[m]);
                    var lineItemsToAdd = [{
                        variantId: products[m].variants[0].id,
                        quantity: 1,
                        customAttributes: [{key: "title", value: products[m].title}],
                    }];
-                   console.log(lineItemsToAdd);
+
+                   if(!$.contains(cartTable, document.getElementById(productObjects[m].title))){
+                      var newRow = cartTable.insertRow(0);
+                      newRow.id = productObjects[m].title;
+                      var cell1 = newRow.insertCell(0);
+                      var cell2 = newRow.insertCell(1);
+                      var cell3 = newRow.insertCell(2);
+                      var cell4 = newRow.insertCell(3);
+                      cell1.innerText = productObjects[m].title;
+                      cell2.innerText = productObjects[m].variants[0].price;
+                      cell3.innerText = 1;
+                      cell4.innerText = parseFloat(productObjects[m].variants[0].price) * cell3.innerText;                       
+                   } else {
+                       console.log('already there');
+                       var newNum = document.getElementById(productObjects[m].title).children[2].innerText;
+                       document.getElementById(productObjects[m].title).children[2].innerText = parseInt(newNum) + 1;
+                   }
+
+//                    console.log(lineItemsToAdd);
                    client.checkout.addLineItems(checkoutId, lineItemsToAdd).then((checkout) => {
-                    cartTotal.innerText = "Total: " + checkout.totalPrice;
+                      cartTotal.innerText = "Total: " + checkout.totalPrice;
                        console.log(checkout);
                     });
 
