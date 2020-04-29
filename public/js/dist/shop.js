@@ -53,11 +53,11 @@ client.product.fetchAll().then((products) => {
                       cell1.innerText = productObjects[m].title;
                       cell2.innerText = productObjects[m].variants[0].price;
                       cell3.innerText = 1;
-                      cell4.innerText = productObjects[m].variants[0].price;                  
+                      cell4.innerText = productObjects[m].variants[0].price;
                    } else {
                        console.log('already there');
                        var newNum = document.getElementById(productObjects[m].title).children[2].innerText;
-      
+
                        document.getElementById(productObjects[m].title).children[2].innerText = parseInt(newNum) + 1;
                        var updatedNum = parseFloat(newNum) + 1;
                        var newSubTotal = parseFloat(productObjects[m].variants[0].price) * updatedNum;
@@ -74,7 +74,7 @@ client.product.fetchAll().then((products) => {
            }
         }); // end of click listener
         i++;
-    } // end of while loop 
+    } // end of while loop
 }); // end of fetch request
 
 //create the cart
@@ -83,3 +83,7 @@ client.checkout.create().then((checkout) => {
     console.log(checkout);
 });
 
+$('#cart-show-hide').click(function(){
+  // event.currentTarget.parentElement.style.transform = "translate(0%, -50%)";
+  event.currentTarget.parentElement.classList.toggle('menu-visible');
+});
