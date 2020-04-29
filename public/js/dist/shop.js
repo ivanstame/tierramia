@@ -53,20 +53,22 @@ client.product.fetchAll().then((products) => {
                       cell1.innerText = productObjects[m].title;
                       cell2.innerText = productObjects[m].variants[0].price;
                       cell3.innerText = 1;
-                      cell4.innerText = parseFloat(productObjects[m].variants[0].price) * cell3.innerText;                       
+                      cell4.innerText = productObjects[m].variants[0].price;                  
                    } else {
                        console.log('already there');
                        var newNum = document.getElementById(productObjects[m].title).children[2].innerText;
+      
                        document.getElementById(productObjects[m].title).children[2].innerText = parseInt(newNum) + 1;
+                       var updatedNum = parseFloat(newNum) + 1;
+                       var newSubTotal = parseFloat(productObjects[m].variants[0].price) * updatedNum;
+                       document.getElementById(productObjects[m].title).children[3].innerText = newSubTotal.toFixed(2);
                    }
 
 //                    console.log(lineItemsToAdd);
                    client.checkout.addLineItems(checkoutId, lineItemsToAdd).then((checkout) => {
                       cartTotal.innerText = "Total: " + checkout.totalPrice;
-                       console.log(checkout);
+                       console.log(checkout.lineItems);
                     });
-
-
                }
                m++;
            }

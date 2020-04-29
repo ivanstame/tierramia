@@ -304,14 +304,18 @@ body#shop-page{
             }
         }      
     }
-      #cart-table{
-          background: pink;
-          td{
-              padding: 5px 15px;
-          }
-      }
-      #total{
-          
-      }
-  }
+            #cart-table{
+             display: inline-block;
+             font-family: 'ArbescoDT-SemiBold', serif;
+                td{
+                 padding: 5px 15px;
+                }
+            }
+            #total{
+                width: 100%;
+                text-align: right;
+                
+            }
+        }
+  } // End products-main
 }// End #about-page total
