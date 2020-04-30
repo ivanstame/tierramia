@@ -242,7 +242,7 @@ background: $background;
     padding: 50px 30px;
     line-height: 1.75;
     text-transform: capitalize;
-    color: $darkbrown;
+    color: $darkerbrown;
     position: relative;
     transform-style: preserve-3d;
 
@@ -326,7 +326,7 @@ background: $background;
               li.city{
                 font-weight: 600;
                 font-size: 3.75vw;
-                color: $darkbrown;
+                color: $darkerbrown;
                 display: inline-block;
                 padding: 0px 3%;
                 line-height: 3;
@@ -378,7 +378,7 @@ background: $background;
       }
       div.cafe-details{
         font-family: 'ArbescoDT-Book', serif;
-        color: $darkbrown;
+        color: $darkerbrown;
         width: 100vw;
         height: 50vw;
         background: #fbf9f8;
@@ -441,8 +441,8 @@ background: $background;
 }//end body#cafe-page
 
 .county-active {
-  color: $otherOrange !important;
-  border-color: $darkbrown !important;
+  color: $orange !important;
+  border-color: $darkerbrown !important;
 }
 
 .out-of-the-way{
@@ -459,8 +459,8 @@ background: $background;
   z-index: 9999;
   width: 15vw;
   height: 15vw;
-  color: $darkbrown;
-  border: 2px solid $darkbrown;
+  color: $darkerbrown;
+  border: 2px solid $darkerbrown;
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
   cursor: pointer;
   display: none;

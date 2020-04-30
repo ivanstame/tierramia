@@ -355,7 +355,7 @@
         padding: 0 5%;
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
-
+              margin-top: 5%;
             }
         }
         @include media(">=tablet"){    //tablet portrait
@@ -417,7 +417,7 @@
               }
           @include media(">=desktop") {  //desktop
             font-size: 2vw;
-            color: $darkbrown;
+            color: $darkerbrown;
           }
         }
         h1{
@@ -432,7 +432,7 @@
           @include media(">=phone"){  //phone defaults above
               @include media("landscape"){ //phone landscape
                 font-size: 6.75vw;
-                margin-bottom: 10px;
+                margin-bottom: 60px;
               }
           }
           @include media(">=tablet"){    //tablet portrait
@@ -500,7 +500,7 @@
           @include media(">=phone"){  //phone defaults above
               @include media("landscape"){ //phone landscape
                 width: 50%;
-                font-size: 1rem;
+                font-size: 2.5vw;
                 padding: 3vw 0;
               }
           }
@@ -600,7 +600,7 @@
       color: $darkerbrown;
       @include media(">=phone"){  //phone defaults above
           @include media("landscape"){ //phone landscape
-            font-size: 0.9rem;
+            font-size: 2.25vw;
           }
       }
       @include media(">=tablet"){    //tablet portrait
@@ -631,8 +631,9 @@
 
       span{
         // color: $orange;
-        color: $lightBlue;
-        font-weight: 600;
+        color: $lightYellow;
+                text-shadow: 0px 0px 1px black;
+
         cursor: pointer;
         &:hover{
           text-decoration-style: double !important;
@@ -655,8 +656,9 @@
   @include media(">=phone"){  //phone defaults above
       @include media("landscape"){ //phone landscape
         height: unset;
-        height: 100vh;
+        height: 110vh;
         padding: 30px 0;
+        background-size: 6%;
       }
   }
   @include media(">=tablet"){    //tablet portrait
@@ -738,8 +740,8 @@
         font-weight: 600;
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
-              font-size: 0.9rem;
-              color: $offOrange;
+              font-size: 2.25vw;
+              color: $orange;
             }
         }
         @include media(">=tablet"){    //tablet portrait
@@ -760,7 +762,7 @@
         font-size: 1.5rem;
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
-              font-size: 1.25rem;
+              font-size: 4vw;
             }
         }
         @include media(">=tablet"){    //tablet portrait
@@ -781,7 +783,7 @@
         line-height: 2;
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
-              font-size: 0.8rem;
+              font-size: 1.75vw;
             }
         }
         @include media(">=tablet"){    //tablet portrait
@@ -803,7 +805,8 @@
         font-family: 'ArbescoDT-Bold';
         @include media(">=phone"){  //phone defaults above
           @include media("landscape"){ //phone landscape
-            color: $lightBlue;
+            color: $orange;
+
           }
         }
         @include media(">=tablet"){    //tablet portrait
@@ -854,7 +857,7 @@
   padding: 50px 0px 75px 0;
   @include media(">=phone"){  //phone defaults above
       @include media("landscape"){ //phone landscape
-        padding: 8% 0;
+        padding: 10% 5%;
       }
   }
   @include media(">=tablet"){    //tablet portrait
@@ -897,7 +900,8 @@
       text-decoration-style: double;
       @include media(">=phone"){  //phone defaults above
           @include media("landscape"){ //phone landscape
-            margin-bottom: 40px;
+            margin-bottom: 10%;
+            font-size: 4.5vw;
           }
       }
       @include media(">=tablet"){    //tablet portrait
@@ -924,6 +928,7 @@
       @include media(">=phone"){  //phone defaults above
           @include media("landscape"){ //phone landscape
             flex-flow: row;
+            padding: 0;
           }
       }
       @include media(">=tablet"){    //tablet portrait
@@ -948,7 +953,7 @@
         cursor: pointer;
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
-              height: 30vw;
+              height: 26vw;
               width: 28vw;
               margin-bottom: 0;
             }
@@ -1043,9 +1048,10 @@
           border-bottom: 3px solid $lightYellow;
           @include media(">=phone"){  //phone defaults above
               @include media("landscape"){ //phone landscape
-                font-size: 0.75rem;
-                height: 33px;
-                line-height: 29px;
+                // font-size: 0.75rem;
+                font-size: 2.5vw;
+                height: 45px;
+                line-height: 41px;
               }
           }
           @include media(">=tablet"){    //tablet portrait
@@ -1075,8 +1081,9 @@
   @include media(">=phone"){  //phone defaults above
       @include media("landscape"){ //phone landscape
         height: unset;
-        // height: 100vh;
+        height: 110vh;
         padding: 30px 0;
+        background-size: 6%;
       }
   }
   @include media(">=tablet"){    //tablet portrait
@@ -1145,6 +1152,7 @@
       @include media(">=phone"){  //phone defaults above
           @include media("landscape"){ //phone landscape
             grid-row: unset;
+            padding: 10% 5%;
           }
       }
       @include media(">=tablet"){    //tablet portrait
@@ -1167,8 +1175,8 @@
         font-weight: 600;
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
-              color: $offOrange;
-              font-size: 0.9rem;
+              font-size: 2.25vw;
+              color: $orange;
             }
         }
         @include media(">=tablet"){    //tablet portrait
@@ -1189,7 +1197,7 @@
         font-size: 1.5rem;
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
-              font-size: 1.25rem;
+              font-size: 4vw;
             }
         }
         @include media(">=tablet"){    //tablet portrait
@@ -1210,7 +1218,7 @@
         line-height: 2;
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
-
+              font-size: 1.75vw;
             }
         }
         @include media(">=tablet"){    //tablet portrait
@@ -1232,7 +1240,7 @@
         font-family: 'ArbescoDT-Bold';
         @include media(">=phone"){  //phone defaults above
           @include media("landscape"){ //phone landscape
-            color: $lightBlue;
+            color: $orange;
           }
         }
         @include media(">=tablet"){    //tablet portrait
@@ -1256,7 +1264,7 @@
   overflow-x: hidden;
   @include media(">=phone"){  //phone defaults above
       @include media("landscape"){ //phone landscape
-        padding-bottom: 120px;
+        padding-bottom: 80px;
       }
   }
   @include media(">=tablet"){    //tablet portrait
@@ -1289,7 +1297,8 @@
     text-decoration-style: double;
     @include media(">=phone"){  //phone defaults above
         @include media("landscape"){ //phone landscape
-
+          margin-bottom: 8%;
+          font-size: 4.5vw;
         }
     }
     @include media(">=tablet"){    //tablet portrait
@@ -1361,7 +1370,7 @@
         width: 25px;
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
-
+              width: 35px;
             }
         }
         @include media(">=tablet"){    //tablet portrait
@@ -1382,7 +1391,7 @@
       z-index: 2;
       @include media(">=phone"){  //phone defaults above
           @include media("landscape"){ //phone landscape
-            display: none;
+            left: 25px;
           }
       }
       @include media(">=tablet"){    //tablet portrait
@@ -1401,7 +1410,7 @@
       z-index: 2;
       @include media(">=phone"){  //phone defaults above
           @include media("landscape"){ //phone landscape
-            display: none;
+            right: 25px;
           }
       }
       @include media(">=tablet"){    //tablet portrait
@@ -1483,7 +1492,10 @@
 
             @include media(">=phone"){  //phone defaults above
                 @include media("landscape"){ //phone landscape
-
+                  display: grid;
+                  grid-template-columns: 1fr 1fr;
+                  grid-template-rows: auto auto;
+                  padding: 0 10%;
                 }
             }
             @include media(">=tablet"){    //tablet portrait
@@ -1502,7 +1514,9 @@
               width: 80%;
               @include media(">=phone"){  //phone defaults above
                   @include media("landscape"){ //phone landscape
-                    width: 100%;
+                    width: 80%;
+                    grid-column: 1/2;
+                    grid-row: 1/2;
                   }
               }
               @include media(">=tablet"){    //tablet portrait
@@ -1548,7 +1562,9 @@
               text-align: center;
               @include media(">=phone"){  //phone defaults above
                   @include media("landscape"){ //phone landscape
-
+                    font-size: 3vw;
+                    grid-column: 1/2;
+                    grid-row: 2/3;
                   }
               }
               @include media(">=tablet"){    //tablet portrait
@@ -1569,6 +1585,20 @@
                 background: $lightYellow;
                 left: 50%;
                 transform: translateX(-50%);
+                @include media(">=phone"){  //phone defaults above
+                    @include media("landscape"){ //phone landscape
+                      top: 125%;
+                    }
+                }
+                @include media(">=tablet"){    //tablet portrait
+
+                      @include media("landscape") {  //tablet landscape
+
+                      }
+                    }
+                @include media(">=desktop") {  //desktop
+
+                }
               }
             }
             p{
@@ -1580,7 +1610,11 @@
               color: $darkerbrown;
               @include media(">=phone"){  //phone defaults above
                   @include media("landscape"){ //phone landscape
-
+                    font-size: 2vw;
+                    grid-column: 2/3;
+                    grid-row: 1/2;
+                    padding: 0;
+                    align-self: center;
                   }
               }
               @include media(">=tablet"){    //tablet portrait
@@ -1603,7 +1637,7 @@
               outline: none;
               line-height: 30px;
               height: 30px;
-              font-family: 'ArbescoDT-SemiBold', sans-serif;
+              font-family: 'ArbescoDT-Bold', sans-serif;
               border: 2px solid rgba(42,24,14,0.768627);
               font-size: 0.8rem;
               box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
@@ -1612,6 +1646,13 @@
               margin: 0 auto;
               @include media(">=phone"){  //phone defaults above
                   @include media("landscape"){ //phone landscape
+                    grid-column: 2/3;
+                    grid-row: 2/3;
+                    margin-top: -8px;
+                    font-size: 2vw;
+                    padding: 0 20px;
+                    height: 34px;
+                    line-height: 32px;
 
                   }
               }
@@ -1636,7 +1677,7 @@
 } //close #shop
 
   footer {
-    background: $darkbrown;
+    background: $darkerbrown;
     height: 65vh;
     height: calc(var(--vh, 1vh) * 65);
     padding: 20px 120px;
@@ -1649,6 +1690,7 @@
           height: 100vh;
           height: calc(var(--vh, 1vh) * 100);
           justify-content: space-around;
+          padding-top: 40px;
         }
     }
     @include media(">=tablet"){    //tablet portrait
@@ -1672,6 +1714,11 @@
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
               padding: 0;
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr;
+              grid-column-gap: 40px;
+              grid-auto-rows: auto;
+              align-self: start;
             }
         }
         @include media(">=tablet"){    //tablet portrait
@@ -1715,7 +1762,8 @@
       width: 200%;
       @include media(">=phone"){  //phone defaults above
           @include media("landscape"){ //phone landscape
-            width: 125%;
+            width: 75%;
+            align-self: start;
           }
       }
       @include media(">=tablet"){    //tablet portrait
