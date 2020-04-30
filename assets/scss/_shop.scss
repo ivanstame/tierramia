@@ -305,7 +305,7 @@ body#shop-page{
         }
     }
     #checkout{
-      transition: 1s all;
+      transition: .4s all;
       background: lightblue;
       position: fixed;
       right:0;
@@ -339,6 +339,8 @@ body#shop-page{
           text-align: right;
           font-size: 0.9rem;
           font-family: 'ArbescoDT-Bold', serif;
+          padding-right: 30px;
+          margin-top: 30px;
 
       }
     }
