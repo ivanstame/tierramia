@@ -384,6 +384,30 @@ background: $background;
       }
   } //end of div#location-nav
   section#locations-container{
+  @include media(">=phone"){  //phone defaults above
+    @include media("landscape"){ //phone landscape
+	>.cafe-wrapper {
+		&:nth-of-type(2n) {
+			.cafe-details {
+				grid-column: 1/2 !important;
+			}
+			>a {
+				grid-column: 2/3 !important;
+			}
+			grid-auto-flow: dense !important;
+		}
+	}
+    }
+  }      
+  @include media(">=tablet"){    //tablet portrait
+
+    @include media("landscape") {  //tablet landscape
+
+    }
+  } 
+  @include media(">=desktop") {  //desktop 
+
+  }
     div.cafe-wrapper{
       display: grid;
       grid-template-rows: auto auto;
@@ -392,7 +416,6 @@ background: $background;
           grid-template-rows: auto;
           grid-auto-rows: min-content;
           grid-template-columns: 1fr 1fr;
-                          // height: calc(var(--vh, 1vh) * 100);
         }
       }
       @include media(">=tablet"){    //tablet portrait
@@ -533,7 +556,7 @@ background: $background;
           @include media("landscape"){ //phone landscape
             grid-column: 2/3;
             width: unset;
-            // padding: unset;
+              padding: 5vw;
                 height: calc(var(--vh, 1vh) * 100);
           }
         }
@@ -718,3 +741,17 @@ background: $background;
 
   }
 }
+
+// #locations-container > .cafe-wrapper:nth-of-type(2n) .cafe-details{
+//     background: green !important;
+//     grid-column: 1/2 !important;
+// }
+
+// #locations-container > .cafe-wrapper:nth-of-type(2n) > a {
+//     grid-column: 2/3 !important;
+// }
+
+// #locations-container > .cafe-wrapper:nth-of-type(2n) {
+//     grid-auto-flow: dense !important;
+// }
+

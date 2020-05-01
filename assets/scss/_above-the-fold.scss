@@ -1687,10 +1687,10 @@
     align-items: center;
     @include media(">=phone"){  //phone defaults above
         @include media("landscape"){ //phone landscape
-          height: 100vh;
-          height: calc(var(--vh, 1vh) * 100);
+          height: 60vh;
+          height: calc(var(--vh, 1vh) * 60);
           justify-content: space-around;
-          padding-top: 40px;
+          padding: 0;
         }
     }
     @include media(">=tablet"){    //tablet portrait
@@ -1714,11 +1714,10 @@
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
               padding: 0;
-              display: grid;
-              grid-template-columns: 1fr 1fr 1fr;
-              grid-column-gap: 40px;
-              grid-auto-rows: auto;
-              align-self: start;
+              display: flex;
+              flex-flow: row;
+              align-items: center;
+              width: 100%;
             }
         }
         @include media(">=tablet"){    //tablet portrait
@@ -1763,6 +1762,8 @@
       @include media(">=phone"){  //phone defaults above
           @include media("landscape"){ //phone landscape
             width: 75%;
+            margin-left: 10px;
+            margin-bottom: 10px;
             align-self: start;
           }
       }

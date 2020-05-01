@@ -29,7 +29,7 @@ body#shop-page{
     z-index: 999;
     @include media(">=phone"){  //phone defaults above
       @include media("landscape"){ //phone landscape
-
+        padding: 2% 5%;
         }
     }
     @include media(">=tablet"){    //tablet portrait
@@ -47,7 +47,8 @@ body#shop-page{
       border-radius: 50%;
       @include media(">=phone"){  //phone defaults above
         @include media("landscape"){ //phone landscape
-
+          width: 11vw;
+          height: 11vw;
           }
       }
       @include media(">=tablet"){    //tablet portrait
@@ -132,7 +133,7 @@ body#shop-page{
           }
           @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
-
+                font-size: 2.5vw;
               }
           }
           @include media(">=tablet"){    //tablet portrait
@@ -156,7 +157,8 @@ body#shop-page{
     position: relative;
     @include media(">=phone"){  //phone defaults above
         @include media("landscape"){ //phone landscape
-
+          height: 110vh;
+          background-position: center;
         }
     }
     @include media(">=tablet"){    //tablet portrait
@@ -207,7 +209,7 @@ body#shop-page{
         letter-spacing: 1px;
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
-
+              font-size: 8vw;
             }
         }
         @include media(">=tablet"){    //tablet portrait
@@ -306,24 +308,27 @@ body#shop-page{
     }
     #checkout{
       transition: .4s all;
-      background: lightblue;
+      background: white;
       position: fixed;
       right:0;
       top: 50%;
       height: 80%;
       width: 85%;
+      padding: 10% 5%;
       transform: translate(100%, -50%);
+      box-shadow: -1px 1px 10px 0px rgba(0,0,0,0.3);
       // transform: translate(-20% -50%);
       #cart-show-hide{
-        color: white;
+        color: $lightYellow;
         background: $darkerbrown;
         display: inline-block;
         font-size: 1.5rem;
-        padding: 10px;
+        padding: 8px;
         cursor: pointer;
-        position:relative;
+        position:absolute;
         top: 50%;
         transform:translate(-100%, -50%);
+        box-shadow: -1px 1px 10px 0px rgba(0,0,0,0.3);
 
       }
       #cart-table{
