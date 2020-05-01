@@ -16,7 +16,7 @@ background: $background;
     width: 100%;
     @include media(">=phone"){  //phone defaults above
       @include media("landscape"){ //phone landscape
-
+        padding: 2% 5%;
         }
     }
     @include media(">=tablet"){    //tablet portrait
@@ -34,7 +34,8 @@ background: $background;
       border-radius: 50%;
       @include media(">=phone"){  //phone defaults above
         @include media("landscape"){ //phone landscape
-
+          width: 11vw;
+          height: 11vw;
           }
       }
       @include media(">=tablet"){    //tablet portrait
@@ -111,6 +112,20 @@ background: $background;
             color: #fff;
             transition: .2s all ease-in-out;
             cursor: pointer;
+            @include media(">=phone"){  //phone defaults above
+              @include media("landscape"){ //phone landscape
+                font-size: 2.5vw;
+              }
+            }
+            @include media(">=tablet"){    //tablet portrait
+
+              @include media("landscape") {  //tablet landscape
+
+              }
+            }
+            @include media(">=desktop") {  //desktop
+
+            }
           &:hover{
             color: $orange;
           }
@@ -144,7 +159,8 @@ background: $background;
     position: relative;
     @include media(">=phone"){  //phone defaults above
         @include media("landscape"){ //phone landscape
-
+          height: 110vh;
+          background-position: center;
         }
     }
     @include media(">=tablet"){    //tablet portrait
@@ -194,7 +210,7 @@ background: $background;
         letter-spacing: 1px;
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
-
+              font-size: 8vw;
             }
         }
         @include media(">=tablet"){    //tablet portrait
@@ -213,6 +229,20 @@ background: $background;
   #menu-body{
     padding: 20px;
     background: $background;
+    @include media(">=phone"){  //phone defaults above
+      @include media("landscape"){ //phone landscape
+        padding: 0 14vw;
+      }
+    }
+    @include media(">=tablet"){    //tablet portrait
+
+      @include media("landscape") {  //tablet landscape
+
+      }
+    }
+    @include media(">=desktop") {  //desktop
+
+    }
     h1,h2,h3,h4,h5,h6{
       text-align: center !important;
       font-family: 'ArbescoDT-SemiBold', serif;
@@ -234,6 +264,20 @@ background: $background;
         text-underline-position: under;
         text-decoration-color: $lightYellow;
         text-decoration-style: double;
+        @include media(">=phone"){  //phone defaults above
+          @include media("landscape"){ //phone landscape
+            font-size: 4.5vw;
+          }
+        }
+        @include media(">=tablet"){    //tablet portrait
+
+          @include media("landscape") {  //tablet landscape
+
+          }
+        }
+        @include media(">=desktop") {  //desktop
+
+        }
       }
       div.sub-menu-list-wrapper{
         margin-bottom: 60px;
@@ -241,6 +285,20 @@ background: $background;
           font-size: 1.25rem;
           margin-bottom: 5px;
           color: $darkerbrown;
+          @include media(">=phone"){  //phone defaults above
+            @include media("landscape"){ //phone landscape
+              font-size: 3vw;
+            }
+          }
+          @include media(">=tablet"){    //tablet portrait
+
+            @include media("landscape") {  //tablet landscape
+
+            }
+          }
+          @include media(">=desktop") {  //desktop
+
+          }
         }
         p.header-description{
           font-style: italic;
@@ -249,8 +307,36 @@ background: $background;
           text-align: center;
           margin-bottom: 15px;
           color: $orange;
+          @include media(">=phone"){  //phone defaults above
+            @include media("landscape"){ //phone landscape
+              font-size: 1.85vw;
+            }
+          }
+          @include media(">=tablet"){    //tablet portrait
+
+            @include media("landscape") {  //tablet landscape
+
+            }
+          }
+          @include media(">=desktop") {  //desktop
+
+          }
         }
         ul.sub-menu-list{
+          @include media(">=phone"){  //phone defaults above
+            @include media("landscape"){ //phone landscape
+              margin-top: 7.5%;
+            }
+          }
+          @include media(">=tablet"){    //tablet portrait
+
+            @include media("landscape") {  //tablet landscape
+
+            }
+          }
+          @include media(">=desktop") {  //desktop
+
+          }
 
           li.sub-menu-list-item{
             color: $darkerbrown;
@@ -259,6 +345,21 @@ background: $background;
             line-height: 3;
             letter-spacing: 1px;
             font-size: 0.85rem;
+            @include media(">=phone"){  //phone defaults above
+              @include media("landscape"){ //phone landscape
+                font-size: 2vw;
+
+              }
+            }
+            @include media(">=tablet"){    //tablet portrait
+
+              @include media("landscape") {  //tablet landscape
+
+              }
+            }
+            @include media(">=desktop") {  //desktop
+
+            }
           }
         }
       }

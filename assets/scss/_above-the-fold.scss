@@ -735,7 +735,7 @@
         text-transform: uppercase;
         font-family: 'ArbescoDT-Bold', sans-serif;
         color: $lightYellow;
-                letter-spacing: 1px;
+        letter-spacing: 1px;
         font-size: 1.1rem;
         font-weight: 600;
         @include media(">=phone"){  //phone defaults above

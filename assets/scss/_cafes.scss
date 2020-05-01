@@ -16,7 +16,7 @@ background: $background;
     width: 100%;
     @include media(">=phone"){  //phone defaults above
       @include media("landscape"){ //phone landscape
-
+        padding: 2% 5%;
         }
     }
     @include media(">=tablet"){    //tablet portrait
@@ -34,7 +34,8 @@ background: $background;
       border-radius: 50%;
       @include media(">=phone"){  //phone defaults above
         @include media("landscape"){ //phone landscape
-
+          width: 11vw;
+          height: 11vw;
           }
       }
       @include media(">=tablet"){    //tablet portrait
@@ -111,25 +112,25 @@ background: $background;
             color: #fff;
             transition: .2s all ease-in-out;
             cursor: pointer;
+            @include media(">=phone"){  //phone defaults above
+              @include media("landscape"){ //phone landscape
+                font-size: 2.5vw;
+              }
+            }
+            @include media(">=tablet"){    //tablet portrait
+
+              @include media("landscape") {  //tablet landscape
+
+              }
+            }
+            @include media(">=desktop") {  //desktop
+
+            }
           &:hover{
             color: $orange;
           }
           &:last-child{
             display: none;
-          }
-          @include media(">=phone"){  //phone defaults above
-            @include media("landscape"){ //phone landscape
-
-              }
-          }
-          @include media(">=tablet"){    //tablet portrait
-
-            @include media("landscape") {  //tablet landscape
-
-            }
-          }
-          @include media(">=desktop") {  //desktop
-
           }
         }
       }
@@ -143,7 +144,8 @@ background: $background;
     position: relative;
     @include media(">=phone"){  //phone defaults above
         @include media("landscape"){ //phone landscape
-
+          height: 110vh;
+          background-position: center;
         }
     }
     @include media(">=tablet"){    //tablet portrait
@@ -192,7 +194,7 @@ background: $background;
         letter-spacing: 1px;
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
-
+              font-size: 8vw;
             }
         }
         @include media(">=tablet"){    //tablet portrait
@@ -219,7 +221,9 @@ background: $background;
         bottom: 10%;
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
-
+              font-size: 2.5vw;
+              width: 33%;
+              padding: 2vw 2.5vw;
             }
         }
         @include media(">=tablet"){    //tablet portrait
@@ -245,6 +249,22 @@ background: $background;
     color: $darkerbrown;
     position: relative;
     transform-style: preserve-3d;
+    @include media(">=phone"){  //phone defaults above
+      @include media("landscape"){ //phone landscape
+        margin-top: 50px;
+        font-size: 4vw;
+        padding: 50px 100px;
+      }
+    }
+    @include media(">=tablet"){    //tablet portrait
+
+      @include media("landscape") {  //tablet landscape
+
+      }
+    }
+    @include media(">=desktop") {  //desktop
+
+    }
 
   &:after{
     display: block;
@@ -297,6 +317,20 @@ background: $background;
                   color: $darkerbrown;
                   border-bottom: 1px solid $background;
                   padding-bottom: 3px;
+                  @include media(">=phone"){  //phone defaults above
+                    @include media("landscape"){ //phone landscape
+                      font-size: 2.5vw;
+                    }
+                  }
+                  @include media(">=tablet"){    //tablet portrait
+
+                    @include media("landscape") {  //tablet landscape
+
+                    }
+                  }
+                  @include media(">=desktop") {  //desktop
+
+                  }
                   &:hover{
 
                   }
@@ -330,6 +364,20 @@ background: $background;
                 display: inline-block;
                 padding: 0px 3%;
                 line-height: 3;
+                @include media(">=phone"){  //phone defaults above
+                  @include media("landscape"){ //phone landscape
+                    font-size: 2vw;
+                  }
+                }
+                @include media(">=tablet"){    //tablet portrait
+
+                  @include media("landscape") {  //tablet landscape
+
+                  }
+                }
+                @include media(">=desktop") {  //desktop
+
+                }
               }
           }
 
@@ -339,41 +387,132 @@ background: $background;
     div.cafe-wrapper{
       display: grid;
       grid-template-rows: auto auto;
+      @include media(">=phone"){  //phone defaults above
+        @include media("landscape"){ //phone landscape
+          grid-template-rows: auto;
+          grid-auto-rows: min-content;
+          grid-template-columns: 1fr 1fr;
+                          // height: calc(var(--vh, 1vh) * 100);
+        }
+      }
+      @include media(">=tablet"){    //tablet portrait
 
-      div.photo-wrapper{
-        width: 100vw;
-        height: 65vw;
-        position: relative;
-        .overlay{
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          right: 0;
-          left: 0;
-          // background: rgba(0,0,0,0.6);
-          display: flex;
-          flex-flow: column;
-          justify-content: center;
-          align-items: center;
-          h3{
-            color: $lightYellow;
-            font-size: 6.25vw;
-            font-family: 'ArbescoDT-SemiBold', serif;
-            text-transform: uppercase;
-            width: 100%;
-            height: 43px;
-            line-height: 40px;
-            background: rgba(87,73,66,0.85);
-            border-top: 3px solid $lightYellow;
-            border-bottom: 3px solid $lightYellow;
-            text-align: center;
+        @include media("landscape") {  //tablet landscape
+
+        }
+      }
+      @include media(">=desktop") {  //desktop
+
+      }
+      a{
+        @include media(">=phone"){  //phone defaults above
+          @include media("landscape"){ //phone landscape
+                            grid-column: 1/2;
+          }
+        }
+        @include media(">=tablet"){    //tablet portrait
+
+          @include media("landscape") {  //tablet landscape
 
           }
         }
-        img{
-          object-fit: cover;
-          width: 100%;
-          height: 100%;
+        @include media(">=desktop") {  //desktop
+
+        }
+        div.photo-wrapper{
+          width: 100vw;
+          height: 65vw;
+          position: relative;
+          @include media(">=phone"){  //phone defaults above
+            @include media("landscape"){ //phone landscape
+
+              width: 100%;
+                height: calc(var(--vh, 1vh) * 100);
+            }
+          }
+          @include media(">=tablet"){    //tablet portrait
+
+            @include media("landscape") {  //tablet landscape
+
+            }
+          }
+          @include media(">=desktop") {  //desktop
+
+          }
+          .overlay{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            // background: rgba(0,0,0,0.6);
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            @include media(">=phone"){  //phone defaults above
+              @include media("landscape"){ //phone landscape
+
+              }
+            }
+            @include media(">=tablet"){    //tablet portrait
+
+              @include media("landscape") {  //tablet landscape
+
+              }
+            }
+            @include media(">=desktop") {  //desktop
+
+            }
+            h3{
+              color: $lightYellow;
+              font-size: 6.25vw;
+              font-family: 'ArbescoDT-SemiBold', serif;
+              text-transform: uppercase;
+              width: 100%;
+              height: 43px;
+              line-height: 40px;
+              background: rgba(87,73,66,0.85);
+              border-top: 3px solid $lightYellow;
+              border-bottom: 3px solid $lightYellow;
+              text-align: center;
+              @include media(">=phone"){  //phone defaults above
+                @include media("landscape"){ //phone landscape
+                  font-size: 3vw;
+                }
+              }
+              @include media(">=tablet"){    //tablet portrait
+
+                @include media("landscape") {  //tablet landscape
+
+                }
+              }
+              @include media(">=desktop") {  //desktop
+
+              }
+            }
+          }
+          img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            @include media(">=phone"){  //phone defaults above
+              @include media("landscape"){ //phone landscape
+                width: 50vw;
+                // height: calc(var(--vh, 1vh) * 100);
+
+              }
+            }
+            @include media(">=tablet"){    //tablet portrait
+
+              @include media("landscape") {  //tablet landscape
+
+              }
+            }
+            @include media(">=desktop") {  //desktop
+
+            }
+          }
         }
       }
       div.cafe-details{
@@ -390,17 +529,76 @@ background: $background;
         position: relative;
         justify-content: center;
         align-items: center;
+        @include media(">=phone"){  //phone defaults above
+          @include media("landscape"){ //phone landscape
+            grid-column: 2/3;
+            width: unset;
+            // padding: unset;
+                height: calc(var(--vh, 1vh) * 100);
+          }
+        }
+        @include media(">=tablet"){    //tablet portrait
+
+          @include media("landscape") {  //tablet landscape
+
+          }
+        }
+        @include media(">=desktop") {  //desktop
+
+        }
         div.address{
           justify-self: start;
           grid-column: 1/2;
           grid-row: 1/2;
+          @include media(">=phone"){  //phone defaults above
+            @include media("landscape"){ //phone landscape
+
+            }
+          }
+          @include media(">=tablet"){    //tablet portrait
+
+            @include media("landscape") {  //tablet landscape
+
+            }
+          }
+          @include media(">=desktop") {  //desktop
+
+          }
         }
         div.hours{
           grid-column: 2/3;
           grid-row: 1/2;
+          @include media(">=phone"){  //phone defaults above
+            @include media("landscape"){ //phone landscape
+
+            }
+          }
+          @include media(">=tablet"){    //tablet portrait
+
+            @include media("landscape") {  //tablet landscape
+
+            }
+          }
+          @include media(">=desktop") {  //desktop
+
+          }
           span{
             font-weight: 600;
             text-transform: uppercase;
+            @include media(">=phone"){  //phone defaults above
+              @include media("landscape"){ //phone landscape
+
+              }
+            }
+            @include media(">=tablet"){    //tablet portrait
+
+              @include media("landscape") {  //tablet landscape
+
+              }
+            }
+            @include media(">=desktop") {  //desktop
+
+            }
           }
         }
         button{
@@ -423,15 +621,55 @@ background: $background;
           box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
           padding: 0 10px;
           display: block;
-          ;
+          @include media(">=phone"){  //phone defaults above
+            @include media("landscape"){ //phone landscape
 
+            }
+          }
+          @include media(">=tablet"){    //tablet portrait
+
+            @include media("landscape") {  //tablet landscape
+
+            }
+          }
+          @include media(">=desktop") {  //desktop
+
+          }
         }
         div.contact{
           grid-column: 2/3;
           grid-row: 2/3;
           align-self: start;
+          @include media(">=phone"){  //phone defaults above
+            @include media("landscape"){ //phone landscape
+
+            }
+          }
+          @include media(">=tablet"){    //tablet portrait
+
+            @include media("landscape") {  //tablet landscape
+
+            }
+          }
+          @include media(">=desktop") {  //desktop
+
+          }
           span{
             font-weight: 600;
+            @include media(">=phone"){  //phone defaults above
+              @include media("landscape"){ //phone landscape
+
+              }
+            }
+            @include media(">=tablet"){    //tablet portrait
+
+              @include media("landscape") {  //tablet landscape
+
+              }
+            }
+            @include media(">=desktop") {  //desktop
+
+            }
           }
 
         }
@@ -464,4 +702,19 @@ background: $background;
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
   cursor: pointer;
   display: none;
+  @include media(">=phone"){  //phone defaults above
+    @include media("landscape"){ //phone landscape
+      width: 9vw;
+      height: 9vw;
+    }
+  }
+  @include media(">=tablet"){    //tablet portrait
+
+    @include media("landscape") {  //tablet landscape
+
+    }
+  }
+  @include media(">=desktop") {  //desktop
+
+  }
 }

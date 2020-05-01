@@ -99,6 +99,20 @@ a{
       color: $darkerbrown;
       border-bottom: 1px solid $background;
       padding-bottom: 3px;
+      @include media(">=phone"){  //phone defaults above
+        @include media("landscape"){ //phone landscape
+          font-size: 2.5vw;
+        }
+      }
+      @include media(">=tablet"){    //tablet portrait
+
+        @include media("landscape") {  //tablet landscape
+
+        }
+      }
+      @include media(">=desktop") {  //desktop
+
+      }
     }
   }
 }
@@ -128,5 +142,23 @@ a{
     outline: none;
     background: $background;
     font-family: 'ArbescoDT-SemiBold', serif;
+    @include media(">=phone"){  //phone defaults above
+      @include media("landscape"){ //phone landscape
+        font-size: 2.5vw;
+      }
+    }
+    @include media(">=tablet"){    //tablet portrait
+
+      @include media("landscape") {  //tablet landscape
+
+      }
+    }
+    @include media(">=desktop") {  //desktop
+
+    }
   }
+}
+
+.nav-active{
+  color: $lightYellow;
 }
