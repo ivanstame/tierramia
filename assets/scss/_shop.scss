@@ -58,8 +58,8 @@ body#shop-page{
         }
       }
       @include media(">=desktop") {  //desktop
-        width: 9.25vw;
-        height: 9.25vw;
+        width: 8vw;
+        height: 8vw;
       }
       img.circle-logo{
         width: 100%;
@@ -94,7 +94,7 @@ body#shop-page{
         }
       }
       @include media(">=desktop") {  //desktop
-
+        width: 50%;
       }
       ul#main-nav{
           display:flex;
@@ -130,6 +130,20 @@ body#shop-page{
           }
           &:last-child{
             display: none;
+            @include media(">=phone"){  //phone defaults above
+              @include media("landscape"){ //phone landscape
+
+              }
+            }
+            @include media(">=tablet"){    //tablet portrait
+
+              @include media("landscape") {  //tablet landscape
+
+              }
+            }
+            @include media(">=desktop") {  //desktop
+              display: block;
+            }
           }
           @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
@@ -143,7 +157,7 @@ body#shop-page{
             }
           }
           @include media(">=desktop") {  //desktop
-
+                font-size: 1.25vw;
           }
         }// end nav-item
       } // end #main-nav
@@ -232,6 +246,20 @@ body#shop-page{
   }// end hero
   #products-main{
     padding: 50px 30px;
+    @include media(">=phone"){  //phone defaults above
+      @include media("landscape"){ //phone landscape
+
+      }
+    }
+    @include media(">=tablet"){    //tablet portrait
+
+      @include media("landscape") {  //tablet landscape
+
+      }
+    }
+    @include media(">=desktop") {  //desktop
+      padding: 50px 15vw;
+    }
     h1{
       text-align: left;
       margin-bottom: 60px;
@@ -250,6 +278,23 @@ body#shop-page{
     }
     ul#collection-container{
         padding: 0 50px;
+        @include media(">=phone"){  //phone defaults above
+          @include media("landscape"){ //phone landscape
+
+          }
+        }
+        @include media(">=tablet"){    //tablet portrait
+
+          @include media("landscape") {  //tablet landscape
+
+          }
+        }
+        @include media(">=desktop") {  //desktop
+          display: grid;
+          grid-template-rows: repeat(2, 1fr);
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 100px;
+        }
         li.product{
             min-height: 50vh;
             display: flex;
@@ -258,6 +303,20 @@ body#shop-page{
             align-items: center;
             margin-bottom: 50px;
             padding: 0 30px !important;
+            @include media(">=phone"){  //phone defaults above
+              @include media("landscape"){ //phone landscape
+
+              }
+            }
+            @include media(">=tablet"){    //tablet portrait
+
+              @include media("landscape") {  //tablet landscape
+
+              }
+            }
+            @include media(">=desktop") {  //desktop
+              min-height: 75vh;
+            }
             img{
                 margin-bottom: 10px;
             }

@@ -5,7 +5,7 @@
 body#cafes-page
 {
   transition: 1s all;
-background: $background;
+  background: $background;
   header{
     display: flex;
     justify-content: space-between;
@@ -45,8 +45,8 @@ background: $background;
         }
       }
       @include media(">=desktop") {  //desktop
-        width: 9.25vw;
-        height: 9.25vw;
+        width: 8vw;
+        height: 8vw;
       }
       img.circle-logo{
         width: 100%;
@@ -81,7 +81,7 @@ background: $background;
         }
       }
       @include media(">=desktop") {  //desktop
-
+        width: 50%;
       }
       ul#main-nav{
           display:flex;
@@ -124,13 +124,27 @@ background: $background;
               }
             }
             @include media(">=desktop") {  //desktop
-
+              font-size: 1.25vw;
             }
           &:hover{
-            color: $orange;
+            color: $lightYellow;
           }
           &:last-child{
             display: none;
+            @include media(">=phone"){  //phone defaults above
+              @include media("landscape"){ //phone landscape
+
+              }
+            }
+            @include media(">=tablet"){    //tablet portrait
+
+              @include media("landscape") {  //tablet landscape
+
+              }
+            }
+            @include media(">=desktop") {  //desktop
+              display: block;
+            }
           }
         }
       }
@@ -155,7 +169,8 @@ background: $background;
         }
     }
     @include media(">=desktop") {  //desktop
-
+      height: 100vh;
+      height: calc(var(--vh, 1vh) * 100);
     }
     .overlay{
       padding: 10vw 0vw;
@@ -207,35 +222,86 @@ background: $background;
 
         }
       }
+
       #nearest-cafe{
-        border: 3px solid #fff;
-        padding: 4vw 5vw;
-        font-family: 'ArbescoDT-SemiBold', serif;
-        color: #fff;
+        border: 2px solid #f2c572;
+        padding: 3vw 5vw;
+        font-family: 'ArbescoDT-Book', serif;
+        background: $lightYellow;
+        color: $darkerbrown;
+        margin-top: 20px;
         cursor: pointer;
-        text-transform: uppercase;
-        font-size: 4.5vw;
-        background: rgba(0,0,0,0.3);
-        position: absolute;
-        width: 70%;
-        bottom: 10%;
+        font-size: 3.5vw;
+        width: 40%;
+                    font-weight: 600;
+        margin: 0 auto;
+        margin-top: 20px;
+        transition: 0.15s all ease-in-out;
+        &:focus{
+          outline: none;
+        }
+        &:active{
+          outline: none;
+        }
+        &:hover{
+          border-color: $darkerbrown;
+
+        }
         @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
+              width: 50%;
               font-size: 2.5vw;
-              width: 33%;
-              padding: 2vw 2.5vw;
+              padding: 3vw 0;
             }
         }
         @include media(">=tablet"){    //tablet portrait
 
-            @include media("landscape") {  //tablet landscape
+              @include media("landscape") {  //tablet landscape
 
+              }
             }
-        }
         @include media(">=desktop") {  //desktop
+          box-shadow: 0px 3px 15px $darkerbrown;
+          color: $darkerbrown;
+          background: $lightYellow;
+          width: 15%;
+          font-size: 1.25vw;
+          padding: 1.25vw 0;
+          font-weight: 400;
+          margin-top: 40px;
+
 
         }
       }
+      // #nearest-cafe{
+      //   border: 3px solid #fff;
+      //   padding: 4vw 5vw;
+      //   font-family: 'ArbescoDT-SemiBold', serif;
+      //   color: #fff;
+      //   cursor: pointer;
+      //   text-transform: uppercase;
+      //   font-size: 4.5vw;
+      //   background: rgba(0,0,0,0.3);
+      //   position: absolute;
+      //   width: 70%;
+      //   bottom: 10%;
+      //   @include media(">=phone"){  //phone defaults above
+      //       @include media("landscape"){ //phone landscape
+      //         font-size: 2.5vw;
+      //         width: 33%;
+      //         padding: 2vw 2.5vw;
+      //       }
+      //   }
+      //   @include media(">=tablet"){    //tablet portrait
+      //
+      //       @include media("landscape") {  //tablet landscape
+      //
+      //       }
+      //   }
+      //   @include media(">=desktop") {  //desktop
+      //
+      //   }
+      // }
     }
   }
   blockquote{
@@ -263,7 +329,7 @@ background: $background;
       }
     }
     @include media(">=desktop") {  //desktop
-
+          font-size: 2vw;
     }
 
   &:after{
@@ -329,7 +395,7 @@ background: $background;
                     }
                   }
                   @include media(">=desktop") {  //desktop
-
+                    font-size: 2vw;
                   }
                   &:hover{
 
@@ -344,6 +410,20 @@ background: $background;
           position: relative;
           padding: 0 5vw;
           margin-bottom: 15px;
+          @include media(">=phone"){  //phone defaults above
+            @include media("landscape"){ //phone landscape
+
+            }
+          }
+          @include media(">=tablet"){    //tablet portrait
+
+            @include media("landscape") {  //tablet landscape
+
+            }
+          }
+          @include media(">=desktop") {  //desktop
+            padding: 0 15vw;
+          }
           ul.cities-list{
             text-align: center;
             transition: .2s all ease-in-out;
@@ -376,7 +456,7 @@ background: $background;
                   }
                 }
                 @include media(">=desktop") {  //desktop
-
+                  font-size: 1.25vw;
                 }
               }
           }
@@ -390,6 +470,7 @@ background: $background;
 		&:nth-of-type(2n) {
 			.cafe-details {
 				grid-column: 1/2 !important;
+        // padding-left: 50%;
 			}
 			>a {
 				grid-column: 2/3 !important;
@@ -398,14 +479,14 @@ background: $background;
 		}
 	}
     }
-  }      
+  }
   @include media(">=tablet"){    //tablet portrait
 
     @include media("landscape") {  //tablet landscape
 
     }
-  } 
-  @include media(">=desktop") {  //desktop 
+  }
+  @include media(">=desktop") {  //desktop
 
   }
     div.cafe-wrapper{
@@ -425,7 +506,8 @@ background: $background;
         }
       }
       @include media(">=desktop") {  //desktop
-
+        margin-bottom: 50px;
+          grid-template-columns: auto auto;
       }
       a{
         @include media(">=phone"){  //phone defaults above
@@ -511,7 +593,8 @@ background: $background;
                 }
               }
               @include media(">=desktop") {  //desktop
-
+                height: 63px;
+                line-height: 60px;
               }
             }
           }
@@ -533,7 +616,8 @@ background: $background;
               }
             }
             @include media(">=desktop") {  //desktop
-
+              width: unset;
+              width: inherit;
             }
           }
         }
@@ -567,7 +651,9 @@ background: $background;
           }
         }
         @include media(">=desktop") {  //desktop
-
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(4, 1fr);
+          font-size: 1.33vw;
         }
         div.address{
           justify-self: start;
@@ -585,7 +671,8 @@ background: $background;
             }
           }
           @include media(">=desktop") {  //desktop
-
+            grid-column: unset;
+            grid-row: unset;
           }
         }
         div.hours{
@@ -603,7 +690,8 @@ background: $background;
             }
           }
           @include media(">=desktop") {  //desktop
-
+            grid-column: unset;
+            grid-row: unset;
           }
           span{
             font-weight: 600;
@@ -656,7 +744,11 @@ background: $background;
             }
           }
           @include media(">=desktop") {  //desktop
-
+            grid-column: unset;
+            grid-row: unset;
+            line-height: 50px;
+            height: 53px;
+            font-size: 1.25vw;
           }
         }
         div.contact{
@@ -675,7 +767,8 @@ background: $background;
             }
           }
           @include media(">=desktop") {  //desktop
-
+            grid-column: unset;
+            grid-row: unset;
           }
           span{
             font-weight: 600;
@@ -738,7 +831,8 @@ background: $background;
     }
   }
   @include media(">=desktop") {  //desktop
-
+      width: 5vw;
+      height: 5vw;
   }
 }
 
@@ -754,4 +848,3 @@ background: $background;
 // #locations-container > .cafe-wrapper:nth-of-type(2n) {
 //     grid-auto-flow: dense !important;
 // }
-

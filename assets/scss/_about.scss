@@ -58,8 +58,8 @@ body#about-page{
         }
       }
       @include media(">=desktop") {  //desktop
-        width: 9.25vw;
-        height: 9.25vw;
+        width: 8vw;
+        height: 8vw;
       }
       img.circle-logo{
         width: 100%;
@@ -94,7 +94,7 @@ body#about-page{
         }
       }
       @include media(">=desktop") {  //desktop
-
+        width: 50%;
       }
       ul#main-nav{
           display:flex;
@@ -125,26 +125,41 @@ body#about-page{
             color: #fff;
             transition: .2s all ease-in-out;
             cursor: pointer;
+            @include media(">=phone"){  //phone defaults above
+              @include media("landscape"){ //phone landscape
+                    font-size: 2.5vw;
+                }
+            }
+            @include media(">=tablet"){    //tablet portrait
+
+              @include media("landscape") {  //tablet landscape
+
+              }
+            }
+            @include media(">=desktop") {  //desktop
+                font-size: 1.25vw;
+            }
           &:hover{
-            color: $orange;
+            color: $lightYellow;
           }
           &:last-child{
             display: none;
-          }
-          @include media(">=phone"){  //phone defaults above
-            @include media("landscape"){ //phone landscape
-                  font-size: 2.5vw;
+            @include media(">=phone"){  //phone defaults above
+              @include media("landscape"){ //phone landscape
+
               }
-          }
-          @include media(">=tablet"){    //tablet portrait
+            }
+            @include media(">=tablet"){    //tablet portrait
 
-            @include media("landscape") {  //tablet landscape
+              @include media("landscape") {  //tablet landscape
 
+              }
+            }
+            @include media(">=desktop") {  //desktop
+              display: block;
             }
           }
-          @include media(">=desktop") {  //desktop
 
-          }
         }// end nav-item
       } // end #main-nav
     } // end nav
@@ -168,7 +183,8 @@ body#about-page{
         }
     }
     @include media(">=desktop") {  //desktop
-
+      height: 100vh;
+      height: calc(var(--vh, 1vh) * 100);
     }
     .overlay{
       position: absolute;
@@ -232,6 +248,20 @@ body#about-page{
   }// end hero
   #story{
       padding-bottom: 60px;
+      @include media(">=phone"){  //phone defaults above
+        @include media("landscape"){ //phone landscape
+
+        }
+      }
+      @include media(">=tablet"){    //tablet portrait
+
+        @include media("landscape") {  //tablet landscape
+
+        }
+      }
+      @include media(">=desktop") {  //desktop
+        padding: 0 17vw 60px 17vw;
+      }
       blockquote{
         padding: 50px 30px;
         font-family: 'ArbescoDT-Bold';
@@ -253,7 +283,7 @@ body#about-page{
           }
         }
         @include media(">=desktop") {  //desktop
-
+          font-size: 2vw;
         }
       &:after{
         display: block;
@@ -266,7 +296,21 @@ body#about-page{
         left: -1%;
         transform: translateZ(-1px);
         opacity: 0.06;
+        @include media(">=phone"){  //phone defaults above
+          @include media("landscape"){ //phone landscape
 
+          }
+        }
+        @include media(">=tablet"){    //tablet portrait
+
+          @include media("landscape") {  //tablet landscape
+
+          }
+        }
+        @include media(">=desktop") {  //desktop
+          top: 10%;
+          height: 90%;
+        }
       }
       }
     .chapter{
@@ -299,7 +343,7 @@ body#about-page{
           }
         }
         @include media(">=desktop") {  //desktop
-
+          font-size: 2.5vw;
         }
       }
       p{
@@ -321,7 +365,7 @@ body#about-page{
           }
         }
         @include media(">=desktop") {  //desktop
-
+          font-size: 1.25vw;
         }
         &:last-of-type{
           margin-bottom: 0;
@@ -345,6 +389,7 @@ body#about-page{
         }
       }
       @include media(">=desktop") {  //desktop
+        height: 65vh;
 
       }
       img{

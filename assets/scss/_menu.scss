@@ -45,8 +45,8 @@ background: $background;
         }
       }
       @include media(">=desktop") {  //desktop
-        width: 9.25vw;
-        height: 9.25vw;
+        width: 8vw;
+        height: 8vw;
       }
       img.circle-logo{
         width: 100%;
@@ -81,7 +81,7 @@ background: $background;
         }
       }
       @include media(">=desktop") {  //desktop
-
+        width: 50%;
       }
       ul#main-nav{
           display:flex;
@@ -124,27 +124,27 @@ background: $background;
               }
             }
             @include media(">=desktop") {  //desktop
-
+                font-size: 1.25vw;
             }
           &:hover{
-            color: $orange;
+            color: $lightYellow;
           }
           &:last-child{
             display: none;
-          }
-          @include media(">=phone"){  //phone defaults above
-            @include media("landscape"){ //phone landscape
+            @include media(">=phone"){  //phone defaults above
+              @include media("landscape"){ //phone landscape
+
+                }
+            }
+            @include media(">=tablet"){    //tablet portrait
+
+              @include media("landscape") {  //tablet landscape
 
               }
-          }
-          @include media(">=tablet"){    //tablet portrait
-
-            @include media("landscape") {  //tablet landscape
-
             }
-          }
-          @include media(">=desktop") {  //desktop
-
+            @include media(">=desktop") {  //desktop
+              display: block;
+            }
           }
         }
       }
@@ -170,7 +170,8 @@ background: $background;
         }
     }
     @include media(">=desktop") {  //desktop
-
+      height: 100vh;
+      height: calc(var(--vh, 1vh) * 100);
     }
     .overlay{
       position: absolute;
@@ -252,33 +253,34 @@ background: $background;
     }
     div.menu-list{ // three panes, cold - hot - pastries
       transition: all .5s;
-      h2.menu-list-title{
-        text-transform: uppercase;
-        font-size: 1.5rem;
-        margin-bottom: 70px;
-        margin-top: 40px;
-        font-family: "ArbescoDT-SemiBold", Arial, sans-serif;
-        color: $darkerbrown;
-        letter-spacing: 2px;
-        text-decoration: underline;
-        text-underline-position: under;
-        text-decoration-color: $lightYellow;
-        text-decoration-style: double;
-        @include media(">=phone"){  //phone defaults above
-          @include media("landscape"){ //phone landscape
-            font-size: 4.5vw;
-          }
-        }
-        @include media(">=tablet"){    //tablet portrait
-
-          @include media("landscape") {  //tablet landscape
-
-          }
-        }
-        @include media(">=desktop") {  //desktop
-
-        }
-      }
+              margin-top: 80px;
+      // h2.menu-list-title{
+      //   text-transform: uppercase;
+      //   font-size: 1.5rem;
+      //   margin-bottom: 70px;
+      //   margin-top: 40px;
+      //   font-family: "ArbescoDT-SemiBold", Arial, sans-serif;
+      //   color: $darkerbrown;
+      //   letter-spacing: 2px;
+      //   text-decoration: underline;
+      //   text-underline-position: under;
+      //   text-decoration-color: $lightYellow;
+      //   text-decoration-style: double;
+      //   @include media(">=phone"){  //phone defaults above
+      //     @include media("landscape"){ //phone landscape
+      //       font-size: 4.5vw;
+      //     }
+      //   }
+      //   @include media(">=tablet"){    //tablet portrait
+      //
+      //     @include media("landscape") {  //tablet landscape
+      //
+      //     }
+      //   }
+      //   @include media(">=desktop") {  //desktop
+      //     font-size: 2.5vw;
+      //   }
+      // }
       div.sub-menu-list-wrapper{
         margin-bottom: 60px;
         h3.sub-menu-list-title{
@@ -297,7 +299,7 @@ background: $background;
             }
           }
           @include media(">=desktop") {  //desktop
-
+            font-size: 2.5vw;
           }
         }
         p.header-description{
@@ -309,7 +311,7 @@ background: $background;
           color: $orange;
           @include media(">=phone"){  //phone defaults above
             @include media("landscape"){ //phone landscape
-              font-size: 1.85vw;
+              font-size: 1.5vw;
             }
           }
           @include media(">=tablet"){    //tablet portrait
@@ -319,7 +321,7 @@ background: $background;
             }
           }
           @include media(">=desktop") {  //desktop
-
+            font-size: 1.33vw;
           }
         }
         ul.sub-menu-list{
@@ -358,7 +360,8 @@ background: $background;
               }
             }
             @include media(">=desktop") {  //desktop
-
+              font-size: 1.25vw;
+              line-height: 2;
             }
           }
         }
