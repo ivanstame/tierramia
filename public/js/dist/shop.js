@@ -44,7 +44,7 @@ client.product.fetchAll().then((products) => {
                    }];
 
                    if(!$.contains(cartTable, document.getElementById(productObjects[m].title))){
-                      var newRow = cartTable.insertRow(0);
+                      var newRow = cartTable.insertRow(1);
                       newRow.id = productObjects[m].title;
                       var cell1 = newRow.insertCell(0);
                       var cell2 = newRow.insertCell(1);

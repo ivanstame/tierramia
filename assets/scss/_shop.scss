@@ -371,7 +371,8 @@ body#shop-page{
       position: fixed;
       right:0;
       top: 50%;
-      height: 80%;
+      min-height: 30%;
+      height: fit-content;
       width: 85%;
       padding: 10% 5%;
       transform: translate(100%, -50%);
@@ -394,9 +395,21 @@ body#shop-page{
        font-size: 0.8rem;
        display: inline-block;
        font-family: 'ArbescoDT-SemiBold', serif;
-          td{
-           padding: 5px 15px;
-          }
+       tr{
+         &:first-child{
+           border-bottom: 1px solid $orange;
+         }
+       }
+       th{
+         font-size: 0.9rem;
+         font-weight: 600;
+         padding: 5px 15px 15px 0;
+       }
+        td{
+         padding: 5px 15px;
+         padding-left: 0;
+         margin-bottom: 10px;
+        }
       }
       #total{
           width: 100%;

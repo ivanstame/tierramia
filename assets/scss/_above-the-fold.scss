@@ -1457,7 +1457,7 @@
             }
           }
       @include media(">=desktop") {  //desktop
-
+          right: 0;
       }
 
     }
@@ -1523,7 +1523,8 @@
                 }
               }
           @include media(">=desktop") {  //desktop
-            width: 33vw;
+            width: 100%;
+            padding: 0 15%;
           }
           .product-wrapper{
 
@@ -1542,7 +1543,7 @@
                   }
                 }
             @include media(">=desktop") {  //desktop
-
+              padding: unset;
             }
 
             .product-image{
@@ -1563,7 +1564,7 @@
                     }
                   }
               @include media(">=desktop") {  //desktop
-                width: 100%;
+                width: 60%;
               }
 
               img {
@@ -1661,7 +1662,7 @@
                     }
                   }
               @include media(">=desktop") {  //desktop
-                font-size: 1vw;
+                font-size: 1.25vw;
               }
 
             }
@@ -1685,11 +1686,12 @@
                   @include media("landscape"){ //phone landscape
                     grid-column: 2/3;
                     grid-row: 2/3;
-                    margin-top: -8px;
+                    margin: 0;
                     font-size: 2vw;
                     padding: 0 20px;
                     height: 34px;
                     line-height: 32px;
+
 
                   }
               }
@@ -1706,6 +1708,7 @@
                 padding: 0 30px;
                 align-self: center;
                 justify-self: start;
+                width: 50%;
               }
             }// close .buy-btn
           } //close .product-wrapper
