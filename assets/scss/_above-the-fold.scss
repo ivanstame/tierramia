@@ -482,14 +482,14 @@
         div#cta {
           border: 2px solid #f2c572;
           padding: 4vw 5vw;
-          font-family: 'ArbescoDT-Book', serif;
-          background: $lightYellow;
+          font-family: 'MarrSans-Medium', sans-serif;
+          background-color: #f5deba;
+          background: radial-gradient(circle, #f5deba 1%, #e9bf75 100%);
           color: $darkerbrown;
           margin-top: 20px;
           cursor: pointer;
           font-size: 3.5vw;
           width: 60%;
-                      font-weight: 600;
           margin: 0 auto;
           transition: 0.15s all ease-in-out;
           &:focus{
@@ -500,7 +500,6 @@
           }
           &:hover{
             border-color: $darkerbrown;
-
           }
           @include media(">=phone"){  //phone defaults above
               @include media("landscape"){ //phone landscape
@@ -727,7 +726,7 @@
       flex-flow: column;
       justify-content: space-between;
       align-items: center;
-      font-family: 'ArbescoDT-Book', sans-serif;
+
       grid-row: 2/3;
       padding: 8% 10%;
       @include media(">=phone"){  //phone defaults above
@@ -1668,20 +1667,23 @@
             }
             .buy-btn{
               @include button-style;
-              text-transform: uppercase;
               letter-spacing: 1px;
               cursor: pointer;
-              color: rgba(42,24,14,0.768627);
+              color: $darkerbrown;
               outline: none;
-              line-height: 30px;
-              height: 30px;
-              font-family: 'ArbescoDT-Bold', sans-serif;
-              border: 2px solid rgba(42,24,14,0.768627);
+              border: 2px solid #f2c572;
+              line-height: 40px;
+              height: 40px;
+              font-family: 'MarrSans-Medium', sans-serif;
               font-size: 0.8rem;
-              box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
-              padding: 0 10px;
+              box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.8);
+              padding: 0px 20px;
               display: block;
               margin: 0 auto;
+              transition: 0.15s all ease-in-out;
+              &:hover{
+                border-color: $darkerbrown;
+              }
               @include media(">=phone"){  //phone defaults above
                   @include media("landscape"){ //phone landscape
                     grid-column: 2/3;

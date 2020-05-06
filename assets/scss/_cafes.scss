@@ -226,14 +226,14 @@ body#cafes-page
       #nearest-cafe{
         border: 2px solid #f2c572;
         padding: 3vw 5vw;
-        font-family: 'ArbescoDT-Book', serif;
-        background: $lightYellow;
+        font-family: 'MarrSans-Medium', sans-serif;
+        background-color: #f5deba;
+        background: radial-gradient(circle, #f5deba 1%, #e9bf75 100%);
         color: $darkerbrown;
         margin-top: 20px;
         cursor: pointer;
         font-size: 3.5vw;
         width: 40%;
-                    font-weight: 600;
         margin: 0 auto;
         margin-top: 20px;
         transition: 0.15s all ease-in-out;
@@ -438,12 +438,12 @@ body#cafes-page
 
               }
               li.city{
-                font-weight: 600;
                 font-size: 3.75vw;
                 color: $darkerbrown;
                 display: inline-block;
                 padding: 0px 3%;
                 line-height: 3;
+                font-family: 'MarrSansCondensed-Medium-Reduced';
                 @include media(">=phone"){  //phone defaults above
                   @include media("landscape"){ //phone landscape
                     font-size: 2vw;

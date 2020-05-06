@@ -46,22 +46,21 @@ client.product.fetchAll().then((products) => {
                    if(!$.contains(cartTable, document.getElementById(productObjects[m].title))){
                       var newRow = cartTable.insertRow(1);
                       newRow.id = productObjects[m].title;
-                      var cell1 = newRow.insertCell(0);
-                      var cell2 = newRow.insertCell(1);
-                      var cell3 = newRow.insertCell(2);
-                      var cell4 = newRow.insertCell(3);
+                      var cell0 = newRow.insertCell(0);
+                      var cell1 = newRow.insertCell(1);
+                      var cell2 = newRow.insertCell(2);
+                      var cell3 = newRow.insertCell(3);
+                      var thumbnail = $('<img class="thumbnail">');
+                      thumbnail.attr('src', url);
+                      thumbnail.appendTo(cell0);
                       cell1.innerText = productObjects[m].title;
                       cell2.innerText = productObjects[m].variants[0].price;
                       cell3.innerText = 1;
-                      cell4.innerText = productObjects[m].variants[0].price;
                    } else {
                        console.log('already there');
-                       var newNum = document.getElementById(productObjects[m].title).children[2].innerText;
+                       var newNum = document.getElementById(productObjects[m].title).children[3].innerText;
 
-                       document.getElementById(productObjects[m].title).children[2].innerText = parseInt(newNum) + 1;
-                       var updatedNum = parseFloat(newNum) + 1;
-                       var newSubTotal = parseFloat(productObjects[m].variants[0].price) * updatedNum;
-                       document.getElementById(productObjects[m].title).children[3].innerText = newSubTotal.toFixed(2);
+                       document.getElementById(productObjects[m].title).children[3].innerText = parseInt(newNum) + 1;
                    }
 
 //                    console.log(lineItemsToAdd);
@@ -86,4 +85,9 @@ client.checkout.create().then((checkout) => {
 $('#cart-show-hide').click(function(){
   // event.currentTarget.parentElement.style.transform = "translate(0%, -50%)";
   event.currentTarget.parentElement.classList.toggle('menu-visible');
+});
+
+
+$('input').on('keypress', function(){
+
 });

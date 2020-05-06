@@ -185,6 +185,7 @@ body#about-page{
     @include media(">=desktop") {  //desktop
       height: 100vh;
       height: calc(var(--vh, 1vh) * 100);
+      background-position: 0 54%;
     }
     .overlay{
       position: absolute;
@@ -215,7 +216,11 @@ body#about-page{
           }
       }
       @include media(">=desktop") {  //desktop
-
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        padding: 0 8vw;
+        padding-bottom: 9%;
       }
       h3{
         color: #fff;
@@ -235,7 +240,10 @@ body#about-page{
             }
         }
         @include media(">=desktop") {  //desktop
-
+          grid-row: 2;
+          align-self: end;
+          text-align: right;
+          font-size: 7vw;
         }
       }
       h4{

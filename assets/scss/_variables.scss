@@ -50,6 +50,66 @@ $lightYellow: rgb(242, 188, 121);
   src: url('../Arbesco/ArbescoDT-Book.ttf')  format('truetype');
 }
 
+@font-face {
+  font-family: 'MarrSans-Bold';
+  src: url('../MarrSans/MarrSans-Bold-Web.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MarrSans-BoldItalic';
+  src: url('../MarrSans/MarrSans-BoldItalic-Web.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MarrSans-Medium';
+  src: url('../MarrSans/MarrSans-Medium-Web.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MarrSans-Regular';
+  src: url('../MarrSans/MarrSans-Regular-Web.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MarrSans-RegularItalic';
+  src: url('../MarrSans/MarrSans-RegularItalic-Web.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MarrSans-SemiBold';
+  src: url('../MarrSans/MarrSans-Semibold-Web.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MarrSansCondensed-Bold-Reduced';
+  src: url('../MarrSans/MarrSansCondensed-Bold-Reduced.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MarrSansCondensed-BoldItalic-Reduced';
+  src: url('../MarrSans/MarrSansCondensed-BoldItalic-Reduced.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MarrSansCondensed-Medium-Reduced';
+  src: url('../MarrSans/MarrSansCondensed-Medium-Reduced.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MarrSansCondensed-Regular-Reduced';
+  src: url('../MarrSans/MarrSansCondensed-Regular-Reduced.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MarrSansCondensed-RegularItalic-Reduced';
+  src: url('../MarrSans/MarrSansCondensed-RegularItalic-Reduced.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'MarrSansCondensed-SemiBold-Reduced';
+  src: url('../MarrSans/MarrSansCondensed-Semibold-Reduced.woff') format('woff');
+}
+
 a {
      text-decoration: none;
 }
