@@ -45,21 +45,22 @@ client.product.fetchAll().then((products) => {
 
                    if(!$.contains(cartTable, document.getElementById(productObjects[m].title))){
                       var newRow = cartTable.insertRow(1);
+                      var adjustBtns = $('<div class="adjust-btn-container">' + '<button class="plus adjust-btn">+</button>' + '<button class="minus adjust-btn">-</button>' + '</div>');
                       newRow.id = productObjects[m].title;
                       var cell0 = newRow.insertCell(0);
                       var cell1 = newRow.insertCell(1);
                       var cell2 = newRow.insertCell(2);
                       var cell3 = newRow.insertCell(3);
+                      var cell4 = newRow.insertCell(4);
                       var thumbnail = $('<img class="thumbnail">');
                       thumbnail.attr('src', url);
                       thumbnail.appendTo(cell0);
                       cell1.innerText = productObjects[m].title;
                       cell2.innerText = productObjects[m].variants[0].price;
                       cell3.innerText = 1;
+                      adjustBtns.appendTo(cell4);
                    } else {
-                       console.log('already there');
                        var newNum = document.getElementById(productObjects[m].title).children[3].innerText;
-
                        document.getElementById(productObjects[m].title).children[3].innerText = parseInt(newNum) + 1;
                    }
 
@@ -88,6 +89,21 @@ $('#cart-show-hide').click(function(){
 });
 
 
-$('input').on('keypress', function(){
+$('#cart-table').on('click', '.adjust-btn', function(){
+    console.log($(this));
+    let hook = ($(this).parent().parent().parent()[0].id);
+    let targetQty = $(this).parent().parent().parent()[0].children[3].innerText;
+    for(let x=0; x < productObjects.length; x++){
+      if(productObjects[x].title === hook){
+        //perform your fetch to update the cart quantity for the  specific item
+        if($(this).hasClass('minus') && targetQty != 0) {
+          let minusQty = parseInt(targetQty) - 1;
+          $(this).parent().parent().parent()[0].children[3].innerText = minusQty;
+        } else if ($(this).hasClass('plus')){
+          let plusQty = parseInt(targetQty) + 1;
+          $(this).parent().parent().parent()[0].children[3].innerText = plusQty;
+        }
 
+      }
+    }
 });

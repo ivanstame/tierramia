@@ -436,3 +436,13 @@ body#shop-page{
 .menu-visible{
   transform: translate(0%, -50%) !important;
 }
+
+.adjust-btn{
+  font-family: 'MarrSans-Bold-Web', sans-serif;
+  background: none;
+  outline: none;
+  border: none;
+  .plus{
+    padding-bottom: 5px;
+  }
+}
