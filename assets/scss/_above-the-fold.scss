@@ -100,7 +100,7 @@
           }
         }
         @include media(">=desktop") {  //desktop
-          width: 50%;
+          width: 57.5%;
         }
         ul#main-nav{
             display:flex;
@@ -193,7 +193,7 @@
         .carousel-image{
             position:absolute;
             width: 100%;
-            filter: brightness(0.75);
+            filter: brightness(0.6);
             height: 100%;
             @include media(">=phone"){  //phone defaults above
           	    @include media("landscape"){ //phone landscape
@@ -216,6 +216,20 @@
                 background: url('../img/montebello.jpg');
                 background-size: cover;
                 background-repeat: no-repeat;
+                @include media(">=phone"){  //phone defaults above
+                  @include media("landscape"){ //phone landscape
+
+                  }
+                }
+                @include media(">=tablet"){    //tablet portrait
+
+                  @include media("landscape") {  //tablet landscape
+
+                  }
+                }
+                @include media(">=desktop") {  //desktop
+                  background-position: 0;
+                }
             }
             &:nth-of-type(2){
                 background: url('../img/tm_mobile_hero/latte_art_lighting.jpg');
@@ -315,20 +329,19 @@
         }
     }
     #content-box {
-      height: 100%;
       position: absolute;
       right: 0;
       top: 0;
-      z-index: 999;
+      bottom: 0;
+      left: 0;
       display: flex;
       flex-flow: column;
       justify-content: center;
-      padding-top: 25%;
+      align-items: center;
       z-index: 900;
+      padding: 10vw;
       @include media(">=phone"){  //phone defaults above
           @include media("landscape"){ //phone landscape
-            left: 0;
-            padding-top: unset;
           }
       }
       //
@@ -343,96 +356,21 @@
       @include media(">=desktop") {  //desktop
         width: 100%;
         height: calc(var(--vh, 1vh) * 100);
-        left: unset;
-        padding-bottom: 3%;
-        display: flex;
-        flex-flow: column;
-        justify-content: flex-end;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        padding: 0;
+        padding: 0 8vw 0 0;
+        padding-bottom: 9%;
 
       }
-      #top-heading{
-        transform-style: preserve-3d;
-        width: 100%;
-        text-align: center;
-        padding: 0 5%;
-        @include media(">=phone"){  //phone defaults above
-            @include media("landscape"){ //phone landscape
-              margin-top: 5%;
-            }
-        }
-        @include media(">=tablet"){    //tablet portrait
-
-              @include media("landscape") {  //tablet landscape
-
-              }
-            }
-        @include media(">=desktop") {  //desktop
-          margin-top: 50px;
-          text-align: center;
-          padding: unset;
-
-
-        }
-        &:after{
-          // content: '';
-          // display: none;
-          // position: absolute;
-          // width: 100%;
-          // height:150%;
-          // background-image:url('../img/talavera.svg');
-          // background-repeat: no-repeat;
-          // opacity: 0.06;
-          // transform: translateZ(-1px);
-          // top: -15%;
-          // left: 15px;
-          // @include media(">=phone"){  //phone defaults above
-          //     @include media("landscape"){ //phone landscape
-          //       height: 150%;
-          //       top: -20%;
-          //     }
-          // }
-          // @include media(">=tablet"){    //tablet portrait
-          //
-          //       @include media("landscape") {  //tablet landscape
-          //
-          //       }
-          //     }
-          // @include media(">=desktop") {  //desktop
-          //   height: 175%;
-          //   display: block;
-          // }
-        }
-        h3{
-          font-family: "Viner Hand ITC", cursive;
-          color: $lightYellow;
-          font-size: 5.75vw;
-          margin-bottom: 3vw;
-          @include media(">=phone"){  //phone defaults above
-              @include media("landscape"){ //phone landscape
-                font-size: 4vw;
-                margin-bottom: 5px;
-              }
-          }
-          @include media(">=tablet"){    //tablet portrait
-
-                @include media("landscape") {  //tablet landscape
-
-                }
-              }
-          @include media(">=desktop") {  //desktop
-            font-size: 2vw;
-            color: $lightYellow;
-          }
-        }
         h1{
           font-family: "ArbescoDT-Bold", Arial, sans-serif;
           color: white;
                   letter-spacing: 1px;
 
           text-transform: uppercase;
-          font-size: 13vw;
-          margin-bottom: 5vw;
+          font-size: 9vw;
           @include media(">=phone"){  //phone defaults above
               @include media("landscape"){ //phone landscape
                 font-size: 6.75vw;
@@ -446,42 +384,50 @@
                 }
               }
           @include media(">=desktop") {  //desktop
-            font-size: 8vw;
-            margin-bottom: 20px;
-            color: white;
-            line-height: unset;
+            grid-row: 2;
+            align-self: end;
+            font-size: 4vw;
+            margin: 0;
+            justify-self: end;
+            width: 85%;
+            text-align: right;
           }
         }
         p{
-          font-family: 'ArbescoDT-Book', serif;
-          font-size: 13px;
-          line-height: 2;
-          color: #fff;
-          text-align: left;
-          padding: 0 15% 30px 15%;
-          text-shadow: 0px 0px 1px black;
+          font-family: 'ArbescoDT-Regular', sans-serif;
+          color: white;
+          font-weight: 400;
+          font-size: 3.48vw;
+          line-height: 1.5;
+          margin-top: 30px;
           @include media(">=phone"){  //phone defaults above
-              @include media("landscape"){ //phone landscape
-                padding: 0 15%;
-                font-size: 0.9rem;
+            @include media("landscape"){ //phone landscape
 
-              }
+            }
           }
           @include media(">=tablet"){    //tablet portrait
 
-                @include media("landscape") {  //tablet landscape
+            @include media("landscape") {  //tablet landscape
 
-                }
-              }
+            }
+          }
           @include media(">=desktop") {  //desktop
-            font-size: 1.33vw;
-            padding: 0 10% 30px 10%;
-            color: #685a54;
+            font-size: 1.25vw;
+            line-height: 2;
+            grid-row: 3;
+            grid-column: 2;
+            align-self: start;
+            margin: unset;
+            width: 85%;
           }
         }
         div#cta {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: 15%;
           border: 2px solid #f2c572;
-          padding: 4vw 5vw;
+          padding: 3vw 5vw;
           font-family: 'MarrSans-Medium', sans-serif;
           background-color: #f5deba;
           background: radial-gradient(circle, #f5deba 1%, #e9bf75 100%);
@@ -489,8 +435,8 @@
           margin-top: 20px;
           cursor: pointer;
           font-size: 3.5vw;
-          width: 60%;
-          margin: 0 auto;
+          width: 50%;
+          text-align: center;
           transition: 0.15s all ease-in-out;
           &:focus{
             outline: none;
@@ -500,6 +446,7 @@
           }
           &:hover{
             border-color: $darkerbrown;
+
           }
           @include media(">=phone"){  //phone defaults above
               @include media("landscape"){ //phone landscape
@@ -522,11 +469,14 @@
             font-size: 1.25vw;
             padding: 1.25vw 0;
             font-weight: 400;
-
-
+            margin: 0;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 10%;
           }
         }
-      }
+
     }
 }
 
@@ -536,6 +486,11 @@
   justify-content: center;
   align-items: center;
   padding: 15% 10%;
+  background-image: url(../img/arabica_illustration.svg),url(../img/arabica_illustration2.svg);
+  background-size: 12%, 20%;
+  background-position: left top, right bottom;
+  background-repeat: no-repeat;
+
   @include media(">=phone"){  //phone defaults above
       @include media("landscape"){ //phone landscape
         padding: 10%;
@@ -550,23 +505,18 @@
 
       }
   @include media(">=desktop") {  //desktop
-    // height: calc(var(--vh, 1vh) * 30);
-    // display:unset;
-    // padding: unset;
-    // position: absolute;
-    // background: transparent;
-    // transform: translateY(-135%);
-    // z-index: 999;
-    padding: 5% 20%;
+  background-size: 15%, 15%;
+    padding: 10% 20%;
   }
-  #shape-box{
-    position: static;
-    margin: 0;
-    z-index: 999;
-    transform-style: preserve-3d;
+  p{
+    font-family: 'ArbescoDT-Book', sans-serif;
+    width: 100%;
+    font-size: 3.5vw;
+    line-height: 2;
+    color: $darkerbrown;
     @include media(">=phone"){  //phone defaults above
         @include media("landscape"){ //phone landscape
-
+          font-size: 2.25vw;
         }
     }
     @include media(">=tablet"){    //tablet portrait
@@ -576,84 +526,9 @@
           }
         }
     @include media(">=desktop") {  //desktop
-      // z-index: 999;
-      // padding-left: 16%;
-      // margin-top: -30px;
-
-    // transform: translateY(-145%);
-    }
-    #shaper{
-      display: none;
-      @include media(">=phone"){  //phone defaults above
-          @include media("landscape"){ //phone landscape
-
-          }
-      }
-      @include media(">=tablet"){    //tablet portrait
-
-            @include media("landscape") {  //tablet landscape
-
-            }
-          }
-      @include media(">=desktop") {  //desktop
-        // display: block;
-        // float: left;
-        // shape-outside: polygon(0px 0px, 291px 0px, -44px 300px);
-        // width: 350px;
-        // height: 225px;
-      }
-
-    }
-    p{
-      font-family: 'ArbescoDT-Book', sans-serif;
-      width: 100%;
-      font-size: 3.5vw;
-      line-height: 2;
-      color: $darkerbrown;
-      @include media(">=phone"){  //phone defaults above
-          @include media("landscape"){ //phone landscape
-            font-size: 2.25vw;
-          }
-      }
-      @include media(">=tablet"){    //tablet portrait
-
-            @include media("landscape") {  //tablet landscape
-
-            }
-          }
-      @include media(">=desktop") {  //desktop
-        font-size: 1.3vw;
-        width: 90%;
-        line-height: 2.5;
-      }
-      #first-letter{
-        color: $orange;
-        float: left;
-        font-family: 'ArbescoDT-Bold', serif;
-        font-size: 75px;
-        line-height: 60px;
-        // text-shadow: 0px 0px 1px black;
-        padding-top: 4px;
-        padding-right: 8px;
-        padding-left: 3px;
-        &:hover {
-          text-decoration-style: none !important;
-          text-decoration: none !important;
-        }
-      }
-
-      span{
-        color: $orange;
-        font-family: 'ArbescoDT-Bold', serif;
-                // text-shadow: 0px 0px 1px black;
-
-        cursor: pointer;
-        &:hover{
-          text-decoration-style: double !important;
-          text-decoration: underline;
-
-        }
-      }
+      font-size: 1.3vw;
+      width: 90%;
+      line-height: 2.5;
     }
   }
 }
@@ -686,18 +561,6 @@
     padding: 40px 0;
     background-size: 3%;
   }
-  // &::before{
-  //   position: absolute;
-  //   display: block;
-  //   content: '';
-  //   width: 100%;
-  //   height: 3px;
-  //   background: #fff;
-  //   top: -2px;
-  //   left: 2px;
-  //   z-index: 9;
-  // }
-
   #promo-container{
     display: grid;
     height: 100%;
@@ -1400,7 +1263,7 @@
             }
           }
       @include media(">=desktop") {  //desktop
-        display: none;
+
       }
       img{
         width: 25px;
@@ -1437,7 +1300,7 @@
             }
           }
       @include media(">=desktop") {  //desktop
-
+        left: 40px;
       }
 
     }
@@ -1456,7 +1319,7 @@
             }
           }
       @include media(">=desktop") {  //desktop
-          right: 0;
+          right: 40px;
       }
 
     }

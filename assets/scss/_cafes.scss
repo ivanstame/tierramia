@@ -81,7 +81,7 @@ body#cafes-page
         }
       }
       @include media(">=desktop") {  //desktop
-        width: 50%;
+        width: 57.5%;
       }
       ul#main-nav{
           display:flex;
@@ -173,7 +173,7 @@ body#cafes-page
       height: calc(var(--vh, 1vh) * 100);
     }
     .overlay{
-      padding: 10vw 0vw;
+      padding: 10vw;
       padding-top: 20%;
       position: absolute;
       top: 0;
@@ -199,11 +199,15 @@ body#cafes-page
           }
       }
       @include media(">=desktop") {  //desktop
-
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        padding: 0 8vw 0 0;
+        padding-bottom: 9%;
       }
       h3{
         color: #fff;
-        font-size: 13vw;
+        font-size: 9vw;
         font-family: 'ArbescoDT-Bold', serif;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -219,11 +223,18 @@ body#cafes-page
             }
         }
         @include media(">=desktop") {  //desktop
-
+          grid-row: 2;
+          align-self: end;
+          text-align: right;
+          font-size: 4vw;
         }
       }
 
       #nearest-cafe{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 5%;
         border: 2px solid #f2c572;
         padding: 3vw 5vw;
         font-family: 'MarrSans-Medium', sans-serif;
@@ -233,9 +244,7 @@ body#cafes-page
         margin-top: 20px;
         cursor: pointer;
         font-size: 3.5vw;
-        width: 40%;
-        margin: 0 auto;
-        margin-top: 20px;
+        width: 50%;
         transition: 0.15s all ease-in-out;
         &:focus{
           outline: none;
@@ -268,9 +277,11 @@ body#cafes-page
           font-size: 1.25vw;
           padding: 1.25vw 0;
           font-weight: 400;
-          margin-top: 40px;
-
-
+          margin: 0;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: 10%;
         }
       }
       // #nearest-cafe{
@@ -330,6 +341,7 @@ body#cafes-page
     }
     @include media(">=desktop") {  //desktop
           font-size: 2vw;
+          padding: 50px 17vw;
     }
 
   &:after{

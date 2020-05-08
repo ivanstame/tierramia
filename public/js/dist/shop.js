@@ -1,7 +1,7 @@
 var wares = document.getElementsByClassName('product');
 var lineItemsToAdd = [];
 // it doesn't seem that the stored variable "cart" points to the same object as the one created by the createcheckout operation
-var checkoutId;
+let checkoutId;
 var catalogLength = 0;
 var productObjects = [];
 var cartTotal = document.getElementById('total');
@@ -90,18 +90,31 @@ $('#cart-show-hide').click(function(){
 
 
 $('#cart-table').on('click', '.adjust-btn', function(){
-    console.log($(this));
     let hook = ($(this).parent().parent().parent()[0].id);
     let targetQty = $(this).parent().parent().parent()[0].children[3].innerText;
     for(let x=0; x < productObjects.length; x++){
       if(productObjects[x].title === hook){
         //perform your fetch to update the cart quantity for the  specific item
+        const lineItemsToUpdate = [
+          {
+            id: productObjects[x].variants[0].id,
+            quantity: null
+          }
+        ];
         if($(this).hasClass('minus') && targetQty != 0) {
           let minusQty = parseInt(targetQty) - 1;
+          lineItemsToUpdate[0].quantity = minusQty;
           $(this).parent().parent().parent()[0].children[3].innerText = minusQty;
+          client.checkout.updateLineItems(checkoutId, lineItemsToUpdate).then((checkout) => {
+            console.log(checkout);
+          });
         } else if ($(this).hasClass('plus')){
           let plusQty = parseInt(targetQty) + 1;
+          lineItemsToUpdate[0].quantity = plusQty;
           $(this).parent().parent().parent()[0].children[3].innerText = plusQty;
+          client.checkout.updateLineItems(checkoutId, lineItemsToUpdate).then((checkout) => {
+            console.log(checkout);
+          });
         }
 
       }

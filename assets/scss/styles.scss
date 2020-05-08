@@ -182,10 +182,10 @@ a{
 //INSIDE HERO OVERLAYS OF ALL PAGES
 
 p.hero-description{
-  font-family: 'MarrSans-Regular', sans-serif;
+  font-family: 'ArbescoDT-Regular', sans-serif;
   color: white;
   font-weight: 400;
-  font-size: 3.25vw;
+  font-size: 3.48vw;
   line-height: 1.5;
   margin-top: 20px;
   height: 0;
@@ -201,12 +201,13 @@ p.hero-description{
     }
   }
   @include media(">=desktop") {  //desktop
-    font-size: 1.5vw;
+    font-size: 1.25vw;
     line-height: 2;
     grid-row: 3;
     grid-column: 2;
     align-self: start;
     margin: unset;
+    width: 85%;
   }
 }
 div.scroll-hint{
@@ -254,7 +255,6 @@ div.scroll-hint{
       content: '';
       display: inline-block;
       height: 0.45em;
-      left: -2.85em;
       position: relative;
       top: 1.25em;
       vertical-align: top;

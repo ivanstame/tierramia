@@ -26,7 +26,7 @@ body#shop-page{
     padding: 4% 5%;
     position: absolute;
     width: 100%;
-    z-index: 999;
+    z-index: 998;
     @include media(">=phone"){  //phone defaults above
       @include media("landscape"){ //phone landscape
         padding: 2% 5%;
@@ -94,7 +94,7 @@ body#shop-page{
         }
       }
       @include media(">=desktop") {  //desktop
-        width: 50%;
+        width: 57.5%;
       }
       ul#main-nav{
           display:flex;
@@ -217,7 +217,7 @@ body#shop-page{
       }
       h3{
         color: #fff;
-        font-size: 13vw;
+        font-size: 9vw;
         font-family: 'ArbescoDT-Bold', serif;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -370,6 +370,7 @@ body#shop-page{
       transition: .4s all;
       background: white;
       position: fixed;
+      z-index: 999;
       right:0;
       top: 50%;
       height: 100%;
@@ -377,7 +378,22 @@ body#shop-page{
       padding: 10% 5%;
       transform: translate(100%, -50%);
       box-shadow: -1px 1px 10px 0px rgba(0,0,0,0.3);
-      // transform: translate(-20% -50%);
+      @include media(">=phone"){  //phone defaults above
+        @include media("landscape"){ //phone landscape
+
+        }
+      }
+      @include media(">=tablet"){    //tablet portrait
+
+        @include media("landscape") {  //tablet landscape
+
+        }
+      }
+      @include media(">=desktop") {  //desktop
+      transform:translate(99%, -50%);
+      padding: 5%;
+      overflow-y: auto;
+      }
       #cart-show-hide{
         color: $lightYellow;
         background: $darkerbrown;
@@ -389,7 +405,20 @@ body#shop-page{
         top: 50%;
         transform:translate(-150%, -50%);
         box-shadow: -1px 1px 10px 0px rgba(0,0,0,0.3);
+        @include media(">=phone"){  //phone defaults above
+          @include media("landscape"){ //phone landscape
 
+          }
+        }
+        @include media(">=tablet"){    //tablet portrait
+
+          @include media("landscape") {  //tablet landscape
+
+          }
+        }
+        @include media(">=desktop") {  //desktop
+          left: 1.75%;
+        }
       }
       #cart-table{
        font-size: 0.8rem;
@@ -407,6 +436,20 @@ body#shop-page{
          text-transform: uppercase;
          font-weight: 600;
          padding: 5px 15px 15px 0;
+         @include media(">=phone"){  //phone defaults above
+           @include media("landscape"){ //phone landscape
+
+           }
+         }
+         @include media(">=tablet"){    //tablet portrait
+
+           @include media("landscape") {  //tablet landscape
+
+           }
+         }
+         @include media(">=desktop") {  //desktop
+          font-size: 2vw;
+         }
        }
         td{
           font-size: 3.25vw;
@@ -414,10 +457,38 @@ body#shop-page{
          margin-bottom: 10px;
          vertical-align: middle;
          font-family: 'MarrSans-Regular', sans-serif;
+         @include media(">=phone"){  //phone defaults above
+           @include media("landscape"){ //phone landscape
+
+           }
+         }
+         @include media(">=tablet"){    //tablet portrait
+
+           @include media("landscape") {  //tablet landscape
+
+           }
+         }
+         @include media(">=desktop") {  //desktop
+          font-size: 1.5vw;
+         }
         }
         img{
           width: 65%;
           padding: 0;
+          @include media(">=phone"){  //phone defaults above
+            @include media("landscape"){ //phone landscape
+
+            }
+          }
+          @include media(">=tablet"){    //tablet portrait
+
+            @include media("landscape") {  //tablet landscape
+
+            }
+          }
+          @include media(">=desktop") {  //desktop
+            width: 50%;
+          }
         }
       }
       #total{

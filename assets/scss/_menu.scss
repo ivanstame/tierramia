@@ -81,7 +81,7 @@ background: $background;
         }
       }
       @include media(">=desktop") {  //desktop
-        width: 50%;
+        width: 57.5%;
       }
       ul#main-nav{
           display:flex;
@@ -204,7 +204,7 @@ background: $background;
       }
       h3{
         color: #fff;
-        font-size: 13vw;
+        font-size: 9vw;
         text-align: center;
         font-family: 'ArbescoDT-Bold', serif;
         text-transform: uppercase;
@@ -221,7 +221,7 @@ background: $background;
             }
         }
         @include media(">=desktop") {  //desktop
-
+          font-size: 6vw;
         }
       }
 
@@ -253,34 +253,7 @@ background: $background;
     }
     div.menu-list{ // three panes, cold - hot - pastries
       transition: all .5s;
-              margin-top: 80px;
-      // h2.menu-list-title{
-      //   text-transform: uppercase;
-      //   font-size: 1.5rem;
-      //   margin-bottom: 70px;
-      //   margin-top: 40px;
-      //   font-family: "ArbescoDT-SemiBold", Arial, sans-serif;
-      //   color: $darkerbrown;
-      //   letter-spacing: 2px;
-      //   text-decoration: underline;
-      //   text-underline-position: under;
-      //   text-decoration-color: $lightYellow;
-      //   text-decoration-style: double;
-      //   @include media(">=phone"){  //phone defaults above
-      //     @include media("landscape"){ //phone landscape
-      //       font-size: 4.5vw;
-      //     }
-      //   }
-      //   @include media(">=tablet"){    //tablet portrait
-      //
-      //     @include media("landscape") {  //tablet landscape
-      //
-      //     }
-      //   }
-      //   @include media(">=desktop") {  //desktop
-      //     font-size: 2.5vw;
-      //   }
-      // }
+      margin-top: 30px;
       div.sub-menu-list-wrapper{
         margin-bottom: 60px;
         h3.sub-menu-list-title{

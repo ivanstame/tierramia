@@ -94,7 +94,7 @@ body#about-page{
         }
       }
       @include media(">=desktop") {  //desktop
-        width: 50%;
+        width: 57.5%;
       }
       ul#main-nav{
           display:flex;
@@ -219,12 +219,13 @@ body#about-page{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        padding: 0 8vw;
+        padding: 0;
+        padding: 0 8vw 0 0;
         padding-bottom: 9%;
       }
       h3{
         color: #fff;
-        font-size: 13vw;
+        font-size: 9vw;
         font-family: 'ArbescoDT-Bold', serif;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -243,7 +244,7 @@ body#about-page{
           grid-row: 2;
           align-self: end;
           text-align: right;
-          font-size: 7vw;
+          font-size: 4vw;
         }
       }
       h4{
