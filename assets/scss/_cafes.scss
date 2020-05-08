@@ -319,10 +319,9 @@ body#cafes-page
     padding: 0 30px;
     font-family: 'ArbescoDT-Bold';
     font-size: 1.6rem;
-    text-align: center;
+    text-align: left;
     padding: 50px 30px;
     line-height: 1.75;
-    text-transform: capitalize;
     color: $darkerbrown;
     position: relative;
     transform-style: preserve-3d;
@@ -341,7 +340,7 @@ body#cafes-page
     }
     @include media(">=desktop") {  //desktop
           font-size: 2vw;
-          padding: 50px 17vw;
+          padding: 50px 25vw;
     }
 
   &:after{

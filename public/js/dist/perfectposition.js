@@ -6,7 +6,12 @@ function moveToNew(e){
   var moveAmount = screenHeight / 5;
   var newPosition = currentPosition - moveAmount;
 
-  window.scrollTo(0, newPosition)
+  if(window.innerWidth > window.innerHeight){
+    window.scrollTo(0, currentPosition);
+  } else {
+      window.scrollTo(0, newPosition)
+  }
+
 }
 
 function test2(e) {

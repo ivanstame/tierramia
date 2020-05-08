@@ -213,7 +213,7 @@
 
             }
             &:nth-of-type(1){
-                background: url('../img/montebello.jpg');
+                background: url('http://nebula.wsimg.com/1dfe38c8ee515adbba8c151522c66cf7?AccessKeyId=0A547B94FD14E2142AB9&disposition=0&alloworigin=1');
                 background-size: cover;
                 background-repeat: no-repeat;
                 @include media(">=phone"){  //phone defaults above
@@ -700,7 +700,7 @@
 
     }
     .promo-photo{
-      background: url('../img/echo_park.jpg');
+      background: url('../img/montebello.jpg');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
